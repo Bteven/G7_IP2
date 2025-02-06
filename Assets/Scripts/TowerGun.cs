@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class TowerGun : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject towerObject;
+    public GameObject rotationPoint;
+    public GameObject enemyObject;
+    public float rotationSpeed;
     void Start()
     {
-        Debug.Log("hello");
+        Debug.Log("HelloWorld");
     }
 
     // Update is called once per frame
     void Update()
     {
         
+           
+
+
+
     }
 }
