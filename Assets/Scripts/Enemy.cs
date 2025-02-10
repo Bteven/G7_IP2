@@ -14,26 +14,35 @@ public class Enemy : MonoBehaviour
 
     private int routeToGo;
 
-    private Transform enemyPos;
+    private Vector3 enemyPos;
 
     private float tcount;
 
-    private float speed;
-
     private Vector3 gizmosPos;
 
-    public GameObject Parent;
+    public float speed;
+
+
+
+  
 
 
     void Start()
     {
-       
+        tcount = 0f;
+        routeToGo = 0;
+        coroutineAllowed = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (coroutineAllowed)
+        {
+            StartCoroutine(EnemyRoute(routeToGo));
+        }
+
     }
 
     private void OnDrawGizmos() //draw enemy path in viewport
@@ -63,9 +72,32 @@ public class Enemy : MonoBehaviour
         Vector3 p0 = routes[routeNumber].GetChild(0).position;
         Vector3 p1 = routes[routeNumber].GetChild(1).position;
         Vector3 p2 = routes[routeNumber].GetChild(2).position;
-        Vector3 p3 = routes[routeNumber].GetChild(3).position;
+        Vector3 p3 = routes[routeNumber].GetChild(3).position; //gets the position of each point in the routes array
 
-        return null;
+        for (tcount = 0; tcount < 1; tcount += speed) // t=0 is the start of the curve and t=1 is the end. object moves along curve according to the speed
+        {
+
+            enemyPos = Mathf.Pow(1 - tcount, 3) * p0 + 3 * Mathf.Pow(1 - tcount, 2) * tcount * p1 +
+                3 * Mathf.Pow(1 - tcount, 1) * Mathf.Pow(tcount, 2) * p2 + Mathf.Pow(tcount, 3) * p3;
+
+
+
+            transform.position = enemyPos;
+            yield return new WaitForEndOfFrame();
+
+            tcount = 0f;
+            routeToGo += 1; // after the route is finished it goes to the next
+
+            if (routeToGo > routes.Length - 1) //if there is no next route it goes back to the first
+            {
+                routeToGo = 0;
+            }
+
+
+
+            coroutineAllowed = true; //coroutine repeats
+
+        }
 
     }
 }
