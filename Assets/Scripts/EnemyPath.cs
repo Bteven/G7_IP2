@@ -23,10 +23,14 @@ public class EnemyPath : MonoBehaviour
 
     public float speed;
 
+    private int routeNumber;
+
+
     void Start()
     {
         tcount = 0f;
         routeToGo = 0;
+        routeNumber = 0;
         coroutineAllowed = true;
     }
 
@@ -37,26 +41,47 @@ public class EnemyPath : MonoBehaviour
         {
             StartCoroutine(EnemyRoute(routeToGo));
         }
-    }
 
-    private void OnDrawGizmos() //draw enemy path in viewport
-    {
-       for(float t = 0; t < 1; t += 0.02f)
+
+        if (routeNumber > routes.Length)
         {
-            gizmosPos = Mathf.Pow(1 - t, 3) * pointA.position + 3 * Mathf.Pow(1 - t, 2) * t * pointB.position +
-                3 * Mathf.Pow(1 - t, 1) * Mathf.Pow(t, 2) * pointC.position + Mathf.Pow(t, 3) * pointD.position;
-
-            Gizmos.color = Color.green;
-
-            Gizmos.DrawSphere(gizmosPos, 0.2f);
-
-            //generates a visual representation of the curve
+            routeNumber = 0;
         }
 
-        Gizmos.DrawLine(pointA.position, pointB.position);
-        Gizmos.DrawLine(pointB.position, pointC.position);
-        Gizmos.DrawLine(pointC.position, pointD.position); // draws lines between control points
     }
+    private void OnDrawGizmos() //draw enemy path in viewport
+    {
+
+        foreach(Transform route in routes)
+        {
+
+            Vector3 p0 = routes[routeNumber].GetChild(0).position;
+            Vector3 p1 = routes[routeNumber].GetChild(1).position;
+            Vector3 p2 = routes[routeNumber].GetChild(2).position;
+            Vector3 p3 = routes[routeNumber].GetChild(3).position;
+
+            for (float t = 0; t < 1; t += 0.02f)
+            {
+
+                gizmosPos = Mathf.Pow(1 - t, 3) * p0 + 3 * Mathf.Pow(1 - t, 2) * t * p1 +
+                    3 * Mathf.Pow(1 - t, 1) * Mathf.Pow(t, 2) * p2 + Mathf.Pow(t, 3) * p3;
+
+                Gizmos.color = Color.green;
+
+                Gizmos.DrawSphere(gizmosPos, 0.2f);
+
+
+                //generates a visual representation of the curve
+            }
+            routeNumber++;
+
+            if(routeNumber > 5)
+            {
+                routeNumber = 0;
+            }
+        }
+    }
+
 
     private IEnumerator EnemyRoute(int routeNumber)
     {
@@ -67,12 +92,12 @@ public class EnemyPath : MonoBehaviour
         Vector3 p2 = routes[routeNumber].GetChild(2).position;
         Vector3 p3 = routes[routeNumber].GetChild(3).position; //gets the position of each point in the routes array
 
-        for (tcount = 0; tcount < 1; tcount += 0.0005f) 
+        for (tcount = 0; tcount < 1; tcount += 0.0005f)  
         {
             enemyPos = Mathf.Pow(1 - tcount, 3) * p0 + 3 * Mathf.Pow(1 - tcount, 2) * tcount * p1 +
                 3 * Mathf.Pow(1 - tcount, 1) * Mathf.Pow(tcount, 2) * p2 + Mathf.Pow(tcount, 3) * p3;
 
-            transform.position = Vector3.MoveTowards(transform.position, enemyPos,speed *  Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, enemyPos, speed *  Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
      
