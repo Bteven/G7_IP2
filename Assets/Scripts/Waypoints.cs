@@ -19,17 +19,17 @@ public class Waypoints : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, targetWaypoint.position, enemySpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, enemySpeed * Time.deltaTime);
 
-        if (Vector2.Distance(transform.position, targetWaypoint.position) < checkDistance)
+        if (Vector3.Distance(transform.position, targetWaypoint.position) < checkDistance)
         {
             targetWaypoint = GetNextWaypoint();
         }
 
-        if (currentWaypointIndex >= 13)
-        {
-            Destroy(gameObject);
-        }
+        //if (currentWaypointIndex == 14)
+        //{
+            //Destroy(gameObject);
+        //}
     }
 
 
@@ -38,7 +38,9 @@ public class Waypoints : MonoBehaviour
         currentWaypointIndex++;
         if (currentWaypointIndex >= waypoints.Length)
         {
-            currentWaypointIndex = 0;
+            //currentWaypointIndex = 0;
+            Destroy(gameObject);
+            return null;
         }
 
         return waypoints[currentWaypointIndex];

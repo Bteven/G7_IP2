@@ -10,11 +10,10 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField]
     private GameObject enemyPrefab; //i'd change this to array when we have the prefab variants
 
-    private float enemyInterval = 2.75f; //enemies spawn every 1 to 3 seconds (this is just a placeholder until we know exactly how often we want them to spawn)
+    private float enemyInterval = 2.75f; //enemies spawn every 2.75 seconds (this is just a placeholder until we know exactly how often we want them to spawn)
 
     void Start()
     {
-        //enemyInterval = Random.Range(1f, 3f);
         StartCoroutine(spawnEnemy(enemyInterval, enemyPrefab));
     }
 
@@ -22,7 +21,8 @@ public class EnemySpawn : MonoBehaviour
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
         yield return new WaitForSeconds(interval);
-        GameObject newEnemy = Instantiate(enemy, new Vector3(0f, 0f, 0f), Quaternion.identity);
+        Vector3 spawnPosition = transform.position; //Use spawner position
+        GameObject newEnemy = Instantiate(enemy, spawnPosition, Quaternion.identity);
         StartCoroutine(spawnEnemy(interval, enemy));
     }
 }
