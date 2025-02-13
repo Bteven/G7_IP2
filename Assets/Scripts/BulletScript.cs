@@ -4,13 +4,38 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public GameObject bulletObject;
-    public Vector3 bulletSpeed;
 
- 
-    // Update is called once per frame
+    [Header("BulletMovement")]
+
+    public Rigidbody bulletBody;   
+    public float bulletSpeed;      //speed multiplier
+
+    [Header("BulletDuration")]
+
+    public float bulletTimer;       //current bullet timer  
+    public float maxBulletTime;     // final bullet timer
+
+
     void Update()
     {
-        bulletObject.transform.position = bulletObject.transform.position + bulletSpeed * Time.deltaTime;
+        BulletMove();
+        BulletDespawn();
+
+    }
+    void BulletDespawn()
+    {
+        bulletTimer += Time.deltaTime;       // counts up 
+
+        if (bulletTimer > maxBulletTime)     // when reaches final time
+        {
+            Destroy(gameObject);            // destroys physical bullet
+
+        }
+    }
+    void BulletMove()
+    {
+        bulletBody.velocity = transform.forward * bulletSpeed;  //moves bullet foward
     }
 }
+ 
+  
