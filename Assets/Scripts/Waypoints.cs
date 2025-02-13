@@ -26,10 +26,6 @@ public class Waypoints : MonoBehaviour
             targetWaypoint = GetNextWaypoint();
         }
 
-        //if (currentWaypointIndex == 14)
-        //{
-            //Destroy(gameObject);
-        //}
     }
 
 
@@ -38,7 +34,6 @@ public class Waypoints : MonoBehaviour
         currentWaypointIndex++;
         if (currentWaypointIndex >= waypoints.Length)
         {
-            //currentWaypointIndex = 0;
             Destroy(gameObject);
             return null;
         }
