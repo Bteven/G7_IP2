@@ -17,7 +17,7 @@ public class EnemySpawn : MonoBehaviour
         StartCoroutine(spawnEnemy(enemyInterval, enemyPrefab));
     }
 
-    //Spawns enemies at point just off the screen at the start of the path every 1 to 3 seconds
+    //Spawns enemies at point just off the screen at the start of the path every 2.75 seconds
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
         yield return new WaitForSeconds(interval);
