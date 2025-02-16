@@ -34,7 +34,7 @@ public class Waypoints : MonoBehaviour
         currentWaypointIndex++;
         if (currentWaypointIndex >= waypoints.Length)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             return null;
         }
 

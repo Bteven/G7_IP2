@@ -32,6 +32,7 @@ public class BulletScript : MonoBehaviour
 
         }
     }
+
     void BulletMove()
     {
         bulletBody.velocity = transform.forward * bulletSpeed;  //moves bullet foward
