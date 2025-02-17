@@ -7,11 +7,13 @@ public class Attack : MonoBehaviour
     [SerializeField]
     private float damage;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider col)
     {
-        if (collision.gameObject.tag == "Enemy" | collision.gameObject.tag == "FinishLine")
+        if (col.gameObject.tag == "Enemy" | col.gameObject.tag == "FinishLine") //If bullet hits player the enemy takes damage or if enemy hits player the finish line (the player's) health takes damage
         {
-            var healthController = collision.gameObject.GetComponent<HealthController>();
+            //need to change to make sure bullet can't damage the FinishLine
+
+            var healthController = col.gameObject.GetComponent<HealthController>();
 
             healthController.TakeDamage(damage);
         }

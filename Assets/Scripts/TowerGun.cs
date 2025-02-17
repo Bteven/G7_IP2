@@ -30,10 +30,14 @@ public class TowerGun : MonoBehaviour
     public float fireCooldown; 
     public float currentFireTimer;
 
+
     void Update()
     {
         FindEnemy();
         GunRotation();
+
+        CleanEnemyList(); // Method to remove enemies from in range list if they are destroyed while in range
+
     }
 
     void FindEnemy()
@@ -95,5 +99,11 @@ public class TowerGun : MonoBehaviour
         {
             enemyObjectInRange.Remove(other.gameObject);
         }
+    }
+
+    //Method to remove destroyed enemies
+    void CleanEnemyList()
+    {
+        enemyObjectInRange.RemoveAll(enemy => enemy == null); //removes all null entries from the list
     }
 }

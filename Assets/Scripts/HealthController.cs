@@ -13,7 +13,6 @@ public class HealthController : MonoBehaviour
 
     //can input code for health bar here if needed
 
-    public UnityEvent Death;
 
     public void TakeDamage(float damage)
     {
@@ -24,22 +23,34 @@ public class HealthController : MonoBehaviour
 
         currentHealth -= damage;
 
-        if (currentHealth < 0)
+        if (currentHealth < 0) 
         {
             currentHealth = 0;
         }
 
         if (currentHealth == 0)
         {
-            Death.Invoke();
+            if (gameObject.CompareTag("Enemy")) //When enemies health is 0 they die
+            {
+                Destroy(gameObject);
+                
+                //Gain money/score here
+            }
+
+            if (gameObject.CompareTag("FinishLine")) //When finish line health is 0 it's game over
+            {
+                Debug.Log("GAME OVER!");
+
+                //Add game over logic
+            }
         }
     }
 
-    private void OnCollisionEnter(Collision other) //not ideal to put this here but i'll try move it when we combine the scene
+    private void OnTriggerEnter(Collider col) //not ideal to put this here but i'll try move it when we combine the scene
     {
-        if (other.gameObject.CompareTag("Bullet") | other.gameObject.CompareTag("Enemy"))
+        if (col.gameObject.CompareTag("Bullet") | col.gameObject.CompareTag("Enemy")) //Destroys bullet if it hits player and destroys enemy if it hits the finish line
         {
-            Destroy(other.gameObject);
+            Destroy(col.gameObject);
         }
 
         
