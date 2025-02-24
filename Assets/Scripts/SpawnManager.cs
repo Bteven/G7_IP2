@@ -135,11 +135,11 @@ public class SpawnManager : MonoBehaviour
             Debug.Log("Enemy " + i + " spawned");
             yield return new WaitForSeconds(CooldownPerUnit);  // has to wait before looping again
         }
+        Debug.Log("group Spawned");
     }
     void SpawnEnemy()
         {
-            Debug.Log("EnemySpawned");
-            GameObject newEnemy = Instantiate(enemyPrefabs[groupDiff], spawnPoint.transform.position, Quaternion.identity);
+          GameObject newEnemy = Instantiate(enemyPrefabs[groupDiff], spawnPoint.transform.position, Quaternion.identity);
         // spawns an enemy depending the group dificulty set earlyer and will ether spawn normal,fast,tank
         }
     }
