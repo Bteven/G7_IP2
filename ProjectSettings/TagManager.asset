@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Bullet
   - FinishLine
+  - NoPlacementZone
   layers:
   - Default
   - TransparentFX
@@ -14,9 +15,9 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Tower
+  - Bubble
+  - NoPlacementZone
   - 
   - 
   - 
