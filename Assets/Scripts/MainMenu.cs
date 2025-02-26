@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(0); // Load the main gameplay scene.
+        SceneManager.LoadScene(1); // Load the main gameplay scene.
     }
 
     public void OpenOptions()
