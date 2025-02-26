@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 5853718888122182013}
   - component: {fileID: 6239815640067722495}
   - component: {fileID: 8580004886006140130}
+  - component: {fileID: 1142796899421705937}
   m_Layer: 0
   m_Name: MissleLaunchpad
   m_TagString: Untagged
@@ -239,6 +240,18 @@ MonoBehaviour:
   missilePrefab: {fileID: 8554201936724616901, guid: 0c1243b9f23595b4ba032daf9d23f1c0, type: 3}
   fireRate: 3
   detectionRange: 30
+--- !u!114 &1142796899421705937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5409352781006854833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dca484ede4bec84dbaeaedcbfbf10ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7679115071182295781
 GameObject:
   m_ObjectHideFlags: 0
