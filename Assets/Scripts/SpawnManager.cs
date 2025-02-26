@@ -75,11 +75,16 @@ public class SpawnManager : MonoBehaviour
     }
     void WaveManager()
     {
-        if (groupsSent >= waveDiff)          // checks if groups sent is the correct amount
+        if (groupsSent >= waveDiff && !waveCleared)          // checks if groups sent is the correct amount
         {
             Debug.Log("WAVE OVER");         
             waveCleared = true;             // sets wave to be cleared 
             WaveCooldown();                 // starts cooldown until next wave
+
+            if (CurrencyManager.Instance != null)
+            {
+                CurrencyManager.Instance.RewardWaveCompletion(waveNumber);
+            }
         }
         else
         {

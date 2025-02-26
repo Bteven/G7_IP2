@@ -33,8 +33,11 @@ public class HealthController : MonoBehaviour
             if (gameObject.CompareTag("Enemy")) //When enemies health is 0 they die
             {
                 Destroy(gameObject);
-                
+
                 //Gain money/score here
+
+                //int rewardAmount = 50;
+                //CurrencyManager.Instance.AddMoney(rewardAmount);
             }
 
             if (gameObject.CompareTag("FinishLine")) //When finish line health is 0 it's game over
@@ -52,8 +55,6 @@ public class HealthController : MonoBehaviour
         {
             Destroy(col.gameObject);
         }
-
-        
     }
 
     
