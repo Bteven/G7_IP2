@@ -6,6 +6,7 @@ public class CurrencyManager : MonoBehaviour
 {
     public static CurrencyManager Instance;
 
+    [SerializeField]
     public int CurrentCurrency { get; private set; }
 
     private void Awake()

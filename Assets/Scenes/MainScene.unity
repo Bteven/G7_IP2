@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3861,6 +3862,7 @@ GameObject:
   - component: {fileID: 1058917644}
   - component: {fileID: 1058917646}
   - component: {fileID: 1058917645}
+  - component: {fileID: 1058917647}
   m_Layer: 5
   m_Name: Currency
   m_TagString: Untagged
@@ -3926,6 +3928,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058917643}
   m_CullTransparentMesh: 1
+--- !u!114 &1058917647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058917643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc2f0d665091768489c0c4e8e6b748b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyText: {fileID: 241722862}
 --- !u!1 &1075395100
 GameObject:
   m_ObjectHideFlags: 0
@@ -4238,7 +4253,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145200394}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7589019ed52260741806ba08623959f5, type: 3}
   m_Name: 
@@ -5391,10 +5406,10 @@ MonoBehaviour:
   turrets:
   - turretName: Lazer Turret
     turretPrefab: {fileID: 7501647794508298957, guid: 6483a988d7ff46743895489494cfcb6d, type: 3}
-    cost: 0
+    cost: 50
   - turretName: Missile Turret
     turretPrefab: {fileID: 5409352781006854833, guid: 45243da0b7af77b40a1eab99164f3504, type: 3}
-    cost: 0
+    cost: 100
 --- !u!4 &1373018171
 Transform:
   m_ObjectHideFlags: 0
@@ -5502,6 +5517,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 53.667, y: 0, z: 0}
+--- !u!1 &1440695504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1440695506}
+  - component: {fileID: 1440695505}
+  m_Layer: 0
+  m_Name: CurrencyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1440695505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440695504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a821c4996cac3a44e91c257d6cc6fea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1440695506
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440695504}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.9921436, y: 2.4644446, z: -3.5803938}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1448707522
 GameObject:
   m_ObjectHideFlags: 0
@@ -5512,7 +5571,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1448707524}
   - component: {fileID: 1448707523}
-  - component: {fileID: 1448707526}
   - component: {fileID: 1448707525}
   m_Layer: 0
   m_Name: Manager
@@ -5583,21 +5641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberText: {fileID: 804499054}
-  healthController: {fileID: 1448707526}
---- !u!114 &1448707526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448707522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a48f4326c5f72440b82ff7fc76e5a61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentHealth: 250
-  maxHealth: 250
+  healthController: {fileID: 1145200398}
 --- !u!1 &1516360956
 GameObject:
   m_ObjectHideFlags: 0
@@ -7900,3 +7944,4 @@ SceneRoots:
   - {fileID: 1857366289}
   - {fileID: 1094085332}
   - {fileID: 2131143616}
+  - {fileID: 1440695506}
