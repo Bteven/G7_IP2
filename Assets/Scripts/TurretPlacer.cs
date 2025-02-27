@@ -8,6 +8,17 @@ public class TurretPlacer : MonoBehaviour
     private GameObject turretPreview; //Placement preview of turret
     private bool isPlacing = false; // boolean tracking if player is placing turret 
 
+    [System.Serializable]
+    public class TurretData
+    {
+        public string turretName;
+        public GameObject turretPrefab;
+        public int cost;
+    }
+
+    public TurretData[] turrets;
+    private int currentTurretCost;
+
     void Update()
     {
         if (isPlacing && turretPreview != null)
@@ -23,10 +34,13 @@ public class TurretPlacer : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && isOnGround)
             {
-                //Checks if tower is being placed on ground layer
-                Instantiate(selectedTurretPrefab, mousePos, Quaternion.identity);
-                Destroy(turretPreview);
-                isPlacing = false;
+                //if (CurrencyManager.Instance.SpendMoney(currentTurretCost))
+                //{
+                    //Checks if tower is being placed on ground layer
+                    Instantiate(selectedTurretPrefab, mousePos, Quaternion.identity);
+                    Destroy(turretPreview);
+                    isPlacing = false;
+               // }
             }
             else if (Input.GetMouseButtonDown(0) && !isOnGround)
             {
@@ -35,16 +49,23 @@ public class TurretPlacer : MonoBehaviour
         }
     }
 
-    public void SelectTurret(GameObject turretPrefab)
+    public void SelectTurret(int index)
     {
+        if(index < 0 || index >= turrets.Length)
+        {
+            return;
+        }
+
+        selectedTurretPrefab = turrets[index].turretPrefab;
+        currentTurretCost = turrets[index].cost;
+        isPlacing = true;
+
         //Destorys any existing preview and replaces with the newly selected one and disables the preview colider to avoid unwanted interaction
         if (turretPreview != null)
         {
             Destroy(turretPreview);
         }
 
-        selectedTurretPrefab = turretPrefab;
-        isPlacing = true;
         turretPreview = Instantiate(selectedTurretPrefab);
         turretPreview.GetComponent<Collider>().enabled = false;
     }

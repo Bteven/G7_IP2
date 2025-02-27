@@ -254,8 +254,8 @@ Transform:
   m_GameObject: {fileID: 52594836}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -24.42, y: 1.9946003, z: 7.01}
-  m_LocalScale: {x: 9.930792, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: -24.42, y: 8.2157, z: 7.01}
+  m_LocalScale: {x: 9.930792, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -418,8 +418,8 @@ Transform:
   m_GameObject: {fileID: 88980279}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -9.94, y: 1.9946003, z: -10.9695}
-  m_LocalScale: {x: 13.315962, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: -9.94, y: 8.2157, z: -10.9695}
+  m_LocalScale: {x: 13.315962, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -551,8 +551,8 @@ Transform:
   m_GameObject: {fileID: 120004503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.060242664, z: -0, w: 0.99818385}
-  m_LocalPosition: {x: 43.59, y: 1.9946003, z: 22.69}
-  m_LocalScale: {x: 9.826816, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: 43.59, y: 8.2157, z: 22.69}
+  m_LocalScale: {x: 9.826816, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -1165,11 +1165,11 @@ MonoBehaviour:
       - m_Target: {fileID: 1373018170}
         m_TargetAssemblyTypeName: TurretPlacer, Assembly-CSharp
         m_MethodName: SelectTurret
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 5409352781006854833, guid: 45243da0b7af77b40a1eab99164f3504, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1312,8 +1312,8 @@ Transform:
   m_GameObject: {fileID: 305984802}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.078100204, y: 1.9946003, z: -12.76}
-  m_LocalScale: {x: 9.93079, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: -0.0781, y: 8.2157, z: -12.76}
+  m_LocalScale: {x: 9.93079, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -1511,8 +1511,8 @@ Transform:
   m_GameObject: {fileID: 481849100}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 52, y: 1.9946003, z: 15.0477}
-  m_LocalScale: {x: 29.247568, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: 52, y: 8.2157, z: 15.0477}
+  m_LocalScale: {x: 29.247568, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -1573,7 +1573,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b0e456c2d129e24e907cd091dafe539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 4315122429483287972, guid: bedec52f74e29324493a177dbf74a49c, type: 3}
+  enemyPrefabs:
+  - {fileID: 1642963000032335812, guid: 96794d200ab1e8145a18c9f76d7bea88, type: 3}
+  - {fileID: 7497963062063909274, guid: c40175c09a0711a4ca2fd98d5cacd473, type: 3}
 --- !u!4 &489236457
 Transform:
   m_ObjectHideFlags: 0
@@ -1978,8 +1980,8 @@ Transform:
   m_GameObject: {fileID: 547151013}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.4738, y: 1.9946003, z: 3.25}
-  m_LocalScale: {x: 2.0324, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: 46.4738, y: 8.2157, z: 3.25}
+  m_LocalScale: {x: 2.0324, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -2111,8 +2113,8 @@ Transform:
   m_GameObject: {fileID: 575998210}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.41610998, z: -0, w: 0.90931433}
-  m_LocalPosition: {x: -14.99, y: 1.9946003, z: 17.06}
-  m_LocalScale: {x: 7.9247622, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: -14.99, y: 8.2157, z: 17.06}
+  m_LocalScale: {x: 7.9247622, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -2244,8 +2246,8 @@ Transform:
   m_GameObject: {fileID: 629090276}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.040391184, z: -0, w: 0.99918395}
-  m_LocalPosition: {x: -21.6307, y: 1.9300003, z: -2.312}
-  m_LocalScale: {x: 13.135534, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: -21.6307, y: 7.9782, z: -2.312}
+  m_LocalScale: {x: 13.135534, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -2534,8 +2536,8 @@ Transform:
   m_GameObject: {fileID: 803743568}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.28641582, z: 0, w: 0.9581054}
-  m_LocalPosition: {x: -12.51, y: 1.9946003, z: -5.22}
-  m_LocalScale: {x: 11.936174, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: -12.51, y: 8.2157, z: -5.22}
+  m_LocalScale: {x: 11.936174, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -2965,8 +2967,8 @@ Transform:
   m_GameObject: {fileID: 822624806}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.1586843, z: -0, w: 0.9873294}
-  m_LocalPosition: {x: 9.9043, y: 1.9946003, z: 34.4183}
-  m_LocalScale: {x: 15.08202, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: 9.9043, y: 8.2157, z: 34.4183}
+  m_LocalScale: {x: 15.08202, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -3098,8 +3100,8 @@ Transform:
   m_GameObject: {fileID: 854027464}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.23281094, z: -0, w: 0.972522}
-  m_LocalPosition: {x: 17.14, y: 1.9946003, z: -4.36}
-  m_LocalScale: {x: 19.270662, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: 17.14, y: 8.2157, z: -4.36}
+  m_LocalScale: {x: 19.270662, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -3231,8 +3233,8 @@ Transform:
   m_GameObject: {fileID: 869023891}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.4763, y: 1.9946003, z: -0.48}
-  m_LocalScale: {x: 10.082882, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: 28.4763, y: 8.2157, z: -0.48}
+  m_LocalScale: {x: 10.082882, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -5086,8 +5088,8 @@ Transform:
   m_GameObject: {fileID: 1209090176}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.5642408, z: -0, w: 0.8256103}
-  m_LocalPosition: {x: 40.2839, y: 1.9946003, z: 26.4488}
-  m_LocalScale: {x: 13.70599, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: 40.2839, y: 8.2157, z: 26.4488}
+  m_LocalScale: {x: 13.70599, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -5219,8 +5221,8 @@ Transform:
   m_GameObject: {fileID: 1222497472}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.57154936, z: -0, w: 0.8205677}
-  m_LocalPosition: {x: -11.27, y: 1.9946003, z: 23.86}
-  m_LocalScale: {x: 11.531259, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: -11.27, y: 8.2157, z: 23.86}
+  m_LocalScale: {x: 11.531259, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -5443,7 +5445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1301450311
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5617,8 +5619,8 @@ Transform:
   m_GameObject: {fileID: 1311211109}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.12885612, z: 0, w: 0.9916633}
-  m_LocalPosition: {x: 39.68, y: 1.9946003, z: 1.45}
-  m_LocalScale: {x: 14.667831, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: 39.68, y: 8.2157, z: 1.45}
+  m_LocalScale: {x: 14.667831, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -5750,8 +5752,8 @@ Transform:
   m_GameObject: {fileID: 1319153798}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.5367954, z: -0, w: 0.8437125}
-  m_LocalPosition: {x: 7.9637, y: 1.9946003, z: -12.6043}
-  m_LocalScale: {x: 13.904204, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: 7.9637, y: 8.2157, z: -12.6043}
+  m_LocalScale: {x: 13.904204, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -5914,8 +5916,8 @@ Transform:
   m_GameObject: {fileID: 1363109404}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000008387795, y: -0.08097073, z: -0.00034519355, w: 0.99671644}
-  m_LocalPosition: {x: -22.1024, y: 1.9932, z: 14.5891}
-  m_LocalScale: {x: 15.50995, y: 4.519559, z: 10}
+  m_LocalPosition: {x: -22.1024, y: 8.2106, z: 14.5891}
+  m_LocalScale: {x: 15.50995, y: 16.61616, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -5977,6 +5979,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedTurretPrefab: {fileID: 0}
+  turrets:
+  - turretName: Lazer Turret
+    turretPrefab: {fileID: 7501647794508298957, guid: 6483a988d7ff46743895489494cfcb6d, type: 3}
+    cost: 0
+  - turretName: Missile Turret
+    turretPrefab: {fileID: 5409352781006854833, guid: 45243da0b7af77b40a1eab99164f3504, type: 3}
+    cost: 0
 --- !u!4 &1373018171
 Transform:
   m_ObjectHideFlags: 0
@@ -6565,8 +6574,8 @@ Transform:
   m_GameObject: {fileID: 1620139647}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.060381103, z: -0, w: 0.99817544}
-  m_LocalPosition: {x: 20.01, y: 1.9946003, z: 32.88}
-  m_LocalScale: {x: 10.373217, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: 20.01, y: 8.2157, z: 32.88}
+  m_LocalScale: {x: 10.373217, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -6907,8 +6916,8 @@ Transform:
   m_GameObject: {fileID: 1771695784}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.2265875, z: -0, w: 0.97399086}
-  m_LocalPosition: {x: 30.0573, y: 1.9946003, z: 31.8939}
-  m_LocalScale: {x: 19.787313, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: 30.0573, y: 8.2157, z: 31.8939}
+  m_LocalScale: {x: 19.787313, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -7026,10 +7035,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1373018170}
         m_TargetAssemblyTypeName: TurretPlacer, Assembly-CSharp
         m_MethodName: SelectTurret
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 7501647794508298957, guid: 6483a988d7ff46743895489494cfcb6d, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7204,8 +7213,8 @@ Transform:
   m_GameObject: {fileID: 1847036676}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.15517724, z: -0, w: 0.9878867}
-  m_LocalPosition: {x: -4.9979, y: 1.9946, z: 32.4148}
-  m_LocalScale: {x: 19.005749, y: 4.5195575, z: 10}
+  m_LocalPosition: {x: -4.9979, y: 8.2157, z: 32.4148}
+  m_LocalScale: {x: 19.005749, y: 16.616154, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2131143616}
@@ -8613,7 +8622,7 @@ Transform:
   m_GameObject: {fileID: 2131143615}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.21, y: 0.5, z: -13.8351}
+  m_LocalPosition: {x: -16.21, y: 0.46, z: -13.8351}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
