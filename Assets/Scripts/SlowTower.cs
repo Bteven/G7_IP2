@@ -7,6 +7,7 @@ public class SlowTower : MonoBehaviour
 
     public List<GameObject> objectInRange = new List<GameObject>();
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
@@ -18,7 +19,7 @@ public class SlowTower : MonoBehaviour
         {
             if (enemy.TryGetComponent<Waypoints>(out Waypoints obj))
             {
-                obj.enemySpeed = 5;
+                obj.enemySpeed = 1.5f;
             }
         }
     }
@@ -30,8 +31,10 @@ public class SlowTower : MonoBehaviour
         {
             if (enemy.TryGetComponent<Waypoints>(out Waypoints obj))
             {
-                obj.enemySpeed = 10;
+                obj.enemySpeed = 3;
             }
+
+     
         }
         if (other.CompareTag("Enemy"))
         {
