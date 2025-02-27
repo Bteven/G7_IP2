@@ -175,8 +175,10 @@ MonoBehaviour:
   - {fileID: 4430049900516723813, guid: a1fe1b5336acfb448b72ff6d25fbc7a8, type: 3}
   - {fileID: 6147857698750209099, guid: a46bcecc650ddb24fa7f7a3354de218c, type: 3}
   - {fileID: 2388706717027342783, guid: f99711b32bffe1146a5c0a8b92367d87, type: 3}
-  enemySpeed: 4
+  enemySpeed: 3
   checkDistance: 0.05
+  parent: {fileID: 0}
+  rotationSpeed: 5
 --- !u!135 &1495408880166440578
 SphereCollider:
   m_ObjectHideFlags: 0

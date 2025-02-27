@@ -53,7 +53,7 @@ public class DragAndDrop : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("NoPlacementZone"))// && gameObject.layer == LayerMask.NameToLayer("Tower"))
+        if (other.CompareTag("NoPlacementZone")) // && gameObject.layer == LayerMask.NameToLayer("Tower"))
         {
             isValidPlacement = false;
         }

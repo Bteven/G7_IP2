@@ -10,6 +10,7 @@ public class Waypoints : MonoBehaviour
     [SerializeField] public float enemySpeed;
     [SerializeField] private float checkDistance = 0.05f;
     [SerializeField] private GameObject parent;
+    [SerializeField] private float rotationSpeed = 5f;
 
     private Transform targetWaypoint;
     private int currentWaypointIndex = 0;
@@ -21,8 +22,15 @@ public class Waypoints : MonoBehaviour
 
     void Update()
     {
+        
         transform.position = Vector3.MoveTowards(transform.position, targetWaypoint.position, enemySpeed * Time.deltaTime);
 
+        Vector3 direction = targetWaypoint.position - transform.position;
+        if (direction != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
         if (Vector3.Distance(transform.position, targetWaypoint.position) < checkDistance)
         {
             targetWaypoint = GetNextWaypoint();

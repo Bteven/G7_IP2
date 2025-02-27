@@ -22,23 +22,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 438a41ef557f1d14399b82abfa35861d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.5
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 438a41ef557f1d14399b82abfa35861d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 438a41ef557f1d14399b82abfa35861d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 438a41ef557f1d14399b82abfa35861d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 438a41ef557f1d14399b82abfa35861d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 270
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 438a41ef557f1d14399b82abfa35861d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -147,8 +147,10 @@ MonoBehaviour:
   - {fileID: 4430049900516723813, guid: a1fe1b5336acfb448b72ff6d25fbc7a8, type: 3}
   - {fileID: 6147857698750209099, guid: a46bcecc650ddb24fa7f7a3354de218c, type: 3}
   - {fileID: 2388706717027342783, guid: f99711b32bffe1146a5c0a8b92367d87, type: 3}
-  enemySpeed: 4
+  enemySpeed: 3
   checkDistance: 0.05
+  parent: {fileID: 0}
+  rotationSpeed: 5
 --- !u!54 &-1775878527389066231
 Rigidbody:
   m_ObjectHideFlags: 0

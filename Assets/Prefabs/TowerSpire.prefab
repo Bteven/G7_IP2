@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 8589189385549212416}
   - component: {fileID: 1781168265921037678}
   - component: {fileID: 9102808008512393142}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: TowerSpire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
