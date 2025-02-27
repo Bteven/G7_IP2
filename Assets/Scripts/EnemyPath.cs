@@ -25,6 +25,8 @@ public class EnemyPath : MonoBehaviour
 
     private int routeNumber;
 
+    [SerializeField]
+    private GameObject Parent;
 
     void Start()
     {
@@ -32,6 +34,7 @@ public class EnemyPath : MonoBehaviour
         routeToGo = 0;
         routeNumber = 0;
         coroutineAllowed = true;
+        
     }
 
     // Update is called once per frame
@@ -40,6 +43,7 @@ public class EnemyPath : MonoBehaviour
         if (coroutineAllowed)
         {
             StartCoroutine(EnemyRoute(routeToGo));
+            
         }
 
 
@@ -75,7 +79,7 @@ public class EnemyPath : MonoBehaviour
             }
             routeNumber++;
 
-            if(routeNumber > 5)
+            if(routeNumber > 7)
             {
                 routeNumber = 0;
             }
@@ -92,12 +96,12 @@ public class EnemyPath : MonoBehaviour
         Vector3 p2 = routes[routeNumber].GetChild(2).position;
         Vector3 p3 = routes[routeNumber].GetChild(3).position; //gets the position of each point in the routes array
 
-        for (tcount = 0; tcount < 1; tcount += 0.0005f)  
+        for (tcount = 0; tcount < 1; tcount += speed* Time.deltaTime)  //0.0005f
         {
             enemyPos = Mathf.Pow(1 - tcount, 3) * p0 + 3 * Mathf.Pow(1 - tcount, 2) * tcount * p1 +
                 3 * Mathf.Pow(1 - tcount, 1) * Mathf.Pow(tcount, 2) * p2 + Mathf.Pow(tcount, 3) * p3;
 
-            transform.position = Vector3.MoveTowards(transform.position, enemyPos, speed *  Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, enemyPos, speed * Time.deltaTime);
             yield return new WaitForEndOfFrame();
         }
      
@@ -106,9 +110,10 @@ public class EnemyPath : MonoBehaviour
 
         if (routeToGo > routes.Length - 1) //if there is no next route it goes back to the first
         {
-            routeToGo = 0;
+            Destroy(Parent);
         }
 
+        
         coroutineAllowed = true; //coroutine repeats
 
         

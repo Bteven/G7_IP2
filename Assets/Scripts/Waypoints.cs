@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 //This is just to test that the enemy spawner works and will be removed later on
 public class Waypoints : MonoBehaviour
 {
     [SerializeField] private Transform[] waypoints;
-    [SerializeField] private float enemySpeed;
+    [SerializeField] public float enemySpeed;
     [SerializeField] private float checkDistance = 0.05f;
+    [SerializeField] private GameObject parent;
 
     private Transform targetWaypoint;
     private int currentWaypointIndex = 0;
@@ -34,7 +36,7 @@ public class Waypoints : MonoBehaviour
         currentWaypointIndex++;
         if (currentWaypointIndex >= waypoints.Length)
         {
-            //Destroy(gameObject);
+            Destroy(parent);
             return null;
         }
 
