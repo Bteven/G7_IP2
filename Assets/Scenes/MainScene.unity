@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1553,7 +1553,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489236457}
-  - component: {fileID: 489236456}
   m_Layer: 0
   m_Name: Enemy Spawner
   m_TagString: Untagged
@@ -1561,21 +1560,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &489236456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489236455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b0e456c2d129e24e907cd091dafe539, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 1642963000032335812, guid: 96794d200ab1e8145a18c9f76d7bea88, type: 3}
-  - {fileID: 7497963062063909274, guid: c40175c09a0711a4ca2fd98d5cacd473, type: 3}
 --- !u!4 &489236457
 Transform:
   m_ObjectHideFlags: 0
@@ -6093,6 +6077,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 53.667, y: 0, z: 0}
+--- !u!1 &1448707522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1448707524}
+  - component: {fileID: 1448707523}
+  - component: {fileID: 1448707526}
+  - component: {fileID: 1448707525}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1448707523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448707522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78056ce155340c144bbf27e6abccf23b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 489236455}
+  enemyPrefabs:
+  - {fileID: 1642963000032335812, guid: 96794d200ab1e8145a18c9f76d7bea88, type: 3}
+  - {fileID: 7497963062063909274, guid: c40175c09a0711a4ca2fd98d5cacd473, type: 3}
+  - {fileID: 1783057056495844725, guid: ec700ab13bc3a004aa598afd5ecd7cf4, type: 3}
+  enemyBoss: {fileID: 0}
+  waveCompeledPanel: {fileID: 0}
+  waveCompeledText: {fileID: 0}
+  waveCleared: 0
+  cooldownForWave: 5
+  CooldownPerUnit: 1
+  baseSpawnBurstTimer: 3
+  groupDiff: 0
+  waveDiff: 0
+  baseGroupSpawnPerWave: 3
+  defaultGroupSize: 3
+  groupSize: 0
+  waveNumber: 11
+  groupsSent: 0
+  currentWaveTimer: 0
+  spawnBurstTimer: 0
+  currentBurstTime: 0
+--- !u!4 &1448707524
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448707522}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 50.15535, y: -62.64881, z: 87.73347}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1448707525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448707522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7589019ed52260741806ba08623959f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberText: {fileID: 804499054}
+  healthController: {fileID: 1448707526}
+--- !u!114 &1448707526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448707522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a48f4326c5f72440b82ff7fc76e5a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 250
+  maxHealth: 250
 --- !u!1 &1462921451
 GameObject:
   m_ObjectHideFlags: 0
@@ -8801,6 +8881,7 @@ Rigidbody:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1448707524}
   - {fileID: 1407378187}
   - {fileID: 513385546}
   - {fileID: 1022823235}
