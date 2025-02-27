@@ -34,13 +34,13 @@ public class TurretPlacer : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0) && isOnGround)
             {
-                if (CurrencyManager.Instance.SpendMoney(currentTurretCost))
-                {
+                //if (CurrencyManager.Instance.SpendMoney(currentTurretCost))
+                //{
                     //Checks if tower is being placed on ground layer
                     Instantiate(selectedTurretPrefab, mousePos, Quaternion.identity);
                     Destroy(turretPreview);
                     isPlacing = false;
-                }
+               // }
             }
             else if (Input.GetMouseButtonDown(0) && !isOnGround)
             {

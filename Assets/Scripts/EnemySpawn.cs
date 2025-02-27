@@ -8,21 +8,25 @@ public class EnemySpawn : MonoBehaviour
     //script for spawning enemies at start of path
 
     [SerializeField]
-    private GameObject enemyPrefab; //i'd change this to array when we have the prefab variants
-
-    private float enemyInterval = 2.75f; //enemies spawn every 2.75 seconds (this is just a placeholder until we know exactly how often we want them to spawn)
+    private GameObject[] enemyPrefabs; //i'd change this to array when we have the prefab variants
 
     void Start()
     {
-        StartCoroutine(spawnEnemy(enemyInterval, enemyPrefab));
+        StartCoroutine(spawnEnemy());
     }
 
     //Spawns enemies at point just off the screen at the start of the path every 2.75 seconds
-    private IEnumerator spawnEnemy(float interval, GameObject enemy)
+    private IEnumerator spawnEnemy()
     {
-        yield return new WaitForSeconds(interval);
-        Vector3 spawnPosition = transform.position; //Use spawner position
-        GameObject newEnemy = Instantiate(enemy, spawnPosition, Quaternion.identity);
-        StartCoroutine(spawnEnemy(interval, enemy));
+        while (true)
+        {
+            float interval = Random.Range(2f, 5f); //Spawns enemies at a random interval between 2 to 5 seconds
+            yield return new WaitForSeconds(interval);
+
+            Vector3 spawnPosition = transform.position; //Use spawner position
+            GameObject enemyToSpawn = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)]; //Selects a random enemy prefab
+            Instantiate(enemyToSpawn, spawnPosition, Quaternion.identity);
+        }
+        
     }
 }
