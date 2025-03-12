@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class HealthController : MonoBehaviour
 {
     public float currentHealth;
+    public GameObject finishLine;
 
     [SerializeField]
     private float maxHealth;
@@ -49,15 +50,7 @@ public class HealthController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider col) //not ideal to put this here but i'll try move it when we combine the scene
-    {
-        if (col.gameObject.CompareTag("Bullet") | col.gameObject.CompareTag("Enemy")) //Destroys bullet if it hits player and destroys enemy if it hits the finish line
-        {
-            Destroy(col.gameObject);
-        }
-    }
-
-    
+   
     //can add code for gaining health here
 
 }

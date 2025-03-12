@@ -268,6 +268,9 @@ MonoBehaviour:
   waveCompeledPanel: {fileID: 1206641684}
   waveCompeledText: {fileID: 1624119539}
   waveCleared: 0
+  cooldownForWave: 5
+  CooldownPerUnit: 1
+  baseSpawnBurstTimer: 3
   groupDiff: 0
   waveDiff: 0
   baseGroupSpawnPerWave: 3
@@ -276,9 +279,6 @@ MonoBehaviour:
   waveNumber: 11
   groupsSent: 0
   currentWaveTimer: 0
-  cooldownForWave: 5
-  CooldownPerUnit: 1
-  baseSpawnBurstTimer: 3
   spawnBurstTimer: 0
   currentBurstTime: 0
 --- !u!4 &82892214
@@ -458,6 +458,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &697689431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 697689432}
+  m_Layer: 0
+  m_Name: ZoneTurret
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &697689432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697689431}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.429094, y: -23.44439, z: 35.402374}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 712267500}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &712267500 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+  m_PrefabInstance: {fileID: 1118478301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &868549505
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,7 +520,7 @@ Transform:
   m_GameObject: {fileID: 868549505}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -0.51, z: 0}
+  m_LocalPosition: {x: -7, y: -0.51, z: 6.87}
   m_LocalScale: {x: 1.0177, y: 1.0177, z: 1.0177}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -626,6 +663,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875193185}
   m_CullTransparentMesh: 1
+--- !u!1001 &1118478301
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 697689432}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4685
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4685
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4685
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.429094
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 24.47439
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -35.402374
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.00082238135
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00082238135
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071063
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071063
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -179.867
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
+      propertyPath: m_Name
+      value: Boxer Robot Animated
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
 --- !u!1 &1150016998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1442,13 +1548,13 @@ MonoBehaviour:
   rotationPoint: {fileID: 1901678972}
   rotationSpeed: 5
   targetDir: {x: 0, y: 0, z: 0}
-  bulletPrefab: {fileID: 8554201936724616901, guid: 6d2d12718e8d82346b61afc30881b6d8, type: 3}
-  bulletSpawn: {fileID: 1150016998}
   enemyObjectInRange: []
   enemyObject: {fileID: 0}
   targeting: 1
   fireCooldown: 3
   currentFireTimer: 0
+  bulletPrefab: {fileID: 8554201936724616901, guid: 6d2d12718e8d82346b61afc30881b6d8, type: 3}
+  bulletSpawn: {fileID: 1150016998}
 --- !u!135 &1901678975
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1870,3 +1976,4 @@ SceneRoots:
   - {fileID: 395707025}
   - {fileID: 6634375227874755547}
   - {fileID: 3853987270059893033}
+  - {fileID: 697689432}

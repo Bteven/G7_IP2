@@ -11,11 +11,11 @@ public class HealthUI : MonoBehaviour
     private TextMeshProUGUI numberText;
 
     [SerializeField]
-    private HealthController healthController;
+    private PlayerHealthManager healthController;
 
     void Update()
     {
-        SetNumberText(healthController.currentHealth); //sets health counter UI to the current health of the finish line
+        SetNumberText(healthController.playerHealth); //sets health counter UI to the current health of the finish line
     }
 
     private void SetNumberText(float value)
