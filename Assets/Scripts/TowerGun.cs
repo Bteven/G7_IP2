@@ -44,7 +44,7 @@ public class TowerGun : BaseTurret
             }
         }
     }
-    protected override void GunRotation()
+    protected override void TurretRotation()       //overrides base class so it can call firing sequence in the Guns Rotation
     {
         if (enemyObject != null) // checks of enemy is there before finding direction and rotating towards
         {

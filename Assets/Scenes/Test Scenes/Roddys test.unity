@@ -483,11 +483,11 @@ Transform:
   m_GameObject: {fileID: 697689431}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.429094, y: -23.44439, z: 35.402374}
+  m_LocalPosition: {x: -1.2, y: 1.067, z: -0.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 712267500}
+  - {fileID: 1976387492}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &712267500 stripped
@@ -669,7 +669,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 697689432}
+    m_TransformParent: {fileID: 1976387492}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
       propertyPath: m_LocalScale.x
@@ -685,15 +685,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.429094
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.47439
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.402374
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f383b23951b72274faa3b6fbdb9331a6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1368,7 +1368,7 @@ Transform:
   m_GameObject: {fileID: 1667908637}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.04934, y: -0.70189, z: 0.17874}
+  m_LocalPosition: {x: -0.04934, y: -0.7, z: 0.17874}
   m_LocalScale: {x: 14.422358, y: 0.52389216, z: 14.422358}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1709,6 +1709,78 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1976387491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1976387492}
+  - component: {fileID: 1976387494}
+  - component: {fileID: 1976387493}
+  m_Layer: 0
+  m_Name: CenterPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1976387492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976387491}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.39, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 712267500}
+  m_Father: {fileID: 697689432}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1976387493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976387491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5986cbaad824d6c4c9c1925009c1ab85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationPoint: {fileID: 1976387491}
+  rotationSpeed: 0
+  targetDir: {x: 0, y: 0, z: 0}
+  enemyObjectInRange: []
+  enemyObject: {fileID: 0}
+--- !u!135 &1976387494
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1976387491}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 2.4
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2107187356
 GameObject:
   m_ObjectHideFlags: 0

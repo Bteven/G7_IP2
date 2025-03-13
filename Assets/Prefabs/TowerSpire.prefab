@@ -258,15 +258,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationPoint: {fileID: 3550188720527069974}
-  rotationSpeed: 5
+  rotationSpeed: 10
   targetDir: {x: 0, y: 0, z: 0}
-  bulletPrefab: {fileID: 8554201936724616901, guid: 6d2d12718e8d82346b61afc30881b6d8, type: 3}
-  bulletSpawn: {fileID: 3924214759694535560}
   enemyObjectInRange: []
   enemyObject: {fileID: 0}
   targeting: 1
   fireCooldown: 3
   currentFireTimer: 0
+  bulletPrefab: {fileID: 8554201936724616901, guid: 6d2d12718e8d82346b61afc30881b6d8, type: 3}
+  bulletSpawn: {fileID: 3924214759694535560}
 --- !u!135 &7517194742546261645
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -32,7 +32,7 @@ public class BaseTurret : MonoBehaviour
     {
 
         FindEnemy();
-        GunRotation();
+        TurretRotation();
 
         CleanEnemyList(); // Method to remove enemies from in range list if they are destroyed while in range
 
@@ -50,7 +50,7 @@ public class BaseTurret : MonoBehaviour
         }
     }
 
-    protected virtual void GunRotation()
+    protected virtual void TurretRotation()
     {
         if (enemyObject != null) // checks of enemy is there before finding direction and rotating towards
         {

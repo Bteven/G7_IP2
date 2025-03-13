@@ -49,8 +49,22 @@ public class HealthController : MonoBehaviour
             }
         }
     }
+    private void OnTriggerEnter(Collider col) //not ideal to put this here but i'll try move it when we combine the scene
+    {
+        if (col.gameObject.CompareTag("Bullet")) //Destroys bullet if it hits player and destroys enemy if it hits the finish line
+        {
+            Destroy(col.gameObject);
 
-   
+
+            var damageScript = col.gameObject.GetComponent<Attack>();
+            var damage = damageScript.damage;
+
+
+            TakeDamage(damage);
+
+        }
+    }
+
     //can add code for gaining health here
 
 }
