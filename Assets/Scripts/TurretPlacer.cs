@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class TurretPlacer : MonoBehaviour
 {
     public GameObject selectedTurretPrefab; // Current selected turret prefab
-    private GameObject turretPreview; //Placement preview of turret
+    private GameObject turretPreview; // Placement preview of turret
     private bool isPlacing = false; // boolean tracking if player is placing turret 
 
     [System.Serializable]
@@ -36,22 +37,30 @@ public class TurretPlacer : MonoBehaviour
             {
                 if (CurrencyManager.Instance.SpendMoney(currentTurretCost))
                 {
-                    //Checks if tower is being placed on ground layer
-                    Instantiate(selectedTurretPrefab, mousePos, Quaternion.identity);
+                    // Place the turret
+                    GameObject newTurret = Instantiate(selectedTurretPrefab, mousePos, Quaternion.identity);
+
+                    // Set the turret's isPlaced state to true
+                    MissileTower missileTowerScript = newTurret.GetComponent<MissileTower>();
+                    if (missileTowerScript != null)
+                    {
+                        missileTowerScript.isPlaced = true;
+                    }
+
                     Destroy(turretPreview);
                     isPlacing = false;
                 }
             }
             else if (Input.GetMouseButtonDown(0) && !isOnGround)
             {
-                Debug.Log("Invalid placement: Turret must be placed on the ground."); // Debug will be replaced by ingame message later
+                Debug.Log("Invalid placement: Turret must be placed on the ground.");
             }
         }
     }
 
     public void SelectTurret(int index)
     {
-        if(index < 0 || index >= turrets.Length)
+        if (index < 0 || index >= turrets.Length)
         {
             return;
         }
@@ -60,7 +69,7 @@ public class TurretPlacer : MonoBehaviour
         currentTurretCost = turrets[index].cost;
         isPlacing = true;
 
-        //Destorys any existing preview and replaces with the newly selected one and disables the preview colider to avoid unwanted interaction
+        // Destroy any existing preview and replace with the newly selected one
         if (turretPreview != null)
         {
             Destroy(turretPreview);
@@ -68,24 +77,27 @@ public class TurretPlacer : MonoBehaviour
 
         turretPreview = Instantiate(selectedTurretPrefab);
         turretPreview.GetComponent<Collider>().enabled = false;
+
+        // Set the preview turret's isPlaced state to false
+        MissileTower previewMissileTowerScript = turretPreview.GetComponent<MissileTower>();
+        if (previewMissileTowerScript != null)
+        {
+            previewMissileTowerScript.isPlaced = false;
+        }
     }
 
     private Vector3 GetMouseWorldPosition(out bool isOnGround)
     {
-        // Checks to see if mouse is pointing to ground if not, returns false
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, LayerMask.GetMask("Ground")))
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Ground")))
         {
             isOnGround = true;
-            return hit.point;
+            return hit.point; 
         }
 
         isOnGround = false;
         return Vector3.zero;
     }
-
-
-   
 }
-
-

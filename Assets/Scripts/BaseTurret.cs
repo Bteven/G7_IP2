@@ -4,38 +4,25 @@ using UnityEngine;
 
 public class BaseTurret : MonoBehaviour
 {
-
-    // Added headers to orgnise them better in unity inspector they add no function
+    [Header("Tower State")]
+    public bool isPlaced = false; // Turret is not allowed to shoot until it's placed
 
     [Header("Tower Rotation Variables")]
-
     public GameObject rotationPoint;
     public float rotationSpeed;
-    public Vector3 targetDir;           // stores vector direction of target enemy
-
-
+    public Vector3 targetDir;
 
     [Header("Enemy Detection")]
-
-    public List<GameObject> enemyObjectInRange = new List<GameObject>();  // Used to store a list of all enemys in range
+    public List<GameObject> enemyObjectInRange = new List<GameObject>();
     public GameObject enemyObject;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     protected virtual void Update()
     {
+        if (!isPlaced) return; // Don't execute any shooting or targeting logic if the turret is not placed
 
         FindEnemy();
         TurretRotation();
-
-        CleanEnemyList(); // Method to remove enemies from in range list if they are destroyed while in range
-
+        CleanEnemyList();
     }
 
     void FindEnemy()
