@@ -10,10 +10,19 @@ public class DragAndDrop : MonoBehaviour
     private Vector3 lastValidPosition;
     private bool isValidPlacement = true;
 
+    private Renderer indicatorRenderer;
+    private GameObject placementIndicator;
+
     private void Start()
     {
         fixedYPosition = transform.position.y; //Store initial Y position
         lastValidPosition = transform.position; //Initial valid position
+
+        //Find the placement indicator (circle)
+        placementIndicator = transform.Find("PlacementIndicator").gameObject;
+        indicatorRenderer = placementIndicator.GetComponent<Renderer>();
+
+        placementIndicator.SetActive(true); //hides circle initially
     }
 
     private void OnMouseDown()
@@ -27,6 +36,7 @@ public class DragAndDrop : MonoBehaviour
         }
 
         isValidPlacement = false;
+        placementIndicator.SetActive(true); //show indicator when dragging tower
     }
 
     private void OnMouseDrag()
@@ -49,6 +59,8 @@ public class DragAndDrop : MonoBehaviour
         {
             lastValidPosition = transform.position; //Update valid position
         }
+
+        placementIndicator.SetActive(false); //Hide indicator after placing
     }
 
     private void OnTriggerEnter(Collider other)
@@ -56,6 +68,7 @@ public class DragAndDrop : MonoBehaviour
         if (other.CompareTag("NoPlacementZone")) // && gameObject.layer == LayerMask.NameToLayer("Tower"))
         {
             isValidPlacement = false;
+            indicatorRenderer.material.color = Color.red; //Change circle to red when not placeable
         }
     }
 
@@ -64,6 +77,7 @@ public class DragAndDrop : MonoBehaviour
         if (other.CompareTag("NoPlacementZone")) // && gameObject.layer == LayerMask.NameToLayer("Tower"))
         {
             isValidPlacement = true;
+            indicatorRenderer.material.color = Color.green; //Change circle to green when placeable
         }
     }
 
