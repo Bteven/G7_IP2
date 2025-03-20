@@ -24,8 +24,61 @@ public class DragAndDrop : MonoBehaviour
         placementIndicator = transform.Find("PlacementIndicator").gameObject;
 
         placementIndicator.SetActive(false); //hides circle initially
+
+        //ValidateInitialPlacement();
     }
 
+    //private void ValidateInitialPlacement()
+    //{
+        //Collider[] colliders = Physics.OverlapSphere(transform.position, 0.5f); //Check for nearby colliders
+        //noPlacementZoneCount = 0;
+
+        //foreach (Collider collider in colliders)
+        //{
+            //if (collider.CompareTag("NoPlacementZone"))
+            //{
+                //noPlacementZoneCount++;
+            //}
+        //}
+
+       // isValidPlacement = (noPlacementZoneCount == 0);
+
+       // if (!isValidPlacement)
+       // {
+           // FindValidStartPosition();
+        //}
+        //else
+        //{
+            //lastValidPosition = transform.position;
+        //}
+
+
+    //}
+
+    //private void FindValidStartPosition()
+    //{
+        //Vector3 newPosition = transform.position;
+
+        //while (!isValidPlacement)
+        //{
+            //newPosition.y += 1f;
+            //Collider[] colliders = Physics.OverlapSphere(newPosition, 0.5f);
+            //noPlacementZoneCount = 0;
+
+            //foreach (Collider collider in colliders)
+            //{
+                //if (collider.CompareTag("NoPlacementZone"))
+                //{
+                    //noPlacementZoneCount++;
+                //}
+            //}
+
+            //isValidPlacement = (noPlacementZoneCount == 0);
+        //}
+
+        //transform.position = newPosition;
+        //lastValidPosition = newPosition;
+    //}
     private void OnMouseDown()
     {
         dragPlane = new Plane(Vector3.up, new Vector3(0, fixedYPosition, 0));
@@ -36,7 +89,7 @@ public class DragAndDrop : MonoBehaviour
             offset = transform.position - ray.GetPoint(enter);
         }
 
-        isValidPlacement = (noPlacementZoneCount == 0); //Allow placement when not in any no placement zones
+        //isValidPlacement = (noPlacementZoneCount == 0); //Allow placement when not in any no placement zones
         placementIndicator.SetActive(true); //show indicator when dragging tower
     }
 
@@ -48,6 +101,7 @@ public class DragAndDrop : MonoBehaviour
             transform.position = ray.GetPoint(enter) + offset;
             transform.position = new Vector3(transform.position.x, fixedYPosition, transform.position.z);
         }
+        isValidPlacement = (noPlacementZoneCount == 0);
 
     }
 
@@ -69,9 +123,10 @@ public class DragAndDrop : MonoBehaviour
     {
         if (other.CompareTag("NoPlacementZone")) // && gameObject.layer == LayerMask.NameToLayer("Tower"))
         {
+            Debug.Log($"Entered NoPlacementZone: {other.gameObject.name}");
             noPlacementZoneCount++;
             isValidPlacement = false;
-            //Debug.Log(noPlacementZoneCount);
+            Debug.Log($"noPlacementZoneCount: {noPlacementZoneCount}, isValidPlacement: {isValidPlacement}");
         }
     }
 
@@ -79,9 +134,11 @@ public class DragAndDrop : MonoBehaviour
     {
         if (other.CompareTag("NoPlacementZone")) // && gameObject.layer == LayerMask.NameToLayer("Tower"))
         {
+            Debug.Log($"Exited NoPlacementZone: {other.gameObject.name}");
             noPlacementZoneCount = Mathf.Max(0, noPlacementZoneCount - 1);
             isValidPlacement = (noPlacementZoneCount == 0);
-            //Debug.Log(noPlacementZoneCount);
+            Debug.Log($"noPlacementZoneCount: {noPlacementZoneCount}, isValidPlacement: {isValidPlacement}");
+            
         }
     }
 }
