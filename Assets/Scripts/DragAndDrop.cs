@@ -7,11 +7,13 @@ public class DragAndDrop : MonoBehaviour
     private Vector3 offset;
     private float fixedYPosition;
     private Plane dragPlane;
+
     private Vector3 lastValidPosition;
     private bool isValidPlacement = true;
 
-    private Renderer indicatorRenderer;
     private GameObject placementIndicator;
+
+    private int noPlacementZoneCount = 0; //tracks how many no placement zones the tower is in
 
     private void Start()
     {
@@ -20,9 +22,8 @@ public class DragAndDrop : MonoBehaviour
 
         //Find the placement indicator (circle)
         placementIndicator = transform.Find("PlacementIndicator").gameObject;
-        indicatorRenderer = placementIndicator.GetComponent<Renderer>();
 
-        placementIndicator.SetActive(true); //hides circle initially
+        placementIndicator.SetActive(false); //hides circle initially
     }
 
     private void OnMouseDown()
@@ -35,7 +36,7 @@ public class DragAndDrop : MonoBehaviour
             offset = transform.position - ray.GetPoint(enter);
         }
 
-        isValidPlacement = false;
+        isValidPlacement = (noPlacementZoneCount == 0); //Allow placement when not in any no placement zones
         placementIndicator.SetActive(true); //show indicator when dragging tower
     }
 
@@ -47,6 +48,7 @@ public class DragAndDrop : MonoBehaviour
             transform.position = ray.GetPoint(enter) + offset;
             transform.position = new Vector3(transform.position.x, fixedYPosition, transform.position.z);
         }
+
     }
 
     private void OnMouseUp()
@@ -67,8 +69,9 @@ public class DragAndDrop : MonoBehaviour
     {
         if (other.CompareTag("NoPlacementZone")) // && gameObject.layer == LayerMask.NameToLayer("Tower"))
         {
+            noPlacementZoneCount++;
             isValidPlacement = false;
-            indicatorRenderer.material.color = Color.red; //Change circle to red when not placeable
+            //Debug.Log(noPlacementZoneCount);
         }
     }
 
@@ -76,10 +79,9 @@ public class DragAndDrop : MonoBehaviour
     {
         if (other.CompareTag("NoPlacementZone")) // && gameObject.layer == LayerMask.NameToLayer("Tower"))
         {
-            isValidPlacement = true;
-            indicatorRenderer.material.color = Color.green; //Change circle to green when placeable
+            noPlacementZoneCount = Mathf.Max(0, noPlacementZoneCount - 1);
+            isValidPlacement = (noPlacementZoneCount == 0);
+            //Debug.Log(noPlacementZoneCount);
         }
     }
-
-
 }
