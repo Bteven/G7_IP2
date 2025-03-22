@@ -33,18 +33,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Boxing Robot Rig|Idle (1)
-      takeName: Boxing Robot Rig|Idle
+      name: Boxing Robot Rig|Boxing Robot RigAction
+      takeName: Boxing Robot Rig|Boxing Robot RigAction
       internalID: 2706096074141615050
       firstFrame: 0
-      lastFrame: 89
+      lastFrame: 0
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -65,7 +65,7 @@ ModelImporter:
       name: Boxing Robot Rig|Idle
       takeName: Boxing Robot Rig|Idle
       internalID: -3278336959657632519
-      firstFrame: 89
+      firstFrame: 0
       lastFrame: 89
       wrapMode: 0
       orientationOffsetY: 0
