@@ -79,37 +79,40 @@ public class SpawnManager : MonoBehaviour
         {
             Debug.Log("WAVE OVER");         
             waveCleared = true;             // sets wave to be cleared 
-            WaveCooldown();                 // starts cooldown until next wave
+           StartCoroutine(WaveCooldown());                 // starts cooldown until next wave
 
             if (CurrencyManager.Instance != null)
             {
                 CurrencyManager.Instance.RewardWaveCompletion(waveNumber);
             }
+            
         }
         else
         {
-                GroupDiffCalculator();         // checks unit type to be sent
+           
+            GroupDiffCalculator();         // checks unit type to be sent
                 GroupSpawnCoolDown();          // after cooldown spawns the group
-        }       
+        }
     }
-    void WaveCooldown()
+    IEnumerator WaveCooldown()
     {
         currentWaveTimer += Time.deltaTime;
             
         // coolsdown then sets wave cleared to false starting the next wave
 
-        if (currentWaveTimer > cooldownForWave)
-        {
-            waveCleared = false;
+
+         
             currentWaveTimer = 0;
             groupsSent = 0;
             waveNumber++;
             WaveDiffCalculator();
-        }
+          yield return new WaitForSeconds(cooldownForWave);
+        
     }
         void WaveDiffCalculator()
         {
-            waveDiff = (waveNumber + baseGroupSpawnPerWave);
+        waveCleared = false;
+        waveDiff = (waveNumber + baseGroupSpawnPerWave);
             // calcs how many groups will spawn
         }
         void GroupSpawnCoolDown()
