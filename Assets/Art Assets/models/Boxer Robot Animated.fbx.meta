@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Boxing Robot Rig|Boxing Robot RigAction
-      takeName: Boxing Robot Rig|Boxing Robot RigAction
+      name: Boxing Robot Rig|Spin_Attack (1)
+      takeName: Boxing Robot Rig|Spin_Attack
       internalID: 2706096074141615050
       firstFrame: 0
-      lastFrame: 0
+      lastFrame: 89
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

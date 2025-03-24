@@ -77,7 +77,7 @@ public class SpawnManager : MonoBehaviour
     {
         if (groupsSent >= waveDiff && !waveCleared)          // checks if groups sent is the correct amount
         {
-            Debug.Log("WAVE OVER");         
+                   
             waveCleared = true;             // sets wave to be cleared 
            StartCoroutine(WaveCooldown());                 // starts cooldown until next wave
 
@@ -140,10 +140,10 @@ public class SpawnManager : MonoBehaviour
         for (int i = 0; i < groupSize; i++)
         {
             SpawnEnemy();  // Spawn one enemy
-            Debug.Log("Enemy " + i + " spawned");
+
             yield return new WaitForSeconds(CooldownPerUnit);  // has to wait before looping again
         }
-        Debug.Log("group Spawned");
+       
     }
     void SpawnEnemy()
         {
