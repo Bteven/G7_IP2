@@ -51,7 +51,7 @@ public class ZoneTurret : BaseTurret
 
         if (currentFireTimer > fireCooldown)        // when cooldown over
         {
-            StartCoroutine(SpinAttack());                // calls methoud to fire the bullet
+            StartCoroutine(SpinAttack());                // calls ENumeratort to start spin attack animation 
             currentFireTimer = 0;       // resets timer
         }
 
