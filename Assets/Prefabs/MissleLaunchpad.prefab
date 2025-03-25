@@ -146,7 +146,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.806, y: 147.72, z: 500.21}
-  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_LocalScale: {x: 1.327, y: 0.6635, z: 1.327}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6081907669775594687}
@@ -166,10 +166,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ad41561a7cbc54987d93950c377c0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlaced: 0
   missileSpawnPoint: {fileID: 2004269119298862652}
   missilePrefab: {fileID: 8554201936724616901, guid: 0c1243b9f23595b4ba032daf9d23f1c0, type: 3}
   fireRate: 3
-  detectionRange: 30
+  detectionCollider: {fileID: 0}
 --- !u!114 &1142796899421705937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,8 +309,8 @@ Transform:
   m_GameObject: {fileID: 7679115071182295781}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8.94426, y: 17.88852, z: 8.94426}
+  m_LocalPosition: {x: 0.000000044917, y: 0, z: 0}
+  m_LocalScale: {x: 7.284026, y: 14.568052, z: 7.284026}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6212036796941810027}

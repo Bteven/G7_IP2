@@ -31,6 +31,7 @@ public class ZoneTurret : BaseTurret
     void Update()
     {
         base.Update();
+      
     }
     protected override void TurretRotation()       //overrides base class so it is only calls the turret to attack and not rotate as it dosn't need to
     {
@@ -41,6 +42,7 @@ public class ZoneTurret : BaseTurret
             firingSequence();
 
         }
+  
     }
 
     void firingSequence()           // copied from firing tower
@@ -54,6 +56,7 @@ public class ZoneTurret : BaseTurret
             StartCoroutine(SpinAttack());                // calls ENumeratort to start spin attack animation 
             currentFireTimer = 0;       // resets timer
         }
+      
 
     }
     IEnumerator SpinAttack()
@@ -76,6 +79,7 @@ public class ZoneTurret : BaseTurret
 
 
         ApplySpinDamage();
+        animator.SetTrigger("Idle");
 
         yield return new WaitForSeconds(attackAnimationTime);
         isSpinning = false;

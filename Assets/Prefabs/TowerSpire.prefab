@@ -258,7 +258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55094e3cb20c8a44859a4ec554dcf59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlaced: 0
   rotationPoint: {fileID: 3550188720527069974}
   rotationSpeed: 10
   targetDir: {x: 0, y: 0, z: 0}
@@ -352,7 +351,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -15.21, y: 0, z: -0.75}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.7901883, y: 2.7901883, z: 2.7901883}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8586998210357821163}

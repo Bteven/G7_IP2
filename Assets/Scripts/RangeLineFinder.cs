@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class RangeLineFinder : MonoBehaviour
 {
     private LineRenderer lineRenderer;
     private Vector3[] points;
-    public SphereCollider SphereCollider;
-    [SerializeField] float radius;
 
+    public bool currentSelectedTurret;
+    public SphereCollider sphereCollider;
+    public GameObject rangeIndicator;
+    [SerializeField] float radius;
+    [SerializeField] float rotationSpeed;
     void Start()
     {
-        lineRenderer = GetComponent<LineRenderer>();
-        radius = SphereCollider.radius;
+        lineRenderer = GetComponentInChildren<LineRenderer>();
+        radius = sphereCollider.radius;
         points = new Vector3[4];
 
         // Now calculate the points
@@ -22,7 +26,31 @@ public class RangeLineFinder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckIndicaterActive();
         DrawLine();
+        RotateLine();
+    }
+
+    void CheckIndicaterActive()
+    {
+
+        if (currentSelectedTurret)
+        {
+            rangeIndicator.SetActive(true);
+        }
+        else
+        {
+            rangeIndicator.SetActive(false);
+        }
+    
+    }   
+      void RotateLine()
+    {
+
+        lineRenderer.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+
+
+
     }
 
     void DrawLine()

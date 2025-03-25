@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f383b23951b72274faa3b6fbdb9331a6
+guid: d8e25acb639ea314cb59ef7e7dcd691b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Boxing Robot Rig|Spin_Attack (1)
-      takeName: Boxing Robot Rig|Spin_Attack
-      internalID: 2706096074141615050
+      name: Alien Rig|Alien RigAction
+      takeName: Alien Rig|Alien RigAction
+      internalID: 6718268610507712847
       firstFrame: 0
-      lastFrame: 89
+      lastFrame: 57
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -62,40 +62,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Boxing Robot Rig|Idle
-      takeName: Boxing Robot Rig|Idle
-      internalID: -3278336959657632519
+      name: Alien Rig|CameraAction
+      takeName: Alien Rig|CameraAction
+      internalID: -9140372914874690941
       firstFrame: 0
-      lastFrame: 89
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Boxing Robot Rig|Spin_Attack
-      takeName: Boxing Robot Rig|Spin_Attack
-      internalID: 3151289715492790498
-      firstFrame: 0
-      lastFrame: 89
+      lastFrame: 0
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
