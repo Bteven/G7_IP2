@@ -20,7 +20,7 @@ public class SpeedUp : MonoBehaviour
 
     private void ChangeSpeedUp()
     {
-        Time.timeScale = 5;
+        Time.timeScale = 2;
     }
 
     private void ChangeSpeedDown()
