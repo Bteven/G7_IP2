@@ -6422,6 +6422,7 @@ GameObject:
   - component: {fileID: 1539355541}
   - component: {fileID: 1539355540}
   - component: {fileID: 1539355539}
+  - component: {fileID: 1539355542}
   m_Layer: 5
   m_Name: Yellow
   m_TagString: Untagged
@@ -6530,6 +6531,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1539355537}
   m_CullTransparentMesh: 1
+--- !u!114 &1539355542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539355537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6afe68e49c671640b7bddc2cad25b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 1539355539}
+  upgradeCursor: {fileID: 2800000, guid: 829ff62119aa2d54d8da1c4beb4c9609, type: 3}
 --- !u!1 &1620139647
 GameObject:
   m_ObjectHideFlags: 0
@@ -7694,6 +7709,7 @@ GameObject:
   - component: {fileID: 1878297669}
   - component: {fileID: 1878297668}
   - component: {fileID: 1878297667}
+  - component: {fileID: 1878297670}
   m_Layer: 5
   m_Name: Upgrades
   m_TagString: Untagged
@@ -7802,6 +7818,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1878297665}
   m_CullTransparentMesh: 1
+--- !u!114 &1878297670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878297665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6afe68e49c671640b7bddc2cad25b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btn: {fileID: 0}
+  upgradeCursor: {fileID: 0}
 --- !u!1 &1878880031
 GameObject:
   m_ObjectHideFlags: 0
