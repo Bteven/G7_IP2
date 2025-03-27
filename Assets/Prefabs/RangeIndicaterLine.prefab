@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c852bbcd456c18419cb1dad89ed09bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSelectedTurret: 0
   sphereCollider: {fileID: 0}
   rangeIndicator: {fileID: 0}
   radius: 0
+  rotationSpeed: 90

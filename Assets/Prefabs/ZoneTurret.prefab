@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1667655104315170269}
   - component: {fileID: 6576964069385769489}
   - component: {fileID: 4305107428170173823}
+  - component: {fileID: 249628507594166727}
   m_Layer: 0
   m_Name: ZoneTurret
   m_TagString: Untagged
@@ -50,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationPoint: {fileID: 0}
-  rotationSpeed: 0
+  rotationSpeed: 90
   targetDir: {x: 0, y: 0, z: 0}
   enemyObjectInRange: []
   enemyObject: {fileID: 0}
@@ -149,6 +150,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &249628507594166727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590879394889393170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c852bbcd456c18419cb1dad89ed09bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSelectedTurret: 0
+  sphereCollider: {fileID: 1667655104315170269}
+  rangeIndicator: {fileID: 5033245004593395559}
+  radius: 0
+  rotationSpeed: 90
 --- !u!1001 &4720551316971568273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,7 +231,8 @@ PrefabInstance:
       propertyPath: sphereCollider
       value: 
       objectReference: {fileID: 1667655104315170269}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8994671164125917301, guid: f668498a347a1d0488e9c861c6d002f3, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3763,7 +3762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1022823232
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5833,6 +5832,7 @@ GameObject:
   - component: {fileID: 1448707525}
   - component: {fileID: 1448707526}
   - component: {fileID: 1448707527}
+  - component: {fileID: 1448707528}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -5915,9 +5915,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 768e94a4f55cf8f48852ae4c3b8c6ab6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 250
+  playerHealth: 1000
   finishLine: {fileID: 1145200394}
-  maxPlayerHealth: 250
+  maxPlayerHealth: 1000
 --- !u!114 &1448707527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5944,6 +5944,20 @@ MonoBehaviour:
   - turretName: Missle Turret
     turretPrefab: {fileID: 5409352781006854833, guid: 45243da0b7af77b40a1eab99164f3504, type: 3}
     cost: 100
+--- !u!114 &1448707528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448707522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b518b966c41a9d4a991687d01f19f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedTurret: {fileID: 0}
+  turretIsSelected: 1
 --- !u!1 &1477301646
 GameObject:
   m_ObjectHideFlags: 0
