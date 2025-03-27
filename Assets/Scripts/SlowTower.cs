@@ -6,7 +6,9 @@ public class SlowTower : MonoBehaviour
 {
 
     public List<GameObject> objectInRange = new List<GameObject>();
+   
 
+  
 
     private void OnTriggerEnter(Collider other)
     {
@@ -41,4 +43,6 @@ public class SlowTower : MonoBehaviour
             objectInRange.Remove(other.gameObject);
         }
     }
+
+   
 }
