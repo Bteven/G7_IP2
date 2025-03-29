@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 740.55 321.06">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#radial-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="370.28" cy="192.06" fx="370.28" fy="192.06" r="456.69" gradientTransform="translate(0 12.5) scale(1 .77)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#70007f"/>
+      <stop offset=".49" stop-color="#40006a"/>
+      <stop offset=".98" stop-color="#0f002a"/>
+    </radialGradient>
+    <linearGradient id="linear-gradient" x1="370.28" y1="0" x2="370.28" y2="321.06" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6d007f"/>
+      <stop offset="1" stop-color="#290055"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <rect class="cls-1" width="740.55" height="321.06" rx="33.25" ry="33.25"/>
+      <path class="cls-2" d="M707.3,5.73c15.17,0,27.52,12.35,27.52,27.52v254.56c0,15.17-12.35,27.52-27.52,27.52H33.25c-15.17,0-27.52-12.35-27.52-27.52V33.25c0-15.17,12.35-27.52,27.52-27.52h674.05M707.3,0H33.25C14.89,0,0,14.89,0,33.25v254.56C0,306.18,14.89,321.06,33.25,321.06h674.05c18.36,0,33.25-14.89,33.25-33.25V33.25C740.55,14.89,725.67,0,707.3,0h0Z"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 310.44 350.81">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#drop-shadow-3);
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: #ffd806;
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-5 {
+        fill: #fff6a3;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-8 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .cls-2 {
+        filter: url(#drop-shadow-2);
+      }
+
+      .cls-9 {
+        fill: #858f9d;
+      }
+
+      .cls-10 {
+        fill: #999;
+      }
+
+      .cls-11 {
+        fill: #b3b3b3;
+      }
+
+      .cls-12 {
+        fill: gray;
+      }
+
+      .cls-13 {
+        fill: #ed1c24;
+      }
+
+      .cls-3 {
+        filter: url(#drop-shadow-4);
+      }
+
+      .cls-14 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-15 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-16 {
+        fill: #e6e6e6;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="12.17" y="11.98" width="309" height="343" filterUnits="userSpaceOnUse">
+      <feOffset dx="-3.54" dy="6.19"/>
+      <feGaussianBlur result="blur" stdDeviation="4.42"/>
+      <feFlood flood-color="#000" flood-opacity=".46"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="184.35" y1="171.93" x2="184.35" y2="301.96" gradientTransform="translate(-.18 -6.22) rotate(7.65)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#999"/>
+      <stop offset="1" stop-color="#666"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="97.97" y1="69.65" x2="101.93" y2="69.65" gradientTransform="translate(-10.34 6.47)" gradientUnits="userSpaceOnUse">
+      <stop offset=".17" stop-color="#c1c1c1"/>
+      <stop offset=".22" stop-color="#f4f5f5"/>
+      <stop offset=".42" stop-color="#fff"/>
+      <stop offset=".6" stop-color="#c1c1c1"/>
+    </linearGradient>
+    <filter id="drop-shadow-2" x="149.47" y="144.42" width="39.7" height="15.92" filterUnits="userSpaceOnUse">
+      <feOffset dx="-1.42" dy="3.55"/>
+      <feGaussianBlur result="blur-2" stdDeviation="0"/>
+      <feFlood flood-color="#3f512e" flood-opacity=".67"/>
+      <feComposite in2="blur-2" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-3" x="101.05" y="117.69" width="55.98" height="57.51" filterUnits="userSpaceOnUse">
+      <feOffset dx="-1.02" dy="2.54"/>
+      <feGaussianBlur result="blur-3" stdDeviation="0"/>
+      <feFlood flood-color="#3f512e" flood-opacity=".67"/>
+      <feComposite in2="blur-3" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath">
+      <circle class="cls-5" cx="129.59" cy="145.38" r="22.13"/>
+    </clipPath>
+    <filter id="drop-shadow-4" x="172.69" y="127.31" width="55.98" height="57.51" filterUnits="userSpaceOnUse">
+      <feOffset dx="-1.02" dy="2.54"/>
+      <feGaussianBlur result="blur-4" stdDeviation="0"/>
+      <feFlood flood-color="#3f512e" flood-opacity=".67"/>
+      <feComposite in2="blur-4" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clippath-1">
+      <circle class="cls-5" cx="200.97" cy="154.66" r="22.13"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <rect class="cls-11" x="61.31" y="47.14" width="63.27" height="303.44" transform="translate(-70.66 52.52) rotate(-23.14)"/>
+        <path class="cls-13" d="M62.42,46.92L4.24,71.78s0-.02,0-.03C2.27,61.31-.01,51.07,0,37.85-.19,25.11,3.21,9.28,7.97,0c10,2.98,23.79,11.47,32.86,20.4,9.58,9.14,15.4,17.87,21.59,26.52Z"/>
+        <path class="cls-13" d="M4.24,71.75s0,.02,0,.03l-.05.02.04-.05Z"/>
+        <rect class="cls-12" x="2.41" y="59.54" width="62.8" height="2.83" transform="translate(-21.23 18.19) rotate(-23.14)"/>
+        <rect class="cls-12" x="16.51" y="93.49" width="62.8" height=".94" transform="translate(-33.07 26.38) rotate(-23.14)"/>
+        <rect class="cls-12" x="63.14" y="89.6" width=".88" height="41.56" transform="translate(-38.26 33.86) rotate(-23.14)"/>
+        <rect class="cls-12" x="71.04" y="123.89" width="23" height=".94" transform="translate(-42.23 42.43) rotate(-23.14)"/>
+        <rect class="cls-12" x="39.15" y="145.53" width="62.8" height="2.83" transform="translate(-52.06 39.54) rotate(-23.14)"/>
+        <rect class="cls-12" x="54.35" y="182" width="63.24" height=".94" transform="translate(-64.78 48.45) rotate(-23.14)"/>
+        <rect class="cls-12" x="97.84" y="181.19" width=".88" height="79.34" transform="translate(-78.88 56.38) rotate(-23.14)"/>
+        <rect class="cls-12" x="85.52" y="254.95" width="63.24" height=".94" transform="translate(-90.94 66.57) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="54.13" cy="93.88" rx=".88" ry=".94" transform="translate(-32.53 28.82) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="57.09" cy="100.83" rx=".88" ry=".94" transform="translate(-35.02 30.54) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="60.06" cy="107.77" rx=".88" ry=".94" transform="translate(-37.52 32.27) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="63.03" cy="114.72" rx=".88" ry=".94" transform="translate(-40.01 33.99) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="66" cy="121.67" rx=".88" ry=".94" transform="translate(-42.5 35.72) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="68.97" cy="128.62" rx=".88" ry=".94" transform="translate(-44.99 37.44) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="86.66" cy="185.77" rx=".88" ry=".94" transform="translate(-66.02 48.99) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="89.63" cy="192.72" rx=".88" ry=".94" transform="translate(-68.51 50.72) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="92.59" cy="199.67" rx=".88" ry=".94" transform="translate(-71.01 52.44) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="95.56" cy="206.61" rx=".88" ry=".94" transform="translate(-73.5 54.17) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="98.53" cy="213.56" rx=".88" ry=".94" transform="translate(-75.99 55.89) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="101.5" cy="220.51" rx=".88" ry=".94" transform="translate(-78.48 57.62) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="104.47" cy="227.46" rx=".88" ry=".94" transform="translate(-80.97 59.34) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="107.44" cy="234.41" rx=".88" ry=".94" transform="translate(-83.46 61.07) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="110.41" cy="241.35" rx=".88" ry=".94" transform="translate(-85.95 62.79) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="113.38" cy="248.3" rx=".88" ry=".94" transform="translate(-88.45 64.52) rotate(-23.14)"/>
+        <ellipse class="cls-12" cx="116.35" cy="255.25" rx=".88" ry=".94" transform="translate(-90.94 66.25) rotate(-23.14)"/>
+        <path class="cls-16" d="M11.49,6.58c-4.82,6.04-7.63,21.29-6.77,39.7.03.67.51,1.27,1.05,1.33l2.01.23c.53.06.94-.41.91-1.07-.53-15.89,1.21-29.67,4.46-38.64.43-1.18-.94-2.46-1.66-1.55Z"/>
+      </g>
+      <g class="cls-8">
+        <rect class="cls-11" x="193.8" y="201.61" width="40.12" height="39.65" rx="3.95" ry="3.95" transform="translate(31.38 -26.5) rotate(7.65)"/>
+        <rect class="cls-11" x="76.48" y="185.94" width="40.12" height="39.65" rx="3.95" ry="3.95" transform="translate(28.25 -11.02) rotate(7.65)"/>
+        <polygon class="cls-14" points="209.26 286.42 161.82 280.05 156.52 319.5 127.59 315.62 132.89 276.17 86.02 269.87 107.2 181.68 212.41 195.81 209.26 286.42"/>
+        <rect class="cls-4" x="87.64" y="26.61" width="3.96" height="99.02" transform="translate(10.93 -11.25) rotate(7.65)"/>
+        <rect class="cls-10" x="77.06" y="123.54" width="22.28" height="34.16" transform="translate(19.5 -10.49) rotate(7.65)"/>
+        <polygon class="cls-9" points="228.41 198.16 88.79 179.7 91.71 101.68 246.92 120.14 228.41 198.16"/>
+        <polygon class="cls-11" points="225.11 194.22 93.48 176.82 95.82 106.66 242.01 124.05 225.11 194.22"/>
+        <circle class="cls-16" cx="96.81" cy="24.38" r="4.7"/>
+        <rect class="cls-2" x="151.21" y="146.89" width="37.63" height="7.43" transform="translate(21.56 -21.29) rotate(7.65)"/>
+        <circle class="cls-1" cx="129.55" cy="145.17" r="27.48"/>
+        <g>
+          <circle class="cls-5" cx="129.59" cy="145.38" r="22.13"/>
+          <g class="cls-15">
+            <path class="cls-6" d="M123.59,120.18c18.18,15.62,34.71,32.98,49.42,51.91,2.34,3.02,6.52-1.22,4.2-4.2-14.71-18.92-31.24-36.29-49.42-51.91-2.89-2.48-7.11,1.7-4.2,4.2h0Z"/>
+            <path class="cls-6" d="M130.05,122.91c10.23,6.02,19.66,13.1,28.28,21.26,2.78,2.63,6.98-1.57,4.2-4.2-8.97-8.5-18.83-15.92-29.48-22.19-3.3-1.94-6.3,3.19-3,5.13h0Z"/>
+            <path class="cls-6" d="M109.99,116.45c16.03,17.74,32.71,34.86,50.03,51.34,2.77,2.64,6.98-1.56,4.2-4.2-17.32-16.48-34-33.61-50.03-51.34-2.57-2.84-6.76,1.37-4.2,4.2h0Z"/>
+            <path class="cls-6" d="M110.24,130.71c22.95,25.3,46.73,49.83,71.31,73.55,1.38,1.33,3.48-.77,2.1-2.1-24.58-23.72-48.36-48.25-71.31-73.55-1.29-1.42-3.38.69-2.1,2.1h0Z"/>
+          </g>
+        </g>
+        <circle class="cls-3" cx="201.19" cy="154.79" r="27.48"/>
+        <g>
+          <circle class="cls-5" cx="200.97" cy="154.66" r="22.13"/>
+          <g class="cls-7">
+            <path class="cls-6" d="M194.96,129.46c18.18,15.62,34.71,32.98,49.42,51.91,2.34,3.02,6.52-1.22,4.2-4.2-14.71-18.92-31.24-36.29-49.42-51.91-2.89-2.48-7.11,1.7-4.2,4.2h0Z"/>
+            <path class="cls-6" d="M201.42,132.19c10.23,6.02,19.66,13.1,28.28,21.26,2.78,2.63,6.98-1.57,4.2-4.2-8.97-8.5-18.83-15.92-29.48-22.19-3.3-1.94-6.3,3.19-3,5.13h0Z"/>
+            <path class="cls-6" d="M181.37,125.73c16.03,17.74,32.71,34.86,50.03,51.34,2.77,2.64,6.98-1.56,4.2-4.2-17.32-16.48-34-33.61-50.03-51.34-2.57-2.84-6.76,1.37-4.2,4.2h0Z"/>
+            <path class="cls-6" d="M181.62,139.99c22.95,25.3,46.73,49.83,71.31,73.55,1.38,1.33,3.48-.77,2.1-2.1-24.58-23.72-48.36-48.25-71.31-73.55-1.29-1.42-3.38.69-2.1,2.1h0Z"/>
+          </g>
+        </g>
+        <rect class="cls-11" x="158.68" y="282.45" width="48.08" height="40.39" rx="4.36" ry="4.36" transform="translate(41.91 -21.63) rotate(7.65)"/>
+        <rect class="cls-11" x="82.78" y="272.77" width="48.08" height="40.39" rx="4.36" ry="4.36" transform="translate(39.95 -11.61) rotate(7.65)"/>
+        <path class="cls-10" d="M176.96,259.85c-.85-.33-1.83.08-2.16.93,0,0,0,.01,0,.02l-14.89,38.24c-5.44,13.99.29,29.28,12.81,34.15,12.52,4.87,27.08-2.51,32.53-16.5l14.89-38.24s0-.01,0-.02c.33-.85-.11-1.81-.96-2.14l-42.22-16.43Z"/>
+        <path class="cls-10" d="M66.19,271.01c.23.5.48,1,.74,1.49l19.37,36.18c7.08,13.23,22.43,18.82,34.27,12.48s15.7-22.21,8.62-35.44l-19.37-36.18c-.26-.49-.54-.97-.83-1.44l-42.8,22.91Z"/>
+        <rect class="cls-11" x="242.4" y="156.68" width="18.06" height="81.54" transform="translate(240.46 -122.06) rotate(49.89)"/>
+        <path class="cls-11" d="M310.44,171.88l-5.83-6.93c-6.14,7.23-14.36,9.04-18.65,3.95-4.29-5.09-1.13-12.91,7.01-17.76l-5.73-6.8c-13.37,6.12-16.94,19.7-7.97,30.35,8.97,10.65,22.93,9.39,31.17-2.81Z"/>
+        <polygon class="cls-11" points="79.44 193.13 95.94 200.43 62.88 274.35 46.38 267.05 79.44 193.13"/>
+        <path class="cls-11" d="M29.3,282.12l8.28,3.66c2.36-9.12,8.95-14.29,15.04-11.6,6.09,2.69,6.67,11.04,1.47,18.9l8.13,3.6c9.34-11.25,6.6-24.94-6.12-30.57-12.72-5.63-24.72,1.53-26.79,16Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
