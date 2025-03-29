@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -276,15 +277,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4230905249db570499010cd1577f128f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4230905249db570499010cd1577f128f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4230905249db570499010cd1577f128f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 68.8
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4230905249db570499010cd1577f128f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -317,6 +318,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 4230905249db570499010cd1577f128f, type: 3}
       propertyPath: m_Name
       value: NEWenviroment
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4230905249db570499010cd1577f128f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -5042,7 +5047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f3707a0e31c421f42aad4b7d8c1230f6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2040542448765327740, guid: f3707a0e31c421f42aad4b7d8c1230f6, type: 3}
       propertyPath: m_Layer
@@ -5244,7 +5249,7 @@ Transform:
   m_GameObject: {fileID: 1145200394}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.87, y: 3.08, z: -3.23}
+  m_LocalPosition: {x: 34.6, y: 3.08, z: -3.23}
   m_LocalScale: {x: 0.41755182, y: 6.060527, z: 5.865021}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6657,7 +6662,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 74
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
