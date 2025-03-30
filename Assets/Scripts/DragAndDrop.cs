@@ -11,8 +11,6 @@ public class DragAndDrop : MonoBehaviour
     //private Vector3 lastValidPosition;
     //private bool isValidPlacement = true;
 
-    //private GameObject placementIndicator;
-
     //private int noPlacementZoneCount = 0; //tracks how many no placement zones the tower is in
 
     private void Start()
@@ -20,12 +18,6 @@ public class DragAndDrop : MonoBehaviour
         fixedYPosition = transform.position.y; //Store initial Y position
         //lastValidPosition = transform.position; //Initial valid position
 
-        //Find the placement indicator (circle)
-        //placementIndicator = transform.Find("PlacementIndicator").gameObject;
-
-        //placementIndicator.SetActive(false); //hides circle initially
-
-        //ValidateInitialPlacement();
     }
 
 
@@ -40,7 +32,6 @@ public class DragAndDrop : MonoBehaviour
         }
 
         //isValidPlacement = (noPlacementZoneCount == 0); //Allow placement when not in any no placement zones
-        //placementIndicator.SetActive(true); //show indicator when dragging tower
     }
 
     private void OnMouseDrag()
@@ -66,29 +57,6 @@ public class DragAndDrop : MonoBehaviour
             //lastValidPosition = transform.position; //Update valid position
         //}
         
-        //placementIndicator.SetActive(false); //Hide indicator after placing
+        
     }
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-        //if (other.CompareTag("NoPlacementZone")) // && gameObject.layer == LayerMask.NameToLayer("Tower"))
-        //{
-            //Debug.Log($"Entered NoPlacementZone: {other.gameObject.name}");
-            //noPlacementZoneCount++;
-            //isValidPlacement = false;
-            //Debug.Log($"noPlacementZoneCount: {noPlacementZoneCount}, isValidPlacement: {isValidPlacement}");
-       // }
-    //}
-
-    //private void OnTriggerExit(Collider other)
-    //{
-        //if (other.CompareTag("NoPlacementZone")) // && gameObject.layer == LayerMask.NameToLayer("Tower"))
-        //{
-           // Debug.Log($"Exited NoPlacementZone: {other.gameObject.name}");
-            //noPlacementZoneCount = Mathf.Max(0, noPlacementZoneCount - 1);
-            //isValidPlacement = (noPlacementZoneCount == 0);
-            //Debug.Log($"noPlacementZoneCount: {noPlacementZoneCount}, isValidPlacement: {isValidPlacement}");
-            
-        //}
-    //}
 }

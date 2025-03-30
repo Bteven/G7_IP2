@@ -329,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4230905249db570499010cd1577f128f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1113,7 +1113,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 32, y: -62.9}
+  m_AnchoredPosition: {x: 58.8, y: -64.4}
   m_SizeDelta: {x: 15.768311, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &241722862
@@ -1138,8 +1138,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f96c13ee705aa4445937a04f61b8aeca, type: 2}
+  m_sharedMaterial: {fileID: 6534306612960164323, guid: f96c13ee705aa4445937a04f61b8aeca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5097,7 +5097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5497821681896150671, guid: f3707a0e31c421f42aad4b7d8c1230f6, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f3707a0e31c421f42aad4b7d8c1230f6, type: 3}
       propertyPath: m_Name
@@ -5105,31 +5105,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f3707a0e31c421f42aad4b7d8c1230f6, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f3707a0e31c421f42aad4b7d8c1230f6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2040542448765327740, guid: f3707a0e31c421f42aad4b7d8c1230f6, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2601943109711670910, guid: f3707a0e31c421f42aad4b7d8c1230f6, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5227003592526064064, guid: f3707a0e31c421f42aad4b7d8c1230f6, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7750397243111347764, guid: f3707a0e31c421f42aad4b7d8c1230f6, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8054850828593370273, guid: f3707a0e31c421f42aad4b7d8c1230f6, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
