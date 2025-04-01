@@ -4,10 +4,18 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject optionsPanel;
-
-    public void PlayGame()
+    public GameObject videoPlayer;
+    public GameObject Canvas;
+    public void LoadGame()
     {
-        SceneManager.LoadScene(1); // Load the main gameplay scene.
+        videoPlayer.SetActive(true);
+        Canvas.SetActive(false);
+        Invoke("PlayGame", 7);
+    }
+
+    private void PlayGame()
+    {
+        SceneManager.LoadScene(1);
     }
 
     public void OpenOptions()
