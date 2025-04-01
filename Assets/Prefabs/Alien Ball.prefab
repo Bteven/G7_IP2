@@ -133,20 +133,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypoints:
-  - {fileID: 2112705936792643250, guid: fceda4cdae6abcf4e8a5858fe5d82c75, type: 3}
-  - {fileID: 597992241902673153, guid: 04b25c35573103f4bbe59e4b49b62e4f, type: 3}
-  - {fileID: 1552055460242607525, guid: da1d684c77f457340a95b14bfd93ba07, type: 3}
-  - {fileID: 898720360045475656, guid: 8363ef70a5f466941864846478c95d32, type: 3}
-  - {fileID: 8777265430558520757, guid: 199220b2e5c14e946a56e2e70c5aa5c8, type: 3}
-  - {fileID: 903100604331008353, guid: 24b36673bf0bfb143ab4bfc74ad809cd, type: 3}
-  - {fileID: 4005474357186715199, guid: 8d1062cf8fdbe2b468dc126adf3ed989, type: 3}
-  - {fileID: 8197669984390970073, guid: 4e72ef65693e8cb48819e03c5fe78767, type: 3}
-  - {fileID: 4050966292885346192, guid: 168e9e864e7b72d48b8ccd6daed8a675, type: 3}
-  - {fileID: 1521591317361215739, guid: cb4b6b3e73bba9f4caffb7dfb3103bfb, type: 3}
-  - {fileID: 7649727109092246572, guid: 676495956a779b847822d361aed23186, type: 3}
-  - {fileID: 4430049900516723813, guid: a1fe1b5336acfb448b72ff6d25fbc7a8, type: 3}
-  - {fileID: 6147857698750209099, guid: a46bcecc650ddb24fa7f7a3354de218c, type: 3}
-  - {fileID: 2388706717027342783, guid: f99711b32bffe1146a5c0a8b92367d87, type: 3}
+  - {fileID: 2508931766020446993, guid: 66eac53244421bb4d9ad91855beb4bd0, type: 3}
+  - {fileID: 4983621142382637407, guid: d2ac61b18f650b34d8a5625aaeb417db, type: 3}
+  - {fileID: 2574821096244748981, guid: a0b0070fcb2db1249b9f05a0b5ec8b86, type: 3}
+  - {fileID: 2170907948812283929, guid: fcc17ccd853000d41830849771ba2333, type: 3}
+  - {fileID: 1462494616385000053, guid: fe2cab973b550144eb90b29865cb5b0f, type: 3}
+  - {fileID: 6505176015329760277, guid: 4af3d00ee02a10744b4df71fbc8e7cd1, type: 3}
+  - {fileID: 2987970654212072249, guid: f9856c5019814ff42b9387e0d68178f3, type: 3}
+  - {fileID: 6146992698639927112, guid: 0215407607f718148960f0b6d07ea751, type: 3}
+  - {fileID: 7356617420580973994, guid: c1e9ec0961edc704ca58717e31326f89, type: 3}
+  - {fileID: 5137127170124144108, guid: ffb108a990cdb2b48b29ce98f8510201, type: 3}
+  - {fileID: 5773094254520489642, guid: de08121692bf98a45ace480019f8470f, type: 3}
+  - {fileID: 3779659469199765342, guid: 099d318bb74ad054e92a382c5c300176, type: 3}
+  - {fileID: 1485790961276859202, guid: c66f42969055ed744a2102cdc089ef36, type: 3}
+  - {fileID: 754529417143682749, guid: edbef302951159d4e8ae6ff022597633, type: 3}
+  - {fileID: 6977524860614793981, guid: 352097b1919b32246b6de47df3dd0900, type: 3}
+  - {fileID: 334050448746251178, guid: 8528861507925f8448234518993adf70, type: 3}
+  - {fileID: 5482426250482606171, guid: c977423cb21f31a4fabbf494d148fffb, type: 3}
+  - {fileID: 9186197641706643827, guid: d46e747787733564e8494912ec8ade0d, type: 3}
+  - {fileID: 265352950941669978, guid: 95aa561734c8ac94d8ca9a6e2829827f, type: 3}
+  - {fileID: 7749358970688392973, guid: 2ac50d9ab99bc3748870491fee440e57, type: 3}
   enemySpeed: 3
   checkDistance: 0.05
   parent: {fileID: 0}
@@ -192,4 +198,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 50
   finishLine: {fileID: 0}
+  rewardAmount: 50
   maxHealth: 50
