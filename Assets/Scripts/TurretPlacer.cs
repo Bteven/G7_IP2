@@ -35,6 +35,14 @@ public class TurretPlacer : MonoBehaviour
             return;
         }
 
+        int turretCost = turrets[index].cost;
+
+        if(CurrencyManager.Instance == null || CurrencyManager.Instance.CurrentCurrency < turretCost)
+        {
+            Debug.Log("Not enough money to select this turret.");
+            return;
+        }
+
         selectedTurretPrefab = turrets[index].turretPrefab;
         currentTurretCost = turrets[index].cost;
         isPlacing = true;

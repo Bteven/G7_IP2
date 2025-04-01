@@ -40,6 +40,8 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] int spawnBurstTimer;                    // current time until next group spawns {can be edited in future to change speeds of wave}
     [SerializeField] float currentBurstTime = 0;             // cooldown for how fast the enemy groups spawn
 
+    private int totalEnemyKillReward = 0;
+
     // Update is called once per frame
     private void Start()
     {
@@ -79,13 +81,14 @@ public class SpawnManager : MonoBehaviour
         {
                    
             waveCleared = true;             // sets wave to be cleared 
-           StartCoroutine(WaveCooldown());                 // starts cooldown until next wave
+            StartCoroutine(WaveCooldown());                 // starts cooldown until next wave
 
             if (CurrencyManager.Instance != null)
             {
+                CurrencyManager.Instance.AddMoney(totalEnemyKillReward);
                 CurrencyManager.Instance.RewardWaveCompletion(waveNumber);
             }
-            
+            totalEnemyKillReward = 0;
         }
         else
         {
@@ -145,9 +148,28 @@ public class SpawnManager : MonoBehaviour
         }
        
     }
+
     void SpawnEnemy()
-        {
+    {
           GameObject newEnemy = Instantiate(enemyPrefabs[groupDiff], spawnPoint.transform.position, Quaternion.identity);
         // spawns an enemy depending the group dificulty set earlyer and will ether spawn normal,fast,tank
+
+        if(newEnemy.GetComponent<HealthController>() == null)
+        {
+            newEnemy.AddComponent<HealthController>();
         }
+
+        HealthController hc = newEnemy.GetComponent<HealthController>();
+        if (groupDiff == 0)
+            hc.rewardAmount = 50;
+        else if (groupDiff == 1)
+            hc.rewardAmount = 35;
+        else if (groupDiff == 2)
+            hc.rewardAmount = 100;
     }
+
+    public void AddKillReward(int amount)
+    {
+        totalEnemyKillReward += amount;
+    }
+}

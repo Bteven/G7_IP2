@@ -9,6 +9,8 @@ public class HealthController : MonoBehaviour
     public float currentHealth;
     public GameObject finishLine;
 
+    public int rewardAmount = 50;
+
     [SerializeField]
     private float maxHealth;
 
@@ -33,12 +35,20 @@ public class HealthController : MonoBehaviour
         {
             if (gameObject.CompareTag("Enemy")) //When enemies health is 0 they die
             {
+                if(CurrencyManager.Instance != null)
+                {
+                    GameObject spawnManager = GameObject.FindObjectOfType<SpawnManager>().gameObject;
+                    if(spawnManager != null)
+                    {
+                        SpawnManager sm = spawnManager.GetComponent<SpawnManager>();
+                        if(sm != null)
+                        {
+                            sm.AddKillReward(rewardAmount);
+                        }
+                    }
+                }
+
                 Destroy(gameObject);
-
-                //Gain money/score here
-
-                //int rewardAmount = 50;
-                //CurrencyManager.Instance.AddMoney(rewardAmount);
             }
 
             if (gameObject.CompareTag("FinishLine")) //When finish line health is 0 it's game over
@@ -66,6 +76,4 @@ public class HealthController : MonoBehaviour
     }
 
     //can add code for gaining health here
-
-  
 }

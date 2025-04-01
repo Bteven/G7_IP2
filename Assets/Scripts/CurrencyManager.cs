@@ -46,7 +46,7 @@ public class CurrencyManager : MonoBehaviour
 
     public void RewardWaveCompletion(int waveNumber)
     {
-        int waveBonus = waveNumber * 100;
+        int waveBonus = 250;
         Debug.Log($"[WaveBonus] RewardWaveCompletion CALLED! Wave Number: {waveNumber}, Calculated Bonus: {waveBonus}");
         AddMoney(waveBonus);
         Debug.Log($"[WaveBonus] New CurrentMoney after wave bonus: {CurrentCurrency}");
