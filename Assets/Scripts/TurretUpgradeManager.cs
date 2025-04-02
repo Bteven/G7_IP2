@@ -8,13 +8,14 @@ public class TurretUpgradeManager : MonoBehaviour
 
     public GameObject selectedTurret;
     public bool turretIsSelected;
+    private GameObject selectedTower;
 
 
     // Start is called before the first frame update
     void Start()
     {
 
-        this.enabled = false;
+       // this.enabled = false;
         turretIsSelected = false;
 
 
@@ -35,6 +36,8 @@ public class TurretUpgradeManager : MonoBehaviour
             DeselectTurret();
 
         }
+
+        LookForTower();
         
     }
 
@@ -67,5 +70,50 @@ public class TurretUpgradeManager : MonoBehaviour
 
 
         }
+    }
+
+    private void LookForTower()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            RaycastHit[] hits;
+
+            hits = Physics.RaycastAll(ray, Mathf.Infinity);
+
+            Debug.Log(hits.Length);
+
+            
+
+            
+
+
+         //   if (Physics.Raycast(ray.origin, ray.direction, Mathf.Infinity))
+         //   {
+
+         //       for (int i = 0; i < hits.Count; i++)
+         //       {
+         //           RaycastHit sortedHits = hits[i];
+
+         //           if (sortedHits.collider.gameObject.tag == ("Tower"))
+         //           {
+         //               List<MonoBehaviour> list = new List<MonoBehaviour>();
+         //               sortedHits.collider.gameObject.TryGetComponent<SlowTower>(out SlowTower STComponent);
+         //               sortedHits.collider.gameObject.TryGetComponent<MissileTower>(out MissileTower MTComponent);
+         //               sortedHits.collider.gameObject.TryGetComponent<ZoneTurret>(out ZoneTurret ZTComponent);
+         //               sortedHits.collider.gameObject.TryGetComponent<TowerGun>(out TowerGun TGComponent);
+
+         //               list.Add(STComponent);
+         //               list.Add(MTComponent);
+         //               list.Add(ZTComponent);
+         //               list.Add(TGComponent);
+
+         //               print("Success");
+
+         //           }
+         //       }
+         //   }
+        } 
     }
 }

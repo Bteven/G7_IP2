@@ -152,16 +152,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55094e3cb20c8a44859a4ec554dcf59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlaced: 0
   rotationPoint: {fileID: 5424371682047741495}
   rotationSpeed: 5
   targetDir: {x: 0, y: 0, z: 0}
-  bulletPrefab: {fileID: 8554201936724616901, guid: 6d2d12718e8d82346b61afc30881b6d8, type: 3}
-  bulletSpawn: {fileID: 5474052200900667346}
   enemyObjectInRange: []
   enemyObject: {fileID: 0}
+  towerBody: {fileID: 0}
   targeting: 1
   fireCooldown: 3
   currentFireTimer: 0
+  bulletPrefab: {fileID: 8554201936724616901, guid: 6d2d12718e8d82346b61afc30881b6d8, type: 3}
+  bulletSpawn: {fileID: 5474052200900667346}
 --- !u!135 &2637578107518101305
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -418,7 +420,7 @@ GameObject:
   - component: {fileID: 5472516424921318783}
   m_Layer: 0
   m_Name: Tower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

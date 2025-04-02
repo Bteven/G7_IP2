@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 7945221519762106396}
   m_Layer: 0
   m_Name: GunRobot
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1049,6 +1049,7 @@ MonoBehaviour:
   targetDir: {x: 0, y: 0, z: 0}
   enemyObjectInRange: []
   enemyObject: {fileID: 0}
+  towerBody: {fileID: 0}
   targeting: 1
   fireCooldown: 3
   currentFireTimer: 0
