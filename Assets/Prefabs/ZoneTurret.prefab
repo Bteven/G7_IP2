@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6576964069385769489}
   - component: {fileID: 4305107428170173823}
   - component: {fileID: 249628507594166727}
+  - component: {fileID: -2335496142594066366}
   m_Layer: 0
   m_Name: ZoneTurret
   m_TagString: Tower
@@ -168,6 +169,18 @@ MonoBehaviour:
   rangeIndicator: {fileID: 5033245004593395559}
   radius: 0
   rotationSpeed: 90
+--- !u!114 &-2335496142594066366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590879394889393170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dca484ede4bec84dbaeaedcbfbf10ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4720551316971568273
 PrefabInstance:
   m_ObjectHideFlags: 0
