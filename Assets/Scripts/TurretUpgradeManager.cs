@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurretUpgradeManager : MonoBehaviour
 {
@@ -12,8 +13,8 @@ public class TurretUpgradeManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         turretIsSelected = false;
+
 
     }
 
@@ -64,6 +65,5 @@ public class TurretUpgradeManager : MonoBehaviour
 
 
         }
-
     }
 }
