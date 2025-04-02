@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectInRange: []
+  Sphere: {fileID: 7459459994083777469}
 --- !u!135 &7356980771026646087
 SphereCollider:
   m_ObjectHideFlags: 0

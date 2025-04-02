@@ -73,4 +73,8 @@ public class BaseTurret : MonoBehaviour
         }
     }
 
+    protected virtual void UpgradeState()
+    {
+        transform.localScale *= 1.5f;
+    }
 }

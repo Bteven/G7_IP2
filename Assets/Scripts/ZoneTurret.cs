@@ -31,7 +31,6 @@ public class ZoneTurret : BaseTurret
     void Update()
     {
         base.Update();
-      
     }
     protected override void TurretRotation()       //overrides base class so it is only calls the turret to attack and not rotate as it dosn't need to
     {
@@ -100,8 +99,13 @@ public class ZoneTurret : BaseTurret
                 }
             }
         }
+    }
 
-
+    private void UpgradeState()
+    {
+        base.UpgradeState();
+        fireCooldown -= 2;
+        damageAmount += 5;
     }
 }
 

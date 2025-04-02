@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class TowerGun : BaseTurret
 {
+    [Header("Game Objects")]
+
+    public GameObject towerBody;
 
     [Header("Firing Variables")]
 
@@ -22,6 +25,11 @@ public class TowerGun : BaseTurret
     void Update()
     {
         base.Update();
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            UpgradeState();
+        }
     }
       
     void Fire()
@@ -57,4 +65,11 @@ public class TowerGun : BaseTurret
         }
     }
 
+    private void UpgradeState()
+    {
+        fireCooldown -= 1.5f;
+        towerBody.transform.localScale *= 1.5f;
+        transform.localScale *= 1.2f;
+
+    }
 }

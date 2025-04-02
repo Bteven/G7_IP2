@@ -23,6 +23,11 @@ public class MissileTower : MonoBehaviour
 
         FindTarget();
         FireMissile();
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            UpgradeState();
+        }
     }
 
     void FindTarget()
@@ -86,5 +91,12 @@ public class MissileTower : MonoBehaviour
         {
             enemiesInRange.Remove(other.gameObject); // Remove the enemy from the list
         }
+    }
+
+    private void UpgradeState()
+    {
+        transform.localScale *= 1.5f;
+        fireRate -= 1;
+        detectionCollider.radius *= 1.5f;
     }
 }

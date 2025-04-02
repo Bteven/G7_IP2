@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20696,7 +20695,7 @@ Transform:
   m_GameObject: {fileID: 5260902027196489372}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9424259, z: 0}
+  m_LocalPosition: {x: 0, y: 0.9424259, z: -0.146}
   m_LocalScale: {x: 1.0706999, y: 0.9253145, z: 1.0706999}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20835,6 +20834,7 @@ MonoBehaviour:
   targetDir: {x: 0, y: 0, z: 0}
   enemyObjectInRange: []
   enemyObject: {fileID: 0}
+  towerBody: {fileID: 1179243527904884551}
   targeting: 1
   fireCooldown: 3
   currentFireTimer: 0
@@ -20893,7 +20893,6 @@ GameObject:
   - component: {fileID: 1111705424513102689}
   - component: {fileID: 3472563292739522762}
   - component: {fileID: 1158770475717356295}
-  - component: {fileID: 8399124076469678300}
   m_Layer: 0
   m_Name: RotationPoint
   m_TagString: Untagged
@@ -21074,29 +21073,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &8399124076469678300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5260902027196489372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b55094e3cb20c8a44859a4ec554dcf59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPlaced: 0
-  rotationPoint: {fileID: 0}
-  rotationSpeed: 0
-  targetDir: {x: 0, y: 0, z: 0}
-  enemyObjectInRange: []
-  enemyObject: {fileID: 0}
-  targeting: 0
-  fireCooldown: 0
-  currentFireTimer: 0
-  bulletPrefab: {fileID: 0}
-  bulletSpawn: {fileID: 0}
 --- !u!1001 &8555127644096326103
 PrefabInstance:
   m_ObjectHideFlags: 0
