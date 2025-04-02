@@ -23,11 +23,6 @@ public class MissileTower : MonoBehaviour
 
         FindTarget();
         FireMissile();
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            UpgradeState();
-        }
     }
 
     void FindTarget()

@@ -25,11 +25,6 @@ public class TowerGun : BaseTurret
     void Update()
     {
         base.Update();
-
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            UpgradeState();
-        }
     }
       
     void Fire()
