@@ -93,5 +93,7 @@ public class MissileTower : MonoBehaviour
         transform.localScale *= 1.5f;
         fireRate -= 1;
         detectionCollider.radius *= 1.5f;
+        missilePrefab.TryGetComponent<Attack>(out Attack attack);
+        attack.damage += 20;
     }
 }
