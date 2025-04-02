@@ -14,6 +14,7 @@ public class TowerGun : BaseTurret
     public bool targeting;  //true is target is in line
     public float fireCooldown; 
     public float currentFireTimer;
+    private bool upgradeEnabled;
 
 
     [Header("Bullet Variables")]
