@@ -14,7 +14,7 @@ public class CurrencyManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+           // DontDestroyOnLoad(gameObject);
             CurrentCurrency = 150;
         }
         else
