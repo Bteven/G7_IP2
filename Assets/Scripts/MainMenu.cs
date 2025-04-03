@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     {
         videoPlayer.SetActive(true);
         Canvas.SetActive(false);
-        Invoke("PlayGame", 7);
+        Invoke("PlayGame", 4);
     }
 
     private void PlayGame()

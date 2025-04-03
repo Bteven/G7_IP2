@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Code for health counter on screen
 public class HealthUI : MonoBehaviour
@@ -16,19 +17,38 @@ public class HealthUI : MonoBehaviour
     [SerializeField]
     private GameObject vignette;
 
+    [SerializeField]
+    private float fadeDelay = 1f;
+
     void Start()
     {
-        StartCoroutine(FlashVignette(2, 0.15f)); //Flashes twice, 0.15 seconds apart
+        vignette.SetActive(true);
+        StartCoroutine(Fade(vignette.GetComponent<Image>(), fadeDelay, false));
+        Invoke(nameof(DelayedSetActive), fadeDelay);
     }
 
-    IEnumerator FlashVignette(int flashes, float delay)
+    void DelayedSetActive()
     {
-        for (int i = 0; i < flashes; i++)
+        vignette.SetActive(false);
+    }
+
+    IEnumerator Fade(Image image, float fadeTime, bool fadeIn)
+    {
+        float elapsedTime = 0.0f;
+        Color c = image.color;
+        while (elapsedTime < fadeTime)
         {
-            vignette.SetActive(true);
-            yield return new WaitForSeconds(delay);
-            vignette.SetActive(false);
-            yield return new WaitForSeconds(delay);
+            yield return null;
+            elapsedTime += Time.deltaTime;
+            if (fadeIn)
+            {
+                c.a = Mathf.Clamp01(elapsedTime / fadeTime);
+            }
+            else
+            {
+                c.a = 1f - Mathf.Clamp01(elapsedTime / fadeTime);
+            }
+            image.color = c;
         }
     }
     void Update()
