@@ -88,7 +88,7 @@ public class MissileTower : MonoBehaviour
         }
     }
 
-    private void UpgradeState()
+    public void UpgradeState()
     {
         transform.localScale *= 1.5f;
         fireRate -= 1;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class TurretUpgradeManager : MonoBehaviour
     public GameObject selectedTurret;
     public bool turretIsSelected;
     private GameObject selectedTower;
+    public GameObject upgradeMenu;
 
 
     // Start is called before the first frame update
@@ -82,38 +84,47 @@ public class TurretUpgradeManager : MonoBehaviour
 
             hits = Physics.RaycastAll(ray, Mathf.Infinity);
 
-            Debug.Log(hits.Length);
+            for(int i = 0; i < hits.Length; i++)
+            {
+                RaycastHit raycastHit = hits[i];
 
-            
+                switch (raycastHit.collider.gameObject.tag)
+                {
+                    case "Gun Tower":
+                        if (raycastHit.collider.gameObject.GetComponentInChildren<TowerGun>() != null)
+                        {
+                            // raycastHit.collider.gameObject.GetComponentInChildren<TowerGun>().UpgradeState();
+                            upgradeMenu.SetActive(true);
+                        }
+                        break;
 
-            
+                    case "Zone Tower":
+                        raycastHit.collider.gameObject.TryGetComponent<ZoneTurret>(out ZoneTurret ZTComponent);
+                        // ZTComponent.UpgradeState();
+                        upgradeMenu.SetActive(true);
+                        break;
+
+                    case "Missile Tower":
+                        if (raycastHit.collider.gameObject.GetComponentInParent<MissileTower>() != null)
+                        {
+                            //raycastHit.collider.gameObject.GetComponentInParent<MissileTower>().UpgradeState();
+                            upgradeMenu.SetActive(true);
+                        }
+                        break;
+
+                    case "Slow Tower":
+                        raycastHit.collider.gameObject.TryGetComponent<SlowTower>(out SlowTower STComponent);
+                        // STComponent.UpgradeState();
+                        upgradeMenu.SetActive(true);
+                        break;
+
+                        default:
+                        upgradeMenu.SetActive(false); 
+                        break;
 
 
-         //   if (Physics.Raycast(ray.origin, ray.direction, Mathf.Infinity))
-         //   {
-
-         //       for (int i = 0; i < hits.Count; i++)
-         //       {
-         //           RaycastHit sortedHits = hits[i];
-
-         //           if (sortedHits.collider.gameObject.tag == ("Tower"))
-         //           {
-         //               List<MonoBehaviour> list = new List<MonoBehaviour>();
-         //               sortedHits.collider.gameObject.TryGetComponent<SlowTower>(out SlowTower STComponent);
-         //               sortedHits.collider.gameObject.TryGetComponent<MissileTower>(out MissileTower MTComponent);
-         //               sortedHits.collider.gameObject.TryGetComponent<ZoneTurret>(out ZoneTurret ZTComponent);
-         //               sortedHits.collider.gameObject.TryGetComponent<TowerGun>(out TowerGun TGComponent);
-
-         //               list.Add(STComponent);
-         //               list.Add(MTComponent);
-         //               list.Add(ZTComponent);
-         //               list.Add(TGComponent);
-
-         //               print("Success");
-
-         //           }
-         //       }
-         //   }
+                }
+            }
         } 
     }
 }

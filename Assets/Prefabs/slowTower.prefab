@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4487701573788196458}
   m_Layer: 0
   m_Name: slowTower
-  m_TagString: Tower
+  m_TagString: Slow Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 7356980771026646087}
   m_Layer: 0
   m_Name: TowerSpire
-  m_TagString: Untagged
+  m_TagString: Slow Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 7774811161175400888}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Slow Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

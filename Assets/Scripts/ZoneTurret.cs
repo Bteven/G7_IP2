@@ -101,7 +101,7 @@ public class ZoneTurret : BaseTurret
         }
     }
 
-    private void UpgradeState()
+    public void UpgradeState()
     {
         base.UpgradeState();
         fireCooldown -= 2;

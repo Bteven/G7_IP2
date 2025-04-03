@@ -8,6 +8,11 @@ TagManager:
   - Bullet
   - FinishLine
   - NoPlacementZone
+  - Tower
+  - Slow Tower
+  - Missile Tower
+  - Zone Tower
+  - Gun Tower
   layers:
   - Default
   - TransparentFX

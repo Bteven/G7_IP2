@@ -61,10 +61,10 @@ public class TowerGun : BaseTurret
         }
     }
 
-    private void UpgradeState()
+    public void UpgradeState()
     {
         fireCooldown -= 1.5f;
-        towerBody.transform.localScale *= 1.5f;
+        towerBody.transform.localScale *= 1.1f;
         transform.localScale *= 1.2f;
 
     }

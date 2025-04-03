@@ -52,7 +52,7 @@ public class SlowTower : MonoBehaviour
         }
     }
 
-    private void UpgradeState()
+    public void UpgradeState()
     {
         transform.localScale *= 1.5f;
         Sphere.transform.localScale *= 1.5f;

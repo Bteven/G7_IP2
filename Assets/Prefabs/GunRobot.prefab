@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5759626395649996518}
   m_Layer: 0
   m_Name: transform4
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6888104526431445913}
   m_Layer: 0
   m_Name: transform3
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 6353923985359015306}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 5301217006283680794}
   m_Layer: 0
   m_Name: ShootPoint
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 5580610405922612243}
   m_Layer: 0
   m_Name: pCylinder1
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 6846653716941465739}
   m_Layer: 0
   m_Name: Arms
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 7945221519762106396}
   m_Layer: 0
   m_Name: GunRobot
-  m_TagString: Tower
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 4951266201900347694}
   m_Layer: 0
   m_Name: transform5
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 5144917776493400689}
   m_Layer: 0
   m_Name: pCylinder6
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -509,7 +509,7 @@ GameObject:
   - component: {fileID: 1641645581545392791}
   m_Layer: 0
   m_Name: polySurface2
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 908492757974565738}
   m_Layer: 0
   m_Name: pCylinder5
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -577,7 +577,7 @@ GameObject:
   - component: {fileID: 5131333858329334257}
   m_Layer: 0
   m_Name: Visor
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 8440753502257937142}
   m_Layer: 0
   m_Name: transform1
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -689,7 +689,7 @@ GameObject:
   - component: {fileID: 1745894700226980175}
   m_Layer: 0
   m_Name: pCylinder3
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -723,7 +723,7 @@ GameObject:
   - component: {fileID: 4270460110104880666}
   m_Layer: 0
   m_Name: pCylinder4
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -806,7 +806,7 @@ GameObject:
   - component: {fileID: 9150928541386293036}
   m_Layer: 0
   m_Name: EyePiece
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -887,7 +887,7 @@ GameObject:
   - component: {fileID: 4315045109877135048}
   m_Layer: 0
   m_Name: transform2
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -920,7 +920,7 @@ GameObject:
   - component: {fileID: 8502161769125498746}
   m_Layer: 0
   m_Name: pCylinder2
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1003,7 +1003,7 @@ GameObject:
   - component: {fileID: 1547444724993162498}
   m_Layer: 0
   m_Name: Rotation Point
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1045,11 +1045,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlaced: 1
   rotationPoint: {fileID: 7818617673169005122}
-  rotationSpeed: 10
+  rotationSpeed: 20
   targetDir: {x: 0, y: 0, z: 0}
   enemyObjectInRange: []
   enemyObject: {fileID: 0}
-  towerBody: {fileID: 0}
+  towerBody: {fileID: 2868150809026142808}
   targeting: 1
   fireCooldown: 3
   currentFireTimer: 0
@@ -1089,7 +1089,7 @@ GameObject:
   - component: {fileID: 6263463978031124361}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1170,7 +1170,7 @@ GameObject:
   - component: {fileID: 8995974659201807119}
   m_Layer: 0
   m_Name: pCube1
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1202,7 +1202,7 @@ GameObject:
   - component: {fileID: 2177292695733559115}
   m_Layer: 0
   m_Name: RobotHead:Head
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1322,7 +1322,7 @@ GameObject:
   - component: {fileID: 8622282224381386471}
   m_Layer: 0
   m_Name: MouthPiece
-  m_TagString: Untagged
+  m_TagString: Gun Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
