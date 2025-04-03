@@ -9001,7 +9001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1016060934
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14030,7 +14030,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 2077878070}
   enemyPrefabs:
   - {fileID: 991831396515154558, guid: e4f838cd464100e4db728fd13967bc46, type: 3}
-  - {fileID: 4894402358539842056, guid: 8b8e9728fd8423147aae3e1ad7f43a40, type: 3}
+  - {fileID: 6441949914179121244, guid: 614f168f362193442b1607e54555c54c, type: 3}
   - {fileID: 7497963062063909274, guid: c40175c09a0711a4ca2fd98d5cacd473, type: 3}
   enemyBoss: {fileID: 0}
   waveCompeledPanel: {fileID: 0}
