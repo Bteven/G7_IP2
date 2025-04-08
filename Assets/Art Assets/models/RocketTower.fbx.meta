@@ -3,7 +3,17 @@ guid: 43c88059be6b4ca49998f137dd09630c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RobotHead_standardSurface2
+    second: {fileID: 2100000, guid: d74c1ee61fd80b64abdf0ed76ae14d99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: de16384de5d052f418cba523a67bdae4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

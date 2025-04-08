@@ -8,7 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: RobotHead_standardSurface2
-    second: {fileID: -4309604757862725458, guid: 43c88059be6b4ca49998f137dd09630c, type: 3}
+    second: {fileID: 2100000, guid: 0c3e78dd9e83c414eb7651a91e418172, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 3c6641991966aa149a145962b297edaf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
