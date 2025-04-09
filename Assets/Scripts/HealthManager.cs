@@ -10,6 +10,7 @@ public class PlayerHealthManager : MonoBehaviour
     public GameObject finishLine;
     public float maxPlayerHealth;
     public Image HealthBar;
+    public Shake cameraShake; //shake script
 
     //can input code for health bar here if needed
     public void Start()
@@ -26,6 +27,12 @@ public class PlayerHealthManager : MonoBehaviour
     {
         
         playerHealth -= damage;
+        
+        //camera shake
+        if (cameraShake != null)
+        {
+            cameraShake.start = true;
+        }
 
         HealthBar.fillAmount = playerHealth / maxPlayerHealth;
 
