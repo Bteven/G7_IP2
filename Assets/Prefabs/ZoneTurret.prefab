@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlaced: 0
+  lineFinder: {fileID: 0}
   rotationPoint: {fileID: 0}
   rotationSpeed: 90
   targetDir: {x: 0, y: 0, z: 0}
@@ -61,7 +62,7 @@ MonoBehaviour:
   damageAmount: 10
   isSpinning: 0
   fireCooldown: 5
-  currentFireTimer: 0
+  currentFireTimer: 90
 --- !u!135 &1667655104315170269
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -168,7 +169,7 @@ MonoBehaviour:
   sphereCollider: {fileID: 1667655104315170269}
   rangeIndicator: {fileID: 5033245004593395559}
   radius: 0
-  rotationSpeed: 90
+  rotationIndicatorSpeed: 90
 --- !u!114 &-2335496142594066366
 MonoBehaviour:
   m_ObjectHideFlags: 0

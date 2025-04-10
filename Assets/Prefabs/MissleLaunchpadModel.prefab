@@ -207,7 +207,7 @@ MonoBehaviour:
   sphereCollider: {fileID: 3361939209709220870}
   rangeIndicator: {fileID: 5209006194930622714}
   radius: 0
-  rotationSpeed: 90
+  rotationIndicatorSpeed: 90
 --- !u!1 &5849160063969316437
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +442,16 @@ PrefabInstance:
       value: Missile Tower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -7891092957932549332, guid: 43c88059be6b4ca49998f137dd09630c, type: 3}
+    - {fileID: -1500838157198093432, guid: 43c88059be6b4ca49998f137dd09630c, type: 3}
+    - {fileID: -1058976313529914444, guid: 43c88059be6b4ca49998f137dd09630c, type: 3}
+    - {fileID: -770228499288801478, guid: 43c88059be6b4ca49998f137dd09630c, type: 3}
+    - {fileID: -5790743888752385542, guid: 43c88059be6b4ca49998f137dd09630c, type: 3}
+    - {fileID: 2903893172859080141, guid: 43c88059be6b4ca49998f137dd09630c, type: 3}
+    - {fileID: -344004081357383697, guid: 43c88059be6b4ca49998f137dd09630c, type: 3}
+    - {fileID: 4083721644505050608, guid: 43c88059be6b4ca49998f137dd09630c, type: 3}
+    - {fileID: -1561340675325879793, guid: 43c88059be6b4ca49998f137dd09630c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43c88059be6b4ca49998f137dd09630c, type: 3}

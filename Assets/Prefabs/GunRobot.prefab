@@ -454,7 +454,7 @@ MonoBehaviour:
   sphereCollider: {fileID: 1547444724993162498}
   rangeIndicator: {fileID: 5096369329329665966}
   radius: 0
-  rotationSpeed: 40
+  rotationIndicatorSpeed: 90
 --- !u!54 &3490790565267105495
 Rigidbody:
   m_ObjectHideFlags: 0
