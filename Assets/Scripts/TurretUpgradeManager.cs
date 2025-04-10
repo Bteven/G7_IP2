@@ -17,7 +17,7 @@ public class TurretUpgradeManager : MonoBehaviour
     void Start()
     {
 
-        this.enabled = false;
+        //this.enabled = false;
         turretIsSelected = false;
 
 

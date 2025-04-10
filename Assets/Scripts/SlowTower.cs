@@ -54,9 +54,12 @@ public class SlowTower : MonoBehaviour
 
     public void UpgradeState()
     {
-        transform.localScale *= 1.5f;
-        Sphere.transform.localScale *= 1.5f;
-        slowSpeed -= 0.5f;
+        RangeLineFinder rangeFinder = GetComponentInParent<RangeLineFinder>();
+
+        if (rangeFinder != null)
+        {
+            rangeFinder.currentSelectedTurret = true;
+        }
     }
 
     void CleanEnemyList()
