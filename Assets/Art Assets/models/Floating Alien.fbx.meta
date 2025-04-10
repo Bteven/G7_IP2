@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: b6e48e28537c14044952aa82130d04a4
+guid: c789836df34bcb24ca85fe30235854f1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Floating_Alien
-    second: {fileID: 2100000, guid: ef8a963305e164d4ab7399c165d3de42, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass1
-    second: {fileID: 2100000, guid: 046b86e48ca8d4c48b3cb7e814eb659b, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
