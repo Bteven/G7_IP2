@@ -17,7 +17,7 @@ public class TurretUpgradeManager : MonoBehaviour
     void Start()
     {
 
-       // this.enabled = false;
+        this.enabled = false;
         turretIsSelected = false;
 
 
@@ -87,39 +87,48 @@ public class TurretUpgradeManager : MonoBehaviour
             for(int i = 0; i < hits.Length; i++)
             {
                 RaycastHit raycastHit = hits[i];
-
+                Debug.Log(raycastHit.collider.gameObject.tag);
                 switch (raycastHit.collider.gameObject.tag)
                 {
                     case "Gun Tower":
                         if (raycastHit.collider.gameObject.GetComponentInChildren<TowerGun>() != null)
                         {
-                            // raycastHit.collider.gameObject.GetComponentInChildren<TowerGun>().UpgradeState();
+                            raycastHit.collider.gameObject.GetComponentInChildren<TowerGun>().UpgradeState();
+                                                        
                             upgradeMenu.SetActive(true);
                         }
                         break;
 
                     case "Zone Tower":
+
                         raycastHit.collider.gameObject.TryGetComponent<ZoneTurret>(out ZoneTurret ZTComponent);
-                        // ZTComponent.UpgradeState();
+                        ZTComponent.UpgradeState();
                         upgradeMenu.SetActive(true);
+
                         break;
 
                     case "Missile Tower":
                         if (raycastHit.collider.gameObject.GetComponentInParent<MissileTower>() != null)
                         {
-                            //raycastHit.collider.gameObject.GetComponentInParent<MissileTower>().UpgradeState();
+                            raycastHit.collider.gameObject.GetComponentInParent<MissileTower>().UpgradeState();
                             upgradeMenu.SetActive(true);
                         }
                         break;
 
                     case "Slow Tower":
                         raycastHit.collider.gameObject.TryGetComponent<SlowTower>(out SlowTower STComponent);
-                        // STComponent.UpgradeState();
+                        STComponent.UpgradeState();
                         upgradeMenu.SetActive(true);
                         break;
 
                         default:
-                        upgradeMenu.SetActive(false); 
+                        upgradeMenu.SetActive(false);
+
+                        foreach (RangeLineFinder range in FindObjectsOfType<RangeLineFinder>())
+                        {
+                            range.currentSelectedTurret = false;
+                        }
+
                         break;
 
 

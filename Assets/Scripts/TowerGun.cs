@@ -63,9 +63,14 @@ public class TowerGun : BaseTurret
 
     public void UpgradeState()
     {
-        fireCooldown -= 1.5f;
-        towerBody.transform.localScale *= 1.1f;
-        transform.localScale *= 1.2f;
+        base.UpgradeState();
+
+        RangeLineFinder rangeFinder = GetComponentInParent<RangeLineFinder>();
+
+        if (rangeFinder != null)
+        {
+            rangeFinder.currentSelectedTurret = true;
+        }
 
     }
 }

@@ -104,8 +104,8 @@ public class ZoneTurret : BaseTurret
     public void UpgradeState()
     {
         base.UpgradeState();
-        fireCooldown -= 2;
-        damageAmount += 5;
+      //  fireCooldown -= 2;
+       // damageAmount += 5;
     }
 }
 

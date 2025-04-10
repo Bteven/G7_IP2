@@ -13,11 +13,13 @@ public class RangeLineFinder : MonoBehaviour
     public GameObject rangeIndicator;
     [SerializeField] float radius;
     [SerializeField] float rotationSpeed;
+    float numberOfPoints = 36;
     void Start()
     {
         lineRenderer = GetComponentInChildren<LineRenderer>();
         radius = sphereCollider.radius;
         points = new Vector3[4];
+      
 
         // Now calculate the points
         CalculatePoints();
@@ -31,7 +33,7 @@ public class RangeLineFinder : MonoBehaviour
         RotateLine();
     }
 
-    void CheckIndicaterActive()
+    public void CheckIndicaterActive()
     {
 
         if (currentSelectedTurret)
@@ -48,7 +50,6 @@ public class RangeLineFinder : MonoBehaviour
     {
 
         lineRenderer.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-
 
 
     }

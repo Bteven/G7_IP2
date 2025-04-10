@@ -90,10 +90,15 @@ public class MissileTower : MonoBehaviour
 
     public void UpgradeState()
     {
-        transform.localScale *= 1.5f;
-        fireRate -= 1;
-        detectionCollider.radius *= 1.5f;
-        missilePrefab.TryGetComponent<Attack>(out Attack attack);
-        attack.damage += 20;
+
+        RangeLineFinder rangeFinder = GetComponentInChildren<RangeLineFinder>();
+        if (rangeFinder != null)
+        {
+            rangeFinder.currentSelectedTurret = true;
+        }
+        else
+        {
+            Debug.Log("no range finder found");
+        }
     }
 }

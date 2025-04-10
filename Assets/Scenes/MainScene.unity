@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4504069, g: 0.5004167, b: 0.57523465, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5773,7 +5773,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.3689575, y: 123.9491}
+  m_AnchoredPosition: {x: -4.3688965, y: 123.9491}
   m_SizeDelta: {x: -1048.743, y: -237.898}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698278286
@@ -8364,13 +8364,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959592287}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.29391566, y: 0.36280164, z: -0.12174384, w: 0.87588066}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 37.1, y: 45, z: 0}
 --- !u!1 &964019166
 GameObject:
   m_ObjectHideFlags: 0
@@ -8999,7 +8999,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.3687134, y: 121.95996}
+  m_AnchoredPosition: {x: -4.3686523, y: 121.95996}
   m_SizeDelta: {x: -1048.7, y: -243.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017758533
@@ -9075,7 +9075,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1980, y: 1150}
+  m_SizeDelta: {x: 3000, y: 2000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1023926042
 MonoBehaviour:
@@ -9848,6 +9848,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1112818198}
   - component: {fileID: 1112818197}
+  - component: {fileID: 1112818199}
   m_Layer: 0
   m_Name: TurretManager
   m_TagString: Untagged
@@ -9901,6 +9902,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1112818199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112818196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b518b966c41a9d4a991687d01f19f06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedTurret: {fileID: 0}
+  turretIsSelected: 0
+  upgradeMenu: {fileID: 1156956913}
 --- !u!1001 &1118648403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11700,7 +11716,7 @@ MonoBehaviour:
         m_MethodName: SetTowerToPlace
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8090576121898227209, guid: 21d7c755dd4ff5342a740347383c278d, type: 3}
+          m_ObjectArgument: {fileID: 2868150809026142808, guid: e73eb35a3b6a8dd4a988e65c465d7199, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -13854,8 +13870,6 @@ GameObject:
   - component: {fileID: 1546350971}
   - component: {fileID: 1546350970}
   - component: {fileID: 1546350967}
-  - component: {fileID: 1546350969}
-  - component: {fileID: 1546350968}
   - component: {fileID: 1546350973}
   m_Layer: 0
   m_Name: Manager
@@ -13881,52 +13895,6 @@ MonoBehaviour:
   maxPlayerHealth: 1000
   HealthBar: {fileID: 103266604}
   cameraShake: {fileID: 1955819264}
---- !u!114 &1546350968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546350966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b518b966c41a9d4a991687d01f19f06, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedTurret: {fileID: 0}
-  turretIsSelected: 1
-  upgradeMenu: {fileID: 0}
---- !u!114 &1546350969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1546350966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c3b9952d3588ba49a5c6593dd64e769, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedTurretPrefab: {fileID: 0}
-  turrets:
-  - turretName: Lazer Turret
-    turretPrefab: {fileID: 7501647794508298957, guid: 6483a988d7ff46743895489494cfcb6d, type: 3}
-    cost: 100
-    upgradeCost: 0
-  - turretName: Zone Turret
-    turretPrefab: {fileID: 590879394889393170, guid: 1c07a2aea82719f499a892f118413f77, type: 3}
-    cost: 100
-    upgradeCost: 0
-  - turretName: Slow Turret
-    turretPrefab: {fileID: 2445088891555194062, guid: 21ef6e4d9ba0c2f4f98bcd2ca7fee4ab, type: 3}
-    cost: 100
-    upgradeCost: 0
-  - turretName: Missle Turret
-    turretPrefab: {fileID: 5409352781006854833, guid: 45243da0b7af77b40a1eab99164f3504, type: 3}
-    cost: 100
-    upgradeCost: 0
-  SpawnedTurrets: []
 --- !u!114 &1546350970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18024,7 +17992,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 83
+  field of view: 98.6
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -18050,13 +18018,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955819260}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.62308395, y: -0, z: -0, w: 0.782155}
-  m_LocalPosition: {x: 1.3, y: 43.4, z: 70.3}
+  m_LocalRotation: {x: 0.5628322, y: -0, z: -0, w: 0.82657117}
+  m_LocalPosition: {x: 1.3, y: 24.14, z: 66.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 77.083, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 68.504, y: 0, z: 0}
 --- !u!114 &1955819264
 MonoBehaviour:
   m_ObjectHideFlags: 0
