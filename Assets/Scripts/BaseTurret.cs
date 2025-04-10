@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class BaseTurret : MonoBehaviour
 {
     [Header("Tower State")]
     public bool isPlaced = false; // Turret is not allowed to shoot until it's placed
+    public RangeLineFinder lineFinder;
 
     [Header("Tower Rotation Variables")]
     public GameObject rotationPoint;
@@ -18,7 +20,7 @@ public class BaseTurret : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (!isPlaced) return; // Don't execute any shooting or targeting logic if the turret is not placed
+       //commented out as it breaks the script if (!isPlaced) return; // Don't execute any shooting or targeting logic if the turret is not placed
 
         FindEnemy();
         TurretRotation();
@@ -75,6 +77,16 @@ public class BaseTurret : MonoBehaviour
 
     protected virtual void UpgradeState()
     {
-        transform.localScale *= 1.5f;
+        RangeLineFinder rangeFinder = GetComponentInChildren<RangeLineFinder>();
+        if (rangeFinder != null)
+        {
+            rangeFinder.currentSelectedTurret = true;
+        }
+        else
+        {
+            Debug.Log("no range finder found");
+        }
+      
+        
     }
 }

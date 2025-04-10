@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TowerPlacement : MonoBehaviour
 {
+    [SerializeField] private LayerMask PlacementCheckMask;
+    [SerializeField] private LayerMask PlacementCollideMask;
     [SerializeField] private Camera PlayerCamera;
 
     private GameObject CurrentPlacingTower;
@@ -16,19 +19,48 @@ public class TowerPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(CurrentPlacingTower != null)
+        
+        if (CurrentPlacingTower != null)
         {
             Ray camray = PlayerCamera.ScreenPointToRay(Input.mousePosition);
+            Debug.DrawRay(camray.origin, camray.direction * 1000f, Color.green);
+            RaycastHit HitInfo;
+            
 
-            if(Physics.Raycast(camray, out RaycastHit hitInfo, 100f))
+            if (Physics.Raycast(camray, out HitInfo, 100f, PlacementCollideMask))
             {
-                CurrentPlacingTower.transform.position = hitInfo.point;
+                Debug.Log("Hit : " + HitInfo.collider.name);
+                CurrentPlacingTower.transform.position = HitInfo.point;
+
+                if (Input.GetMouseButtonDown(0) && HitInfo.collider.gameObject != null)
+                {
+                    if (!HitInfo.collider.gameObject.CompareTag("CantPlace"))
+                    {
+                        BoxCollider TowerCollider = CurrentPlacingTower.gameObject.GetComponent<BoxCollider>();
+                        TowerCollider.isTrigger = true;
+
+                        Vector3 BoxCenter = CurrentPlacingTower.gameObject.transform.position + TowerCollider.center;
+                        Vector3 HalfExtents = TowerCollider.size / 2;
+
+                        if (!Physics.CheckBox(BoxCenter, HalfExtents, Quaternion.identity, PlacementCheckMask, QueryTriggerInteraction.Ignore))
+                        {
+                            TowerCollider.isTrigger = false;
+                            CurrentPlacingTower = null;
+                            Debug.Log("Tower Placed!");
+                        }
+                        else
+                        {
+                            Debug.Log("Blocked by something in PlacementCheckMask");
+                        }
+                    }
+                    else
+                    {
+                        Debug.Log("Hit object is tagged CantPlace");
+                    }
+                }
             }
 
-            if(Input.GetMouseButtonDown(0))
-            {
-                CurrentPlacingTower = null;
-            }
+            
         }
     }
 

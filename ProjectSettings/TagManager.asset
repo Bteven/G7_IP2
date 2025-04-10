@@ -13,6 +13,7 @@ TagManager:
   - Missile Tower
   - Zone Tower
   - Gun Tower
+  - CantPlace
   layers:
   - Default
   - TransparentFX
@@ -20,9 +21,9 @@ TagManager:
   - Ground
   - Water
   - UI
-  - NoPlacementZone
+  - Towers
   - 
-  - Tower
+  - 
   - 
   - 
   - 

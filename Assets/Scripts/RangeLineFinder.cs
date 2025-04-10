@@ -12,12 +12,14 @@ public class RangeLineFinder : MonoBehaviour
     public SphereCollider sphereCollider;
     public GameObject rangeIndicator;
     [SerializeField] float radius;
-    [SerializeField] float rotationSpeed;
+    [SerializeField] float rotationIndicatorSpeed;
+    int numberOfPoints = 20;
     void Start()
     {
         lineRenderer = GetComponentInChildren<LineRenderer>();
         radius = sphereCollider.radius;
-        points = new Vector3[4];
+
+
 
         // Now calculate the points
         CalculatePoints();
@@ -31,7 +33,7 @@ public class RangeLineFinder : MonoBehaviour
         RotateLine();
     }
 
-    void CheckIndicaterActive()
+    public void CheckIndicaterActive()
     {
 
         if (currentSelectedTurret)
@@ -42,13 +44,12 @@ public class RangeLineFinder : MonoBehaviour
         {
             rangeIndicator.SetActive(false);
         }
-    
-    }   
-      void RotateLine()
+
+    }
+    void RotateLine()
     {
 
-        lineRenderer.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-
+        lineRenderer.transform.Rotate(Vector3.up, rotationIndicatorSpeed * Time.deltaTime);
 
 
     }
@@ -62,10 +63,25 @@ public class RangeLineFinder : MonoBehaviour
 
     void CalculatePoints()
     {
-        // makes the points into vectors
-        points[0] = new Vector3(radius, 0.5f, 0);  // Right
-        points[2] = new Vector3(-radius, 0.5f, 0); // Left
-        points[1] = new Vector3(0, 0.5f, radius);  // Top
-        points[3] = new Vector3(0, 0.5f, -radius); // Bottom
+
+
+        points = new Vector3[numberOfPoints];
+
+
+        for (int i = 0; i <= numberOfPoints; i++)
+        {
+
+            // this just uses how to find coordinates of a circle and varys the angle keeping it realitive to pi keeping a circle formation
+            // tje (float) stops the decimal from being neglected as it would be if it was a intger
+
+            float angle = (float)i / numberOfPoints * 3.14f * 2;
+
+            float x = Mathf.Cos(angle) * radius;
+            float z = Mathf.Sin(angle) * radius;
+
+            points[i] = new Vector3(x, 0.5f, z);
+
+
+        }
     }
 }
