@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4504069, g: 0.5004167, b: 0.57523465, a: 1}
+  m_IndirectSpecularColor: {r: 0.4504074, g: 0.50041705, b: 0.57523483, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -318,6 +318,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
       propertyPath: m_Name
       value: track straight (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2517,6 +2521,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track corner (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     - target: {fileID: 2360101933065582435, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.099
@@ -2800,6 +2808,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3142,6 +3154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track straight (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3215,6 +3231,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3492,7 +3512,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ae58b2c64b4bdb04c8c45cba9ada71ad, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f1f9084e4992e854a821cc743c9f2fcb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4153,6 +4173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track straight (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4620,6 +4644,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     - target: {fileID: 2360101933065582435, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5726,6 +5754,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track straight (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5773,7 +5805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.3688965, y: 123.9491}
+  m_AnchoredPosition: {x: -4.3691406, y: 123.9491}
   m_SizeDelta: {x: -1048.743, y: -237.898}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &698278286
@@ -6251,6 +6283,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track straight (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6457,6 +6493,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8771,6 +8811,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994327113}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1007923882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2402126065504390598, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+  m_PrefabInstance: {fileID: 1484149359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1007923886
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007923882}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 7508733910249546983, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
 --- !u!1 &1013451052
 GameObject:
   m_ObjectHideFlags: 0
@@ -8999,7 +9066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.3686523, y: 121.95996}
+  m_AnchoredPosition: {x: -4.3688965, y: 121.95996}
   m_SizeDelta: {x: -1048.7, y: -243.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017758533
@@ -9450,14 +9517,14 @@ RectTransform:
   m_GameObject: {fileID: 1080175811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.2518141, y: 0.54887676, z: 0.52269}
+  m_LocalScale: {x: 2.39139, y: 0.54887676, z: 0.52269}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 921129372}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7, y: 2.5}
+  m_AnchoredPosition: {x: 25, y: 2.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1080175813
@@ -9480,7 +9547,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: bc73f0ffb96bfa54c80d0a76ddd41c41, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 918d68a763e79a24385507eb89332e1c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9981,6 +10048,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track straight (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10357,6 +10428,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11484,6 +11559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track corner (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11716,7 +11795,7 @@ MonoBehaviour:
         m_MethodName: SetTowerToPlace
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2868150809026142808, guid: e73eb35a3b6a8dd4a988e65c465d7199, type: 3}
+          m_ObjectArgument: {fileID: 4521650796317206761, guid: e084b0fd2e507b54f8038c0c2d5a9d89, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -12373,6 +12452,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13041,6 +13124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track corner (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13449,10 +13536,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: track straight (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -2402126065504390598, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1007923886}
   m_SourcePrefab: {fileID: 100100000, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
 --- !u!4 &1484149360 stripped
 Transform:
@@ -13972,6 +14066,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 907dfbae69a17cd4caf8a562c1e17061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlacementCheckMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  PlacementCollideMask:
+    serializedVersion: 2
+    m_Bits: 63
   PlayerCamera: {fileID: 1955819262}
 --- !u!1 &1549434505
 GameObject:
@@ -14170,6 +14270,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     - target: {fileID: 2360101933065582435, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14423,14 +14527,14 @@ RectTransform:
   m_GameObject: {fileID: 1580541453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.623556, y: 0.4075871, z: 0.37066853}
+  m_LocalScale: {x: 2.4588757, y: 0.4075871, z: 0.37066853}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1287959668}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000086683, y: -2.9}
+  m_AnchoredPosition: {x: 0.0000031272, y: -2.9}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1580541455
@@ -14453,7 +14557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 63112edbe9858e047b133392585edec1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22e30d2ea5d7d4749b849e3defbaa917, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15364,6 +15468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track corner (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15665,6 +15773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track corner (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     - target: {fileID: 2360101933065582435, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.099
@@ -15746,6 +15858,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16973,6 +17089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track straight (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17446,6 +17566,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track straight (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17524,6 +17648,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17640,6 +17768,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track corner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17714,6 +17846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track straight (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 35864b0a57a0b5041916bb5e14a2f26a, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17787,6 +17923,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18903,14 +19043,14 @@ RectTransform:
   m_GameObject: {fileID: 2059507282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9727316, y: 0.47557127, z: 0.4697}
+  m_LocalScale: {x: 2.5101037, y: 0.47557127, z: 0.4697}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 883597504}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22, y: 0.6}
+  m_AnchoredPosition: {x: 6.5, y: 0.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059507284
@@ -18933,7 +19073,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8931c0224022655449df7997aa23eec0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: df42e132659ee674e86628491a88c40d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19153,6 +19293,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: track corner (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19360,6 +19504,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     - target: {fileID: 2360101933065582435, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19864,6 +20012,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_Name
       value: track corner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
+      propertyPath: m_TagString
+      value: CantPlace
       objectReference: {fileID: 0}
     - target: {fileID: 2360101933065582435, guid: 29ad70d254aafa94c90041ad89c23d26, type: 3}
       propertyPath: m_LocalPosition.x
