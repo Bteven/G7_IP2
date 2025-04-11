@@ -12,6 +12,8 @@ public class PlayerHealthManager : MonoBehaviour
     public Image HealthBar;
     public Shake cameraShake; //shake script
 
+    public GameLostPanelManager gameLostPanelManager;
+
     //can input code for health bar here if needed
     public void Start()
     {
@@ -43,6 +45,11 @@ public class PlayerHealthManager : MonoBehaviour
 
             Debug.Log("GAME OVER!");
             Time.timeScale = 0f;
+
+            if(gameLostPanelManager != null)
+            {
+                gameLostPanelManager.ToggleGameLost();
+            }
         }
     }
       
