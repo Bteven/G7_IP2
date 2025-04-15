@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1724805180}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameLostPanelManager, Assembly-CSharp
         m_MethodName: ConfirmMenuYes
         m_Mode: 1
@@ -4566,7 +4566,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1724805180}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameLostPanelManager, Assembly-CSharp
         m_MethodName: ConfirmRestartYes
         m_Mode: 1
@@ -5879,7 +5879,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1724805180}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameLostPanelManager, Assembly-CSharp
         m_MethodName: ConfirmMenuNo
         m_Mode: 1
@@ -8677,7 +8677,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1724805180}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameLostPanelManager, Assembly-CSharp
         m_MethodName: ConfirmRestartNo
         m_Mode: 1
@@ -10817,7 +10817,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1724805180}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameLostPanelManager, Assembly-CSharp
         m_MethodName: GoToMainMenu
         m_Mode: 1
@@ -16057,6 +16057,7 @@ GameObject:
   - component: {fileID: 1546350967}
   - component: {fileID: 1546350973}
   - component: {fileID: 1546350974}
+  - component: {fileID: 1546350975}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -16082,7 +16083,7 @@ MonoBehaviour:
   HealthBar: {fileID: 103266604}
   cameraShake: {fileID: 1955819264}
   isGameOver: 0
-  gameLostPanelManager: {fileID: 1724805180}
+  gameLostPanelManager: {fileID: 0}
 --- !u!114 &1546350970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16187,6 +16188,24 @@ MonoBehaviour:
   UpgradeTypeOneText: {fileID: 210758996}
   UpgradeTypeTwoText: {fileID: 598725151}
   moneyWarning: {fileID: 1566603114}
+--- !u!114 &1546350975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546350966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f757a3a057ccf040bec60515a48d8e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameLostPanel: {fileID: 1724805176}
+  menuWarningPanel: {fileID: 1593047981}
+  restartWarningPanel: {fileID: 472700229}
+  rocket: {fileID: 1785268670}
+  rocketTargetPosition: {x: 0, y: 10, z: 0}
+  rocketTakeoffDuration: 4
 --- !u!1 &1549434505
 GameObject:
   m_ObjectHideFlags: 0
@@ -18459,7 +18478,6 @@ GameObject:
   - component: {fileID: 1724805177}
   - component: {fileID: 1724805179}
   - component: {fileID: 1724805178}
-  - component: {fileID: 1724805180}
   m_Layer: 5
   m_Name: GameLostPanel
   m_TagString: Untagged
@@ -18526,24 +18544,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1724805176}
   m_CullTransparentMesh: 1
---- !u!114 &1724805180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1724805176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f757a3a057ccf040bec60515a48d8e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameLostPanel: {fileID: 1724805176}
-  menuWarningPanel: {fileID: 1593047981}
-  restartWarningPanel: {fileID: 472700229}
-  rocket: {fileID: 0}
-  rocketTargetPosition: {x: 0, y: 0, z: 0}
-  rocketTakeoffDuration: 2
 --- !u!1 &1757678266
 GameObject:
   m_ObjectHideFlags: 0
@@ -18959,6 +18959,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72b1ff257f5c2284fa0f9bcc7beeccad, type: 3}
+--- !u!1 &1785268670 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b68857813cef2224490fb0bba7bf3b55, type: 3}
+  m_PrefabInstance: {fileID: 249688894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1796229117
 GameObject:
   m_ObjectHideFlags: 0
@@ -19447,7 +19452,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1724805180}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameLostPanelManager, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
