@@ -17,7 +17,8 @@ public class GameLostPanelManager : MonoBehaviour
     public void TriggerGameLostSequence()
     {
         Time.timeScale = 0.0f;
-        StartCoroutine(RocketTakeoffCoroutine());
+        gameLostPanel.SetActive(true);
+        StartCoroutine(RocketTakeoffCoroutine());   
     }
 
     private IEnumerator RocketTakeoffCoroutine()
@@ -33,7 +34,6 @@ public class GameLostPanelManager : MonoBehaviour
             rocket.transform.position = Vector3.Lerp(startPos, targetPos, acceleratedT);
             yield return null;
         }
-        gameLostPanel.SetActive(true);
     }
 
     public void GoToMainMenu()

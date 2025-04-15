@@ -40,7 +40,11 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] int spawnBurstTimer;                    // current time until next group spawns {can be edited in future to change speeds of wave}
     [SerializeField] float currentBurstTime = 0;             // cooldown for how fast the enemy groups spawn
 
-    private int totalEnemyKillReward = 0;
+
+    [Header("Currency")]
+    public int totalEnemyKillReward = 0;
+    public int totalEnemiesSpawned = 0;
+    public int enemiesKilledThisWave = 0;
 
     // Update is called once per frame
     private void Start()
@@ -85,18 +89,39 @@ public class SpawnManager : MonoBehaviour
 
             if (CurrencyManager.Instance != null)
             {
-                CurrencyManager.Instance.AddMoney(totalEnemyKillReward);
-                CurrencyManager.Instance.RewardWaveCompletion(waveNumber);
+                StartCoroutine(DelayedRewardDistribution());
             }
-            totalEnemyKillReward = 0;
         }
         else
         {
            
             GroupDiffCalculator();         // checks unit type to be sent
-                GroupSpawnCoolDown();          // after cooldown spawns the group
+            GroupSpawnCoolDown();          // after cooldown spawns the group
         }
     }
+
+    IEnumerator DelayedRewardDistribution()
+    {
+        yield return new WaitForSeconds(5f);
+
+        CurrencyManager.Instance.AddMoney(totalEnemyKillReward);
+
+        if (enemiesKilledThisWave == totalEnemiesSpawned)
+        {
+            int bonusAmount = 250;
+            CurrencyManager.Instance.AddMoney(bonusAmount);
+            Debug.Log($"[BONUS] All enemies killed! Bonus money awarded: {bonusAmount}");
+        }
+        else
+        {
+            Debug.Log("[BONUS] Not all enemies were killed, no bonuses were given.");
+        }
+
+        totalEnemyKillReward = 0;
+        totalEnemiesSpawned = 0;
+        enemiesKilledThisWave = 0;
+    }
+
     IEnumerator WaveCooldown()
     {
         currentWaveTimer += Time.deltaTime;
@@ -158,18 +183,11 @@ public class SpawnManager : MonoBehaviour
         {
             newEnemy.AddComponent<HealthController>();
         }
-
-        HealthController hc = newEnemy.GetComponent<HealthController>();
-        if (groupDiff == 0)
-            hc.rewardAmount = 50;
-        else if (groupDiff == 1)
-            hc.rewardAmount = 35;
-        else if (groupDiff == 2)
-            hc.rewardAmount = 100;
     }
 
     public void AddKillReward(int amount)
     {
         totalEnemyKillReward += amount;
+        enemiesKilledThisWave++;
     }
 }

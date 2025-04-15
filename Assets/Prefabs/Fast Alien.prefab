@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3623510674017743984}
   m_Layer: 0
   m_Name: Fast Alien
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 200
   finishLine: {fileID: 0}
-  rewardAmount: 50
+  rewardAmount: 25
   maxHealth: 200
 --- !u!95 &2594887499051554777
 Animator:

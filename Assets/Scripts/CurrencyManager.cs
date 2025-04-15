@@ -14,8 +14,8 @@ public class CurrencyManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
-           // DontDestroyOnLoad(gameObject);
-            CurrentCurrency = 1500;
+           DontDestroyOnLoad(gameObject);
+            CurrentCurrency = 450;
         }
         else
         {
@@ -42,13 +42,5 @@ public class CurrencyManager : MonoBehaviour
         {
             return false;
         }
-    }
-
-    public void RewardWaveCompletion(int waveNumber)
-    {
-        int waveBonus = 250;
-        Debug.Log($"[WaveBonus] RewardWaveCompletion CALLED! Wave Number: {waveNumber}, Calculated Bonus: {waveBonus}");
-        AddMoney(waveBonus);
-        Debug.Log($"[WaveBonus] New CurrentMoney after wave bonus: {CurrentCurrency}");
     }
 }

@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 200
   finishLine: {fileID: 0}
-  rewardAmount: 50
+  rewardAmount: 100
   maxHealth: 200
 --- !u!114 &4744027137510018553
 MonoBehaviour:
