@@ -15,7 +15,6 @@ TagManager:
   - Gun Tower
   - CantPlace
   - Menu
-  - Missile
   layers:
   - Default
   - TransparentFX
