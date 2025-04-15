@@ -88,6 +88,7 @@ MonoBehaviour:
   missileSpawnPoint: {fileID: 6133419788619312058}
   missilePrefab: {fileID: 8554201936724616901, guid: 0c1243b9f23595b4ba032daf9d23f1c0, type: 3}
   fireRate: 3
+  missileDamage: 30
   detectionCollider: {fileID: 3361939209709220870}
 --- !u!114 &5599441409323271926
 MonoBehaviour:

@@ -20,8 +20,8 @@ public class UpgradeIconScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
+        ChangeIcon();
     }
 
     public void ChangeIcon()

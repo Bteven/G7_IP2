@@ -28,52 +28,85 @@ public class UpgradePanelMenu : MonoBehaviour
     }
     public void upgradeTwo()
     {
-
+        
 
         GameObject currentTower = turretUpgradeManager.selectedTower;
 
         if (currentTower.TryGetComponent<UpgradeTowerInterface>(out var upgradeInterface))
-
-
-            if (currencyManager.CurrentCurrency >= upgradeTwoCost && upgradeInterface.UpgradeTwoDone == false)
         {
-            currencyManager.SpendMoney(upgradeTwoCost);
+            if (currencyManager.CurrentCurrency >= upgradeTwoCost && upgradeInterface.UpgradeTwoDone == false)
+            {
+                currencyManager.SpendMoney(upgradeTwoCost);
                 upgradeInterface.UpgradeTwo();
             }
-        
+        }
+        else if (currentTower.GetComponentInChildren<UpgradeTowerInterface>() is UpgradeTowerInterface upgradeInterfaceChild)
+        {
+            Debug.Log("1 Hello");
+            if (currencyManager.CurrentCurrency >= upgradeTwoCost && upgradeInterfaceChild.UpgradeTwoDone == false)
+            {
+                currencyManager.SpendMoney(upgradeTwoCost);
+                upgradeInterfaceChild.UpgradeTwo();
+            }
+        }
+        else if (currentTower.GetComponentInParent<UpgradeTowerInterface>() is UpgradeTowerInterface upgradeInterfaceParent)
+        {
+            Debug.Log("1 Hello");
+            if (currencyManager.CurrentCurrency >= upgradeTwoCost && upgradeInterfaceParent.UpgradeTwoDone == false)
+            {
+                currencyManager.SpendMoney(upgradeTwoCost);
+                upgradeInterfaceParent.UpgradeTwo();
+            }
+
+        }
 
 
     }
     public void upgradeOne()
     {
+      
 
         GameObject currentTower = turretUpgradeManager.selectedTower;
 
-        if(currentTower.TryGetComponent<UpgradeTowerInterface>(out var upgradeInterface))
-
-
-        if (currencyManager.CurrentCurrency >= upgradeOneCost && upgradeInterface.UpgradeOneDone == false)
+        if (currentTower.TryGetComponent<UpgradeTowerInterface>(out var upgradeInterface))
         {
-            currencyManager.SpendMoney(upgradeOneCost);
+
+
+            Debug.Log("1 Hello");
+            if (currencyManager.CurrentCurrency >= upgradeOneCost && upgradeInterface.UpgradeOneDone == false)
+            {
+                currencyManager.SpendMoney(upgradeOneCost);
                 upgradeInterface.UpgradeOne();
 
 
+            }
+
+        }
+        else if (currentTower.GetComponentInChildren<UpgradeTowerInterface>() is UpgradeTowerInterface upgradeInterfaceChild)
+        {
+            Debug.Log("1 Hello");
+            if (currencyManager.CurrentCurrency >= upgradeOneCost && upgradeInterfaceChild.UpgradeOneDone == false)
+            {
+                currencyManager.SpendMoney(upgradeOneCost);
+                upgradeInterfaceChild.UpgradeTwo();
+            }
+        }
+        else if (currentTower.GetComponentInParent<UpgradeTowerInterface>() is UpgradeTowerInterface upgradeInterfaceParent)
+        {
+            Debug.Log("1 Hello");
+            if (currencyManager.CurrentCurrency >= upgradeOneCost && upgradeInterfaceParent.UpgradeOneDone == false)
+            {
+                currencyManager.SpendMoney(upgradeOneCost);
+                upgradeInterfaceParent.UpgradeTwo();
+            }
+
         }
 
-        
-
-    }
+        }
     void checkTowerType()
     { 
     // LAZER 0 , ZT 1 , MISSLE 2 , SLOW 3
-
-         if (turretUpgradeManager.turretTypeIndicator == 1)
-        {
-            upgradeOneCost = 150;
-            upgradeTwoCost = 200;
-
-        }
-
+     
 
         switch (turretUpgradeManager.turretTypeIndicator)
         {

@@ -78,7 +78,7 @@ public class TurretUpgradeManager : MonoBehaviour
 
     private void LookForTower()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject())
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -144,7 +144,7 @@ public class TurretUpgradeManager : MonoBehaviour
                     default:
 
                         // issue this stops all menu stuff before button can be pressed will have to find a new way to set false
-
+                        upgradeMenu.SetActive(false);
                         StartCoroutine(turnOffUpgradePanel());
 
                         break;
@@ -164,7 +164,7 @@ public class TurretUpgradeManager : MonoBehaviour
 
 
         yield return new WaitForSeconds(3);
-        upgradeMenu.SetActive(false);
+       // upgradeMenu.SetActive(false);
     }
 
 
