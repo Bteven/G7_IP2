@@ -1,19 +1,39 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameLostPanelManager : MonoBehaviour
 {
+    [Header("Menu Panels")]
     [SerializeField] private GameObject gameLostPanel;
     [SerializeField] private GameObject menuWarningPanel;
     [SerializeField] private GameObject restartWarningPanel;
 
-    public void ToggleGameLost()
+    [Header("Rocket Settings")]
+    [SerializeField] private GameObject rocket;
+    [SerializeField] private Vector3 rocketTargetPosition;
+    [SerializeField] private float rocketTakeoffDuration = 2.0f;
+
+    public void TriggerGameLostSequence()
     {
-        bool isGameLost = gameLostPanel.activeSelf;
-        gameLostPanel.SetActive(!isGameLost);
-        Time.timeScale = isGameLost ? 1.0f : 0.0f;
+        Time.timeScale = 0.0f;
+        StartCoroutine(RocketTakeoffCoroutine());
+    }
+
+    private IEnumerator RocketTakeoffCoroutine()
+    {
+        Vector3 startPos = rocket.transform.position;
+        Vector3 targetPos = startPos + Vector3.up * 25f;
+        float elapsed = 0f;
+        while (elapsed < rocketTakeoffDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            float t = Mathf.Clamp01(elapsed / rocketTakeoffDuration);
+            float acceleratedT = t * t;
+            rocket.transform.position = Vector3.Lerp(startPos, targetPos, acceleratedT);
+            yield return null;
+        }
+        gameLostPanel.SetActive(true);
     }
 
     public void GoToMainMenu()

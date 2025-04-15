@@ -12,6 +12,7 @@ public class PlayerHealthManager : MonoBehaviour
     public Image HealthBar;
     public Shake cameraShake; //shake script
 
+    public bool isGameOver;
     public GameLostPanelManager gameLostPanelManager;
 
     //can input code for health bar here if needed
@@ -27,9 +28,11 @@ public class PlayerHealthManager : MonoBehaviour
 
     public void PlayerDamage(float damage)
     {
-        
+        if (isGameOver)
+            return;
+
         playerHealth -= damage;
-        
+
         //camera shake
         if (cameraShake != null)
         {
@@ -41,16 +44,15 @@ public class PlayerHealthManager : MonoBehaviour
         if (playerHealth <= 0)
         {
             playerHealth = 0;
-
-
+            isGameOver = true;
             Debug.Log("GAME OVER!");
-            Time.timeScale = 0f;
 
-            if(gameLostPanelManager != null)
+
+            if (gameLostPanelManager != null)
             {
-                gameLostPanelManager.ToggleGameLost();
+                gameLostPanelManager.TriggerGameLostSequence();
             }
         }
     }
-      
+
 }
