@@ -16083,7 +16083,7 @@ MonoBehaviour:
   HealthBar: {fileID: 103266604}
   cameraShake: {fileID: 1955819264}
   isGameOver: 0
-  gameLostPanelManager: {fileID: 0}
+  gameLostPanelManager: {fileID: 1546350975}
 --- !u!114 &1546350970
 MonoBehaviour:
   m_ObjectHideFlags: 0
