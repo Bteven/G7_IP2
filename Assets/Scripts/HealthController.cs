@@ -16,6 +16,7 @@ public class HealthController : MonoBehaviour
 
     //can input code for health bar here if needed
 
+    SoundManager soundManager;
 
     public void TakeDamage(float damage)
     {
@@ -61,17 +62,22 @@ public class HealthController : MonoBehaviour
     }
     private void OnTriggerEnter(Collider col) //not ideal to put this here but i'll try move it when we combine the scene
     {
-        if (col.gameObject.CompareTag("Bullet")) //Destroys bullet if it hits player and destroys enemy if it hits the finish line
+        if (col.gameObject.CompareTag("Bullet") || col.gameObject.tag == "Missile") //Destroys bullet if it hits player and destroys enemy if it hits the finish line
         {
             Destroy(col.gameObject);
 
 
+            soundManager = FindObjectOfType<SoundManager>();
             var damageScript = col.gameObject.GetComponent<Attack>();
             var damage = damageScript.damage;
 
+            if (col.gameObject.tag == "Missile")
+            {
+ 
+                soundManager.PlayMissleExplosionSound(this.transform.position);
 
+            }
             TakeDamage(damage);
-
         }
     }
 

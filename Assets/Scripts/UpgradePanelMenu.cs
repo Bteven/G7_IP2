@@ -120,7 +120,7 @@ public class UpgradePanelMenu : MonoBehaviour
             if (currencyManager.CurrentCurrency >= upgradeOneCost && upgradeInterfaceChild.UpgradeOneDone == false)
             {
                 currencyManager.SpendMoney(upgradeOneCost);
-                upgradeInterfaceChild.UpgradeTwo();
+                upgradeInterfaceChild.UpgradeOne();
             }
             else
             {
@@ -135,7 +135,7 @@ public class UpgradePanelMenu : MonoBehaviour
             if (currencyManager.CurrentCurrency >= upgradeOneCost && upgradeInterfaceParent.UpgradeOneDone == false)
             {
                 currencyManager.SpendMoney(upgradeOneCost);
-                upgradeInterfaceParent.UpgradeTwo();
+                upgradeInterfaceParent.UpgradeOne();
             }
             else
             {

@@ -108,7 +108,7 @@ public class SlowTower : MonoBehaviour, UpgradeTowerInterface
     {
         // this will decrease the cooldown betwean swings
 
-        float speedDecrease = 0.1f;
+        float speedDecrease = 0.2f;
         Debug.Log("bye");
         slowSpeedMultiplier = slowSpeedMultiplier - speedDecrease;
 

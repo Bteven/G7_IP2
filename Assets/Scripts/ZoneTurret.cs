@@ -21,8 +21,8 @@ public class ZoneTurret : BaseTurret, UpgradeTowerInterface
     public float fireCooldown;
     public float currentFireTimer;
 
+    private SoundManager soundManager;
 
-         
 
     public bool UpgradeOneDone { get; private set; }
     public bool UpgradeTwoDone { get; private set; }
@@ -34,6 +34,8 @@ public class ZoneTurret : BaseTurret, UpgradeTowerInterface
     {
         currentFireTimer = fireCooldown;
         isSpinning = false;
+         
+
     }
 
     // Update is called once per frame
@@ -61,6 +63,7 @@ public class ZoneTurret : BaseTurret, UpgradeTowerInterface
 
         if (currentFireTimer > fireCooldown)        // when cooldown over
         {
+            
             StartCoroutine(SpinAttack());                // calls ENumeratort to start spin attack animation 
             currentFireTimer = 0;       // resets timer
         }
@@ -72,6 +75,8 @@ public class ZoneTurret : BaseTurret, UpgradeTowerInterface
         isSpinning = true;         
         animator.SetTrigger("Attacking");           // starts the animation
 
+        soundManager = FindObjectOfType<SoundManager>();
+        soundManager.PlayZoneAttackSound(this.transform.position);
 
         if (enemyObjectInRange.Count == 0)  //if no more enemys in range 
         {
@@ -104,6 +109,7 @@ public class ZoneTurret : BaseTurret, UpgradeTowerInterface
                 HealthController enemyHealth = enemy.GetComponent<HealthController>();
                 if (enemyHealth != null)
                 {
+                   
                     enemyHealth.TakeDamage(damageAmount);
                 }
             }
