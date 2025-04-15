@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,15 +19,48 @@ public class MissileTower : MonoBehaviour, UpgradeTowerInterface
     private List<GameObject> enemiesInRange = new List<GameObject>();
     private Transform targetEnemy;
 
+    [Header("Silo Door Settings")]
+    public Transform door1;
+    public Transform door2;
+    public float doorSlideDistance = 1f;
+    public float doorAnimationDuration = 1f;
+
+    private Vector3 door1ClosedPos;
+    private Vector3 door2ClosedPos;
+    private Vector3 door1OpenPos;
+    private Vector3 door2OpenPos;
+
+    private bool isLaunching = false;
     public bool UpgradeOneDone { get; private set; }
     public bool UpgradeTwoDone { get; private set; }
+
+    void Start()
+    {
+        //Save closed positions of doors
+        door1ClosedPos = door1.localPosition;
+        door2ClosedPos = door2.localPosition;
+
+        //Calculate open positions of doors
+        door1OpenPos = door1ClosedPos + Vector3.forward * doorSlideDistance;
+        door2OpenPos = door2ClosedPos + Vector3.back * doorSlideDistance;
+        
+    }
 
     void Update()
     {
         if (!isPlaced) return; // Don't shoot if the turret is not placed
 
         FindTarget();
-        FireMissile();
+        //FireMissile();
+
+        if (targetEnemy != null && fireTimer <= 0f && !isLaunching)
+        {
+            StartCoroutine(LaunchSequence());
+        }
+        else
+        {
+            fireTimer -= Time.deltaTime;
+        }
     }
 
     void FindTarget()
@@ -64,6 +98,46 @@ public class MissileTower : MonoBehaviour, UpgradeTowerInterface
 
 
 
+    }
+
+    IEnumerator LaunchSequence()
+    {
+        isLaunching = true;
+
+        yield return StartCoroutine(SlideDoorsTogether(door1OpenPos, door2OpenPos));
+
+        yield return new WaitForSeconds(0.2f);
+
+        FireMissile();
+
+        yield return new WaitForSeconds(0.8f);
+
+        //Close doors
+        yield return StartCoroutine(SlideDoorsTogether(door1ClosedPos, door2ClosedPos));
+
+        isLaunching = false;
+
+
+    }
+
+    IEnumerator SlideDoorsTogether(Vector3 door1Target, Vector3 door2Target)
+    {
+        Vector3 door1Start = door1.localPosition;
+        Vector3 door2Start = door2.localPosition;
+
+        float elapsed = 0f;
+
+        while (elapsed < doorAnimationDuration)
+        {
+            float t = elapsed / doorAnimationDuration;
+            door1.localPosition = Vector3.Lerp(door1Start, door1Target, t);
+            door2.localPosition = Vector3.Lerp(door2Start, door2Target, t);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        door1.localPosition = door1Target;
+        door2.localPosition = door2Target;
     }
     void FireMissile()
     {
