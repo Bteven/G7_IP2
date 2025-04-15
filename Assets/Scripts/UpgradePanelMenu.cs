@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UpgradePanelMenu : MonoBehaviour
@@ -7,7 +8,14 @@ public class UpgradePanelMenu : MonoBehaviour
 
     TurretUpgradeManager turretUpgradeManager;
     CurrencyManager currencyManager;
-    
+
+    public TextMeshProUGUI costOneText;
+    public TextMeshProUGUI costTwoText;
+
+    public TextMeshProUGUI UpgradeTypeOneText;
+    public TextMeshProUGUI UpgradeTypeTwoText;
+
+    public GameObject moneyWarning;
 
 
     private int upgradeOneCost;
@@ -18,7 +26,7 @@ public class UpgradePanelMenu : MonoBehaviour
     {
         turretUpgradeManager = FindObjectOfType<TurretUpgradeManager>();
         currencyManager = FindObjectOfType<CurrencyManager>();
-      
+
     }
 
     // Update is called once per frame
@@ -28,7 +36,7 @@ public class UpgradePanelMenu : MonoBehaviour
     }
     public void upgradeTwo()
     {
-        
+
 
         GameObject currentTower = turretUpgradeManager.selectedTower;
 
@@ -39,6 +47,12 @@ public class UpgradePanelMenu : MonoBehaviour
                 currencyManager.SpendMoney(upgradeTwoCost);
                 upgradeInterface.UpgradeTwo();
             }
+            else
+            {
+                moneyWarning.SetActive(true);
+                StartCoroutine(moneyWarn());
+
+            }
         }
         else if (currentTower.GetComponentInChildren<UpgradeTowerInterface>() is UpgradeTowerInterface upgradeInterfaceChild)
         {
@@ -47,6 +61,12 @@ public class UpgradePanelMenu : MonoBehaviour
             {
                 currencyManager.SpendMoney(upgradeTwoCost);
                 upgradeInterfaceChild.UpgradeTwo();
+            }
+            else
+            {
+                moneyWarning.SetActive(true);
+                StartCoroutine(moneyWarn());
+
             }
         }
         else if (currentTower.GetComponentInParent<UpgradeTowerInterface>() is UpgradeTowerInterface upgradeInterfaceParent)
@@ -57,6 +77,12 @@ public class UpgradePanelMenu : MonoBehaviour
                 currencyManager.SpendMoney(upgradeTwoCost);
                 upgradeInterfaceParent.UpgradeTwo();
             }
+            else
+            {
+                moneyWarning.SetActive(true);
+                StartCoroutine(moneyWarn());
+
+            }
 
         }
 
@@ -64,7 +90,7 @@ public class UpgradePanelMenu : MonoBehaviour
     }
     public void upgradeOne()
     {
-      
+
 
         GameObject currentTower = turretUpgradeManager.selectedTower;
 
@@ -80,6 +106,12 @@ public class UpgradePanelMenu : MonoBehaviour
 
 
             }
+            else
+            {
+                moneyWarning.SetActive(true);
+                StartCoroutine(moneyWarn());
+
+            }
 
         }
         else if (currentTower.GetComponentInChildren<UpgradeTowerInterface>() is UpgradeTowerInterface upgradeInterfaceChild)
@@ -90,6 +122,12 @@ public class UpgradePanelMenu : MonoBehaviour
                 currencyManager.SpendMoney(upgradeOneCost);
                 upgradeInterfaceChild.UpgradeTwo();
             }
+            else
+            {
+                moneyWarning.SetActive(true);
+                StartCoroutine(moneyWarn());
+
+            }
         }
         else if (currentTower.GetComponentInParent<UpgradeTowerInterface>() is UpgradeTowerInterface upgradeInterfaceParent)
         {
@@ -99,40 +137,81 @@ public class UpgradePanelMenu : MonoBehaviour
                 currencyManager.SpendMoney(upgradeOneCost);
                 upgradeInterfaceParent.UpgradeTwo();
             }
+            else
+            {
+                moneyWarning.SetActive(true);
+                StartCoroutine(moneyWarn());
+
+            }
 
         }
+        
 
-        }
-    void checkTowerType()
+    }
+    IEnumerator moneyWarn()
+    {
+
+        yield return new WaitForSeconds(0.7f);
+        moneyWarning.SetActive(false);
+    }
+
+void checkTowerType()
     { 
     // LAZER 0 , ZT 1 , MISSLE 2 , SLOW 3
      
 
         switch (turretUpgradeManager.turretTypeIndicator)
         {
-            case 1:
+            case 0:
 
                 upgradeOneCost = 150;
                 upgradeTwoCost = 200;
 
-            break;
+                costOneText.text = upgradeOneCost.ToString();
+                costTwoText.text = upgradeTwoCost.ToString();
 
-            case 2:
+                UpgradeTypeOneText.text = "";
+                UpgradeTypeTwoText.text = "";
+
+
+                break;
+
+            case 1:
 
                 upgradeOneCost = 200;
                 upgradeTwoCost = 300;
 
+                costOneText.text = upgradeOneCost.ToString();
+                costTwoText.text = upgradeTwoCost.ToString();
+
+                UpgradeTypeOneText.text = "Faster";
+                UpgradeTypeTwoText.text = "Damage";
+
+
                 break;
-            case 3:
+            case 2:
 
                 upgradeOneCost = 400;
                 upgradeTwoCost = 500;
 
+                costOneText.text = upgradeOneCost.ToString();
+                costTwoText.text = upgradeTwoCost.ToString();
+
+                UpgradeTypeOneText.text = "Fire Speed";
+                UpgradeTypeTwoText.text = "Damage";
+
                 break;
-            case 4:
+            case 3:
 
                 upgradeOneCost = 300;
                 upgradeTwoCost = 600;
+
+                costOneText.text = upgradeOneCost.ToString();
+                costTwoText.text = upgradeTwoCost.ToString();
+
+                UpgradeTypeOneText.text = "Range";
+                UpgradeTypeTwoText.text = "Slowness";
+
 
                 break;
 

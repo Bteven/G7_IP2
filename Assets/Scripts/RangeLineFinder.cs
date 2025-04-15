@@ -57,13 +57,15 @@ public class RangeLineFinder : MonoBehaviour
     void DrawLine()
     {
         // populates the line renderer with the calculated points 
+       
         lineRenderer.positionCount = points.Length;
         lineRenderer.SetPositions(points);
     }
 
-    void CalculatePoints()
+    public void CalculatePoints()
     {
 
+        radius = sphereCollider.radius;
 
         points = new Vector3[numberOfPoints];
 

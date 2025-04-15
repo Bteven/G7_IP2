@@ -134,7 +134,7 @@ public class TurretUpgradeManager : MonoBehaviour
                     case "Slow Tower":
                         raycastHit.collider.gameObject.TryGetComponent<SlowTower>(out SlowTower STComponent);
                         STComponent.UpgradeState();
-
+                        selectedTower = raycastHit.collider.gameObject;
 
 
                         turretTypeIndicator = 3;
