@@ -16565,7 +16565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -187.5, y: -9.68573}
+  m_AnchoredPosition: {x: -187.5, y: -9.685791}
   m_SizeDelta: {x: 284.2317, y: 126.774475}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &1580541453
@@ -17314,7 +17314,7 @@ Transform:
   m_GameObject: {fileID: 1638932932}
   serializedVersion: 2
   m_LocalRotation: {x: 0.32392493, y: 0.6285481, z: -0.6285481, w: 0.32392493}
-  m_LocalPosition: {x: 0.0108, y: -0.1268, z: -0.0044}
+  m_LocalPosition: {x: 0.0082, y: -0.1457, z: -0.0025}
   m_LocalScale: {x: 0.041441057, y: 0.0207747, z: 0.017487776}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -18231,7 +18231,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 50
       minScalar: 10
       maxCurve:
         serializedVersion: 2
