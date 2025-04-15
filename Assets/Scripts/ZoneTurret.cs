@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
-public class ZoneTurret : BaseTurret
+public class ZoneTurret : BaseTurret, UpgradeTowerInterface
 {
     public Animator animator;
     [SerializeField] float damageAmount;
@@ -21,10 +22,18 @@ public class ZoneTurret : BaseTurret
     public float currentFireTimer;
 
 
+         
+
+    public bool UpgradeOneDone { get; private set; }
+    public bool UpgradeTwoDone { get; private set; }
+
+
+
+
     void Start()
     {
         currentFireTimer = fireCooldown;
-         isSpinning = false;
+        isSpinning = false;
     }
 
     // Update is called once per frame
@@ -104,9 +113,31 @@ public class ZoneTurret : BaseTurret
     public void UpgradeState()
     {
         base.UpgradeState();
-      //  fireCooldown -= 2;
+        // fireCooldown -= 2;
        // damageAmount += 5;
     }
+
+    public void UpgradeOne()
+    {
+        // this will decrease the cooldown betwean swings
+
+        int fireCooldownUpgradeValue = 2;
+
+        Debug.Log("Hello");
+        fireCooldown = fireCooldown - fireCooldownUpgradeValue;
+        UpgradeOneDone = true;
+}
+    public void UpgradeTwo()
+    {
+        // this will decrease the cooldown betwean swings
+
+        int damageIncrease = 20;
+
+        damageAmount = damageAmount + damageIncrease;
+
+        UpgradeTwoDone = true;
+    }
+
 }
 
 

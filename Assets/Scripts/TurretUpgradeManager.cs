@@ -9,8 +9,10 @@ public class TurretUpgradeManager : MonoBehaviour
 
     public GameObject selectedTurret;
     public bool turretIsSelected;
-    private GameObject selectedTower;
+    public GameObject selectedTower;
+    public float turretTypeIndicator; // this will be used so the switch case dosn't need to be made twice
     public GameObject upgradeMenu;
+    public UpgradePanelMenu upgradePanelMenu;
 
 
     // Start is called before the first frame update
@@ -40,7 +42,7 @@ public class TurretUpgradeManager : MonoBehaviour
         }
 
         LookForTower();
-        
+
     }
 
 
@@ -50,7 +52,7 @@ public class TurretUpgradeManager : MonoBehaviour
         {
             RangeLineFinder rangeFinder;
             rangeFinder = selectedTurret.GetComponentInChildren<RangeLineFinder>();
-                      
+
             rangeFinder.currentSelectedTurret = false;
 
             selectedTurret = null;
@@ -84,7 +86,7 @@ public class TurretUpgradeManager : MonoBehaviour
 
             hits = Physics.RaycastAll(ray, Mathf.Infinity);
 
-            for(int i = 0; i < hits.Length; i++)
+            for (int i = 0; i < hits.Length; i++)
             {
                 RaycastHit raycastHit = hits[i];
                 Debug.Log(raycastHit.collider.gameObject.tag);
@@ -94,7 +96,9 @@ public class TurretUpgradeManager : MonoBehaviour
                         if (raycastHit.collider.gameObject.GetComponentInChildren<TowerGun>() != null)
                         {
                             raycastHit.collider.gameObject.GetComponentInChildren<TowerGun>().UpgradeState();
-                                                        
+                            selectedTower = raycastHit.collider.gameObject;
+
+                            turretTypeIndicator = 0;
                             upgradeMenu.SetActive(true);
                         }
                         break;
@@ -102,8 +106,15 @@ public class TurretUpgradeManager : MonoBehaviour
                     case "Zone Tower":
 
                         raycastHit.collider.gameObject.TryGetComponent<ZoneTurret>(out ZoneTurret ZTComponent);
+                        selectedTower = raycastHit.collider.gameObject;
+
                         ZTComponent.UpgradeState();
+
+
+
+                        turretTypeIndicator = 1;
                         upgradeMenu.SetActive(true);
+
 
                         break;
 
@@ -111,6 +122,11 @@ public class TurretUpgradeManager : MonoBehaviour
                         if (raycastHit.collider.gameObject.GetComponentInParent<MissileTower>() != null)
                         {
                             raycastHit.collider.gameObject.GetComponentInParent<MissileTower>().UpgradeState();
+                            selectedTower = raycastHit.collider.gameObject;
+
+
+
+                            turretTypeIndicator = 2;
                             upgradeMenu.SetActive(true);
                         }
                         break;
@@ -118,22 +134,39 @@ public class TurretUpgradeManager : MonoBehaviour
                     case "Slow Tower":
                         raycastHit.collider.gameObject.TryGetComponent<SlowTower>(out SlowTower STComponent);
                         STComponent.UpgradeState();
+
+
+
+                        turretTypeIndicator = 3;
                         upgradeMenu.SetActive(true);
                         break;
 
-                        default:
-                        upgradeMenu.SetActive(false);
+                    default:
 
-                        foreach (RangeLineFinder range in FindObjectsOfType<RangeLineFinder>())
-                        {
-                            range.currentSelectedTurret = false;
-                        }
+                        // issue this stops all menu stuff before button can be pressed will have to find a new way to set false
+
+                        StartCoroutine(turnOffUpgradePanel());
 
                         break;
-
-
                 }
             }
-        } 
+        }
     }
+
+    IEnumerator turnOffUpgradePanel()
+    {
+
+
+        foreach (RangeLineFinder range in FindObjectsOfType<RangeLineFinder>())
+        {
+            range.currentSelectedTurret = false;
+        }
+
+
+        yield return new WaitForSeconds(3);
+        upgradeMenu.SetActive(false);
+    }
+
+
+
 }
