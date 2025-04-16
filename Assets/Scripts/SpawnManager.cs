@@ -43,6 +43,7 @@ public class SpawnManager : MonoBehaviour
     bool bossSpawned = false;
 
     public BossScript bossScript;
+    public int bossBonus; 
 
     [Header("Currency")]
     public int totalEnemyKillReward = 0;
@@ -95,6 +96,8 @@ public class SpawnManager : MonoBehaviour
     }
     void spawnBoss()
     {
+
+        CurrencyManager.Instance.AddMoney(bossBonus);
 
         GameObject newEnemy = Instantiate(enemyBoss, spawnPoint.transform.position, Quaternion.identity);
         // spawns an enemy depending the group dificulty set earlyer and will ether spawn normal,fast,tank

@@ -164,8 +164,8 @@ void checkTowerType()
         {
             case 0:
 
-                upgradeOneCost = 150;
-                upgradeTwoCost = 200;
+                upgradeOneCost = 200;
+                upgradeTwoCost = 250;
 
                 costOneText.text = upgradeOneCost.ToString();
                 costTwoText.text = upgradeTwoCost.ToString();
@@ -191,7 +191,7 @@ void checkTowerType()
                 break;
             case 2:
 
-                upgradeOneCost = 400;
+                upgradeOneCost = 200;
                 upgradeTwoCost = 500;
 
                 costOneText.text = upgradeOneCost.ToString();

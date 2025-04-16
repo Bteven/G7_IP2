@@ -59,7 +59,7 @@ MonoBehaviour:
   enemyObjectInRange: []
   enemyObject: {fileID: 0}
   animator: {fileID: 249359500759680807}
-  damageAmount: 20
+  damageAmount: 30
   isSpinning: 0
   fireCooldown: 5
   currentFireTimer: 90

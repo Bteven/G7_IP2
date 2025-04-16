@@ -206,7 +206,7 @@ public class MissileTower : MonoBehaviour, UpgradeTowerInterface
 
         Debug.Log("Hello");
 
-        int damageIncrease = 100;
+        int damageIncrease = 300;
 
 
         missileDamage = missileDamage + damageIncrease;

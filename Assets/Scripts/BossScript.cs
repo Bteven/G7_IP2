@@ -30,7 +30,7 @@ public class BossScript : MonoBehaviour
             bossBar.fillAmount = controller.currentHealth / 5000;   // bad code but i in rush
 
 
-            if (controller.currentHealth <= 0)
+            if (controller.currentHealth <= 0 || bossObject == null)
             {
 
                 GameWinPanel = FindObjectOfType<GameWinPanelScript>();

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,10 +10,15 @@ public class GameWinPanelScript : MonoBehaviour
     [SerializeField] private GameObject gameWinPanel;
     [SerializeField] private GameObject menuWarningPanel;
     [SerializeField] private GameObject restartWarningPanel;
+    public PlayerHealthManager playerHealth;
+    public TextMeshProUGUI healthAtTheEndText;
 
     public void WinGame()
     {
+
+        healthAtTheEndText.text = "You Won With " + playerHealth.playerHealth + " Health Left";
         gameWinPanel.SetActive(true);
+        Time.timeScale = 0.0f;
     }
 
     public void GoToMainMenu()
