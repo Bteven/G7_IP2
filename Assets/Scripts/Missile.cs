@@ -7,9 +7,11 @@ public class Missile : MonoBehaviour
     private Transform targetEnemy;
 
     private AudioSource audioSource;
-   
 
 
+
+    private float lifeTimer = 0f;
+    private float maxLifetime = 3f;
 
     private void Awake()
     {
@@ -35,10 +37,21 @@ public class Missile : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * homingStrength);
             transform.Translate(Vector3.forward * missileSpeed * Time.deltaTime);
         }
+
+
+        lifeTimer += Time.deltaTime;
+        if (lifeTimer >= maxLifetime)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     public void SetTarget(Transform target)
     {
         targetEnemy = target;
     }
+
+    
+
 }

@@ -9960,7 +9960,7 @@ MonoBehaviour:
   zoneAttackSound: {fileID: 8300000, guid: bf8e93a189d58424bbbdf8a59a77c85a, type: 3}
   missileSound: {fileID: 8300000, guid: 10d489d87480c4042a7827c2e136b98c, type: 3}
   missileExplosionSound: {fileID: 8300000, guid: 6ce5b1a87bbe92d4a9b0e0bbafabfb4f, type: 3}
-  lazerFiring: {fileID: 0}
+  lazerFiring: {fileID: 8300000, guid: a1a11343905d2cd4dacd20dd80771297, type: 3}
 --- !u!1 &612583069
 GameObject:
   m_ObjectHideFlags: 0
@@ -13696,7 +13696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 52, y: -664}
+  m_AnchoredPosition: {x: 52, y: -422}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &921129373
@@ -15579,7 +15579,7 @@ MonoBehaviour:
     upgradeCost: 0
   - turretName: Missile Turret
     turretPrefab: {fileID: 2175953359745585590, guid: 389c08c957ed1da4f8fad49ba0f9767b, type: 3}
-    cost: 100
+    cost: 250
     upgradeCost: 0
   - turretName: Zone Turret
     turretPrefab: {fileID: 590879394889393170, guid: 1c07a2aea82719f499a892f118413f77, type: 3}
@@ -15587,7 +15587,7 @@ MonoBehaviour:
     upgradeCost: 0
   - turretName: Slow Turret
     turretPrefab: {fileID: 6303505882682725640, guid: c8f538de101590944b66ddfd6a943629, type: 3}
-    cost: 250
+    cost: 300
     upgradeCost: 0
   SpawnedTurrets: []
 --- !u!4 &1112818198
@@ -17005,7 +17005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 49.999992, y: -422}
+  m_AnchoredPosition: {x: 49.999992, y: -664}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1222920597
@@ -18197,7 +18197,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 250
+  m_text: 300
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f96c13ee705aa4445937a04f61b8aeca, type: 2}
   m_sharedMaterial: {fileID: 5531948816994918108, guid: f96c13ee705aa4445937a04f61b8aeca, type: 2}
@@ -19960,8 +19960,8 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 991831396515154558, guid: e4f838cd464100e4db728fd13967bc46, type: 3}
   - {fileID: 6441949914179121244, guid: 614f168f362193442b1607e54555c54c, type: 3}
-  - {fileID: 7497963062063909274, guid: c40175c09a0711a4ca2fd98d5cacd473, type: 3}
-  enemyBoss: {fileID: 0}
+  - {fileID: 889176342335748640, guid: f90894175408ce94da537fa0898887b6, type: 3}
+  enemyBoss: {fileID: 7497963062063909274, guid: c40175c09a0711a4ca2fd98d5cacd473, type: 3}
   waveCompeledPanel: {fileID: 0}
   waveCompeledText: {fileID: 0}
   waveCleared: 0
@@ -22674,7 +22674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100
+  m_text: 250
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f96c13ee705aa4445937a04f61b8aeca, type: 2}
   m_sharedMaterial: {fileID: 5531948816994918108, guid: f96c13ee705aa4445937a04f61b8aeca, type: 2}
@@ -23988,8 +23988,8 @@ RectTransform:
   - {fileID: 146458885}
   - {fileID: 637977770}
   - {fileID: 1287959668}
-  - {fileID: 1222920596}
   - {fileID: 921129372}
+  - {fileID: 1222920596}
   - {fileID: 883597504}
   m_Father: {fileID: 1373551420}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
