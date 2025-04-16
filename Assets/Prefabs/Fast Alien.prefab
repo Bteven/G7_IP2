@@ -226,10 +226,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a48f4326c5f72440b82ff7fc76e5a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 200
+  currentHealth: 10
   finishLine: {fileID: 0}
   rewardAmount: 25
-  maxHealth: 200
+  maxHealth: 10
 --- !u!95 &2594887499051554777
 Animator:
   serializedVersion: 5

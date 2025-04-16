@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
-public class TowerGun : BaseTurret
+public class TowerGun : BaseTurret, UpgradeTowerInterface
 {
     [Header("Game Objects")]
 
     public GameObject towerBody;
+    public SphereCollider rangeColider;
+
 
     [Header("Firing Variables")]
 
@@ -22,6 +24,8 @@ public class TowerGun : BaseTurret
     public GameObject bulletPrefab;       //  Stores the bullet prefab 
     public GameObject bulletSpawn;
 
+    public bool UpgradeOneDone { get; private set; }
+    public bool UpgradeTwoDone { get; private set; }
 
     void Update()
     {
@@ -77,6 +81,36 @@ public class TowerGun : BaseTurret
         if (rangeFinder != null)
         {
             rangeFinder.currentSelectedTurret = true;
+        }
+
+    }
+
+    public void UpgradeOne()
+    {
+        // this will decrease the cooldown betwean swings
+
+        int fireCooldownUpgradeValue = 2;
+
+        Debug.Log("Hello");
+        fireCooldown = fireCooldown - fireCooldownUpgradeValue;
+        UpgradeOneDone = true;
+    }
+    public void UpgradeTwo()
+    {
+        // this will decrease the cooldown betwean swings
+
+        int rangeIncrease = 3;
+
+        Debug.Log("Hello");
+        rangeColider.radius = rangeColider.radius + rangeIncrease;
+        UpgradeTwoDone = true;
+
+        RangeLineFinder rangeFinder = GetComponentInParent<RangeLineFinder>();
+        if (rangeFinder != null)
+        {
+            rangeFinder.currentSelectedTurret = true;
+            rangeFinder.CalculatePoints();
+
         }
 
     }

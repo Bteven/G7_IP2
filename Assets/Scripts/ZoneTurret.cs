@@ -127,7 +127,7 @@ public class ZoneTurret : BaseTurret, UpgradeTowerInterface
     {
         // this will decrease the cooldown betwean swings
 
-        int fireCooldownUpgradeValue = 2;
+        float fireCooldownUpgradeValue = 2.5f;
 
         Debug.Log("Hello");
         fireCooldown = fireCooldown - fireCooldownUpgradeValue;
