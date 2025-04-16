@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using TMPro;
@@ -128,7 +128,7 @@ public class SpawnManager : MonoBehaviour
 
     IEnumerator DelayedRewardDistribution()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
 
         CurrencyManager.Instance.AddMoney(totalEnemyKillReward);
 
