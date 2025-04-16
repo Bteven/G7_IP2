@@ -15967,8 +15967,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1828446286}
-        m_TargetAssemblyTypeName: GameWinPanelScript, Assembly-CSharp
+      - m_Target: {fileID: 1724805180}
+        m_TargetAssemblyTypeName: GameLostPanelManager, Assembly-CSharp
         m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
@@ -21994,7 +21994,7 @@ MonoBehaviour:
   spawnBurstTimer: 0
   currentBurstTime: 0
   bossScript: {fileID: 1546350977}
-  bossBonus: 2000
+  bossBonus: 1000
   totalEnemyKillReward: 0
   totalEnemiesSpawned: 0
   enemiesKilledThisWave: 0

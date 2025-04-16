@@ -18,7 +18,7 @@ public class GameWinPanelScript : MonoBehaviour
 
         healthAtTheEndText.text = "You Won With " + playerHealth.playerHealth + " Health Left";
         gameWinPanel.SetActive(true);
-        Time.timeScale = 0.0f;
+        //Time.timeScale = 0.0f;
     }
 
     public void GoToMainMenu()
