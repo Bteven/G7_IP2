@@ -30,10 +30,14 @@ public class TowerGun : BaseTurret
       
     void Fire()
     {
-        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDir, rotationSpeed * Time.deltaTime, 0.0f); // finds correct rotion vector for the bullet
-        var newBullet = Instantiate(bulletPrefab,bulletSpawn.transform.position, Quaternion.LookRotation(newDirection)); // fires a new bullet
+        if (enemyObject == null) return;
 
-    }       
+        Vector3 fireDirection = (enemyObject.transform.position - bulletSpawn.transform.position).normalized;
+
+        Quaternion bulletRotation = Quaternion.LookRotation(fireDirection);
+        GameObject newBullet = Instantiate(bulletPrefab, bulletSpawn.transform.position, bulletRotation);
+
+    }
     void firingSequence()
     {
 
@@ -52,10 +56,13 @@ public class TowerGun : BaseTurret
     {
         if (enemyObject != null) // checks of enemy is there before finding direction and rotating towards
         {
+            Vector3 directionToEnemy = enemyObject.transform.position - rotationPoint.transform.position;
+            directionToEnemy.y = 0;
 
-            targetDir = enemyObject.transform.position - rotationPoint.transform.position;
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDir, rotationSpeed * Time.deltaTime, 0.0f);
-            transform.rotation = Quaternion.LookRotation(newDirection);
+            Quaternion targetRotation = Quaternion.LookRotation(directionToEnemy.normalized) * Quaternion.Euler(0, 180f, 0);
+
+            towerBody.transform.rotation = Quaternion.RotateTowards(towerBody.transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
             firingSequence();
 
         }

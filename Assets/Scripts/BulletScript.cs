@@ -18,10 +18,14 @@ public class BulletScript : MonoBehaviour
 
     void Update()
     {
-        BulletMove();
         BulletDespawn();
-
     }
+
+    void FixedUpdate()
+    {
+        bulletBody.velocity = transform.forward * bulletSpeed;  //moves bullet foward
+    }
+
     void BulletDespawn()
     {
         bulletTimer += Time.deltaTime;       // counts up 
@@ -33,10 +37,7 @@ public class BulletScript : MonoBehaviour
         }
     }
 
-    void BulletMove()
-    {
-        bulletBody.velocity = transform.forward * bulletSpeed;  //moves bullet foward
-    }
+    
 }
  
   

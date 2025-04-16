@@ -22,6 +22,10 @@ public class TowerPlacement : MonoBehaviour
         
         if (CurrentPlacingTower != null)
         {
+
+            Collider towerCollider = CurrentPlacingTower.GetComponent<Collider>();
+            towerCollider.enabled = false;
+
             Ray camray = PlayerCamera.ScreenPointToRay(Input.mousePosition);
             Debug.DrawRay(camray.origin, camray.direction * 1000f, Color.green);
             RaycastHit HitInfo;
@@ -32,19 +36,17 @@ public class TowerPlacement : MonoBehaviour
                 Debug.Log("Hit : " + HitInfo.collider.name);
                 CurrentPlacingTower.transform.position = HitInfo.point;
 
-                if (Input.GetMouseButtonDown(0) && HitInfo.collider.gameObject != null)
+                if (Input.GetMouseButtonDown(0))
                 {
-                    if (!HitInfo.collider.gameObject.CompareTag("CantPlace"))
+                    if (!HitInfo.collider.CompareTag("CantPlace"))
                     {
-                        BoxCollider TowerCollider = CurrentPlacingTower.gameObject.GetComponent<BoxCollider>();
-                        TowerCollider.isTrigger = true;
 
-                        Vector3 BoxCenter = CurrentPlacingTower.gameObject.transform.position + TowerCollider.center;
-                        Vector3 HalfExtents = TowerCollider.size / 2;
+                        Vector3 BoxCenter = CurrentPlacingTower.transform.position + towerCollider.bounds.center - towerCollider.transform.position;
+                        Vector3 HalfExtents = towerCollider.bounds.extents;
 
                         if (!Physics.CheckBox(BoxCenter, HalfExtents, Quaternion.identity, PlacementCheckMask, QueryTriggerInteraction.Ignore))
                         {
-                            TowerCollider.isTrigger = false;
+                            towerCollider.enabled = true;
                             CurrentPlacingTower = null;
                             Debug.Log("Tower Placed!");
                         }
@@ -67,5 +69,8 @@ public class TowerPlacement : MonoBehaviour
     public void SetTowerToPlace(GameObject tower)
     {
         CurrentPlacingTower = Instantiate(tower, Vector3.zero, Quaternion.identity);
+
+        Collider col = CurrentPlacingTower.GetComponent<Collider>();
+        if (col != null) col.enabled = false;
     }
 }

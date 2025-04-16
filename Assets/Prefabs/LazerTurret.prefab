@@ -92,7 +92,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7883779844174715829}
-  - component: {fileID: 920889515146894129}
   - component: {fileID: 2308774925477833608}
   m_Layer: 6
   m_Name: LazerTurret
@@ -116,21 +115,8 @@ Transform:
   m_Children:
   - {fileID: 622548062083528093}
   - {fileID: 8484289040890594390}
-  - {fileID: 1100145981411834353}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &920889515146894129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549458340494867599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dca484ede4bec84dbaeaedcbfbf10ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2308774925477833608
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -148,7 +134,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.8978845, y: 1.4656099, z: 1}
   m_Center: {x: -0.2636119, y: 0.6982061, z: 0}
@@ -510,7 +496,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4816682814526123974}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.22442855, y: -0.85476196, z: -0.03571465}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -534,11 +520,11 @@ MonoBehaviour:
   isPlaced: 1
   lineFinder: {fileID: 0}
   rotationPoint: {fileID: 4816682814526123974}
-  rotationSpeed: 20
+  rotationSpeed: 25
   targetDir: {x: 0, y: 0, z: 0}
   enemyObjectInRange: []
   enemyObject: {fileID: 0}
-  towerBody: {fileID: 0}
+  towerBody: {fileID: 8205049782808905684}
   targeting: 1
   fireCooldown: 3
   currentFireTimer: 0
@@ -672,13 +658,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5342327863297600259}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -0.876, y: 0.694, z: -0.849}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.31889296, y: 0.022382492, z: -0.5028855}
+  m_LocalScale: {x: 0.50366676, y: 0.64921427, z: 0.6076643}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7883779844174715829}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_Father: {fileID: 8484289040890594390}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5884014373947587054
 GameObject:
   m_ObjectHideFlags: 0
@@ -908,6 +894,7 @@ Transform:
   m_LocalScale: {x: 1.9854399, y: 1.5403235, z: 1.6456455}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1100145981411834353}
   - {fileID: 3634871950476783211}
   - {fileID: 4931011329935847063}
   - {fileID: 226408329808784735}
