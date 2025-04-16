@@ -8,6 +8,7 @@ public class TowerPlacement : MonoBehaviour
     [SerializeField] private LayerMask PlacementCheckMask;
     [SerializeField] private LayerMask PlacementCollideMask;
     [SerializeField] private Camera PlayerCamera;
+    [SerializeField] private int currentTurretCost;
 
     private GameObject CurrentPlacingTower;
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class TowerPlacement : MonoBehaviour
         
         if (CurrentPlacingTower != null)
         {
+            currentTurretCost = 50;
 
             Collider towerCollider = CurrentPlacingTower.GetComponent<Collider>();
             towerCollider.enabled = false;
@@ -46,9 +48,13 @@ public class TowerPlacement : MonoBehaviour
 
                         if (!Physics.CheckBox(BoxCenter, HalfExtents, Quaternion.identity, PlacementCheckMask, QueryTriggerInteraction.Ignore))
                         {
-                            towerCollider.enabled = true;
-                            CurrentPlacingTower = null;
-                            Debug.Log("Tower Placed!");
+                            if (CurrencyManager.Instance.SpendMoney(currentTurretCost))
+                            {
+                                towerCollider.enabled = true;
+                                CurrentPlacingTower = null;
+                                Debug.Log("Tower Placed!");
+                            }
+
                         }
                         else
                         {
@@ -59,6 +65,7 @@ public class TowerPlacement : MonoBehaviour
                     {
                         Debug.Log("Hit object is tagged CantPlace");
                     }
+
                 }
             }
 
