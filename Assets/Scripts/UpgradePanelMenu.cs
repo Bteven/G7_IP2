@@ -16,6 +16,7 @@ public class UpgradePanelMenu : MonoBehaviour
     public TextMeshProUGUI UpgradeTypeTwoText;
 
     public GameObject moneyWarning;
+    private SoundManager soundManager;
 
 
     private int upgradeOneCost;
@@ -46,6 +47,8 @@ public class UpgradePanelMenu : MonoBehaviour
             {
                 currencyManager.SpendMoney(upgradeTwoCost);
                 upgradeInterface.UpgradeTwo();
+                soundManager = FindObjectOfType<SoundManager>();
+                soundManager.PlayUpgradeSound(currentTower.transform.position);
             }
             else
             {
@@ -61,6 +64,8 @@ public class UpgradePanelMenu : MonoBehaviour
             {
                 currencyManager.SpendMoney(upgradeTwoCost);
                 upgradeInterfaceChild.UpgradeTwo();
+                soundManager = FindObjectOfType<SoundManager>();
+                soundManager.PlayUpgradeSound(currentTower.transform.position);
             }
             else
             {
@@ -76,6 +81,8 @@ public class UpgradePanelMenu : MonoBehaviour
             {
                 currencyManager.SpendMoney(upgradeTwoCost);
                 upgradeInterfaceParent.UpgradeTwo();
+                soundManager = FindObjectOfType<SoundManager>();
+                soundManager.PlayUpgradeSound(currentTower.transform.position);
             }
             else
             {
@@ -102,7 +109,10 @@ public class UpgradePanelMenu : MonoBehaviour
             if (currencyManager.CurrentCurrency >= upgradeOneCost && upgradeInterface.UpgradeOneDone == false)
             {
                 currencyManager.SpendMoney(upgradeOneCost);
+                
                 upgradeInterface.UpgradeOne();
+                soundManager = FindObjectOfType<SoundManager>();
+                soundManager.PlayUpgradeSound(currentTower.transform.position);
 
 
             }
@@ -121,6 +131,8 @@ public class UpgradePanelMenu : MonoBehaviour
             {
                 currencyManager.SpendMoney(upgradeOneCost);
                 upgradeInterfaceChild.UpgradeOne();
+                soundManager = FindObjectOfType<SoundManager>();
+                soundManager.PlayUpgradeSound(currentTower.transform.position);
             }
             else
             {
@@ -136,6 +148,8 @@ public class UpgradePanelMenu : MonoBehaviour
             {
                 currencyManager.SpendMoney(upgradeOneCost);
                 upgradeInterfaceParent.UpgradeOne();
+                soundManager = FindObjectOfType<SoundManager>();
+                soundManager.PlayUpgradeSound(currentTower.transform.position);
             }
             else
             {

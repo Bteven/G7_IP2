@@ -10718,6 +10718,7 @@ MonoBehaviour:
   missileSound: {fileID: 8300000, guid: 10d489d87480c4042a7827c2e136b98c, type: 3}
   missileExplosionSound: {fileID: 8300000, guid: 6ce5b1a87bbe92d4a9b0e0bbafabfb4f, type: 3}
   lazerFiring: {fileID: 8300000, guid: a1a11343905d2cd4dacd20dd80771297, type: 3}
+  upgradeNoise: {fileID: 8300000, guid: 6f911d17d18dff345bf44d45375054c6, type: 3}
 --- !u!1 &612583069
 GameObject:
   m_ObjectHideFlags: 0
@@ -17039,6 +17040,7 @@ MonoBehaviour:
     cost: 300
     upgradeCost: 0
   SpawnedTurrets: []
+  moneyWarning: {fileID: 1566603114}
 --- !u!4 &1112818198
 Transform:
   m_ObjectHideFlags: 0

@@ -13,11 +13,12 @@ public class SoundManager : MonoBehaviour
     public AudioClip missileSound;
     public AudioClip missileExplosionSound;
     public AudioClip lazerFiring;
+    public AudioClip upgradeNoise;
 
     private AudioSource missileAudioSource;
     public void PlayPlacingSound(Vector3 position)
     {
-        AudioSource.PlayClipAtPoint(placingSound, position);
+        AudioSource.PlayClipAtPoint(zoneAttackSound, position);
 
     }
     public void PlayZoneAttackSound(Vector3 position)
@@ -25,7 +26,13 @@ public class SoundManager : MonoBehaviour
         AudioSource.PlayClipAtPoint(zoneAttackSound, position);
 
     }
-   
+
+    public void PlayUpgradeSound(Vector3 position)
+    {
+        AudioSource.PlayClipAtPoint(upgradeNoise, position);
+
+    }
+
     public void StopMissileSound()
     {
         if (missileAudioSource != null && missileAudioSource.isPlaying)

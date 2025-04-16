@@ -23,6 +23,8 @@ public class TurretPlacer : MonoBehaviour
     public List<GameObject> SpawnedTurrets;
     private int currentTurretCost;
 
+    public GameObject moneyWarning;
+
     void Update()
     {
         PlaceTurret();
@@ -40,6 +42,8 @@ public class TurretPlacer : MonoBehaviour
         if(CurrencyManager.Instance == null || CurrencyManager.Instance.CurrentCurrency < turretCost)
         {
             Debug.Log("Not enough money to select this turret.");
+            moneyWarning.SetActive(true);
+            StartCoroutine(moneyWarn());
             return;
         }
 
@@ -63,7 +67,12 @@ public class TurretPlacer : MonoBehaviour
             previewMissileTowerScript.isPlaced = false;
         }
     }
+    IEnumerator moneyWarn()
+    {
 
+        yield return new WaitForSeconds(0.7f);
+        moneyWarning.SetActive(false);
+    }
     private Vector3 GetMouseWorldPosition(out bool isOnGround)
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
