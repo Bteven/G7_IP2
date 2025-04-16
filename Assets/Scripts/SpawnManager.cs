@@ -40,6 +40,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] int spawnBurstTimer;                    // current time until next group spawns {can be edited in future to change speeds of wave}
     [SerializeField] float currentBurstTime = 0;             // cooldown for how fast the enemy groups spawn
 
+    bool bossSpawned = false;
 
     [Header("Currency")]
     public int totalEnemyKillReward = 0;
@@ -50,7 +51,7 @@ public class SpawnManager : MonoBehaviour
     private void Start()
     {
         waveCleared = false;            
-        waveNumber = 1;
+        waveNumber = 0;
         spawnBurstTimer = baseSpawnBurstTimer;
        // initilising that wave isnt over and on wave one also setting spawn group time equal to the default
 
@@ -59,16 +60,27 @@ public class SpawnManager : MonoBehaviour
     }
     void Update()
     {
-        WaveManager();      // makes sure waves are being processed
+        if (waveNumber < 8)
+        {
+            WaveManager();      // makes sure waves are being processed
+        }
+        else if (bossSpawned == false)
+        {
+
+            spawnBoss();
+
+        }
+
+
     }
     void GroupDiffCalculator()
     {
         
-        if (waveNumber == 5 && groupsSent >= 3 || waveNumber == 6 && groupsSent >= 2)
+        if (waveNumber == 5 && groupsSent >= 3 || waveNumber == 6 && groupsSent >= 2 || waveNumber == 7 && groupsSent >= 3)
         {
             groupDiff = 2;
         }
-        else if (waveNumber == 2 && groupsSent >= 2 || waveNumber == 3 && groupsSent >= 1 || waveNumber == 4 && groupsSent >= 2)
+        else if (waveNumber == 2 && groupsSent >= 2 || waveNumber == 3 && groupsSent >= 1 || waveNumber == 4 && groupsSent >= 2 || waveNumber == 7 && groupsSent >= 0)
         {
             groupDiff = 1;
         }
@@ -78,6 +90,18 @@ public class SpawnManager : MonoBehaviour
         }
 
 
+    }
+    void spawnBoss()
+    {
+
+        GameObject newEnemy = Instantiate(enemyBoss, spawnPoint.transform.position, Quaternion.identity);
+        // spawns an enemy depending the group dificulty set earlyer and will ether spawn normal,fast,tank
+
+        if (newEnemy.GetComponent<HealthController>() == null)
+        {
+            newEnemy.AddComponent<HealthController>();
+        }
+        bossSpawned = true; 
     }
     void WaveManager()
     {
