@@ -1678,6 +1678,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedUpButton: {fileID: 146458887}
+  speedUpImage: {fileID: 21300000, guid: 563a65f13db743044b298c9455f83d43, type: 3}
+  speedDownImage: {fileID: 21300000, guid: e162a87e474c9e94997411c770369270, type: 3}
+  boostImage: {fileID: 2143854016}
 --- !u!114 &146458887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15429,8 +15432,8 @@ RectTransform:
   - {fileID: 1156956914}
   - {fileID: 1443436043}
   - {fileID: 571364352}
-  - {fileID: 1724805177}
   - {fileID: 1828446283}
+  - {fileID: 1724805177}
   - {fileID: 1023926041}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29246,14 +29249,14 @@ RectTransform:
   m_GameObject: {fileID: 2143854014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.72, z: 1}
+  m_LocalScale: {x: 0.6176866, y: 0.5927184, z: 0.82322}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 146458885}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5, y: 0}
+  m_AnchoredPosition: {x: 5, y: -0.0000039143}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143854016

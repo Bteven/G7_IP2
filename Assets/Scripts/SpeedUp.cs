@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class SpeedUp : MonoBehaviour
 {
-  public Button speedUpButton;
+  public UnityEngine.UI.Button speedUpButton;
+    public Sprite speedUpImage;
+    public Sprite speedDownImage;
+
+    public UnityEngine.UI.Image boostImage;
 
     private void Update()
     {
@@ -21,10 +26,12 @@ public class SpeedUp : MonoBehaviour
     private void ChangeSpeedUp()
     {
         Time.timeScale = 5;
+        boostImage.sprite = speedDownImage;
     }
 
     private void ChangeSpeedDown()
     {
         Time.timeScale = 1;
+        boostImage.sprite = speedUpImage;
     }
 }
