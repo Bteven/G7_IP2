@@ -9,6 +9,8 @@ public class HealthController : MonoBehaviour
     public float currentHealth;
     public GameObject finishLine;
 
+    public GameObject explosion;
+
     public int rewardAmount = 50;
 
     [SerializeField]
@@ -49,6 +51,7 @@ public class HealthController : MonoBehaviour
                     }
                 }
 
+                GameObject deathExplosion = Instantiate(explosion, transform.position, Quaternion.identity);
                 Destroy(gameObject);
             }
 

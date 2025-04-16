@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 7883779844174715829}
   - component: {fileID: 2308774925477833608}
   - component: {fileID: 4829577606939862731}
+  - component: {fileID: 5881205660629955796}
   m_Layer: 6
   m_Name: LazerTurret
   m_TagString: Gun Tower
@@ -133,7 +134,7 @@ Transform:
   m_GameObject: {fileID: 549458340494867599}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.59, y: 17.71, z: 85.42}
+  m_LocalPosition: {x: 0.59, y: 19.08, z: 85.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -161,8 +162,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 1.8978845, y: 1.4656099, z: 1}
-  m_Center: {x: -0.2636119, y: 0.6982061, z: 0}
+  m_Size: {x: 3.3736172, y: 6.0850697, z: 2.760994}
+  m_Center: {x: -0.2990265, y: 0.20393658, z: 0.39354324}
 --- !u!114 &4829577606939862731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +181,18 @@ MonoBehaviour:
   rangeIndicator: {fileID: 7911959248553695108}
   radius: 0
   rotationIndicatorSpeed: 90
+--- !u!114 &5881205660629955796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549458340494867599}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dca484ede4bec84dbaeaedcbfbf10ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &561563202793734670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1039,6 +1052,10 @@ PrefabInstance:
     - target: {fileID: 313960887928736758, guid: f668498a347a1d0488e9c861c6d002f3, type: 3}
       propertyPath: m_Name
       value: RangeIndicaterLine
+      objectReference: {fileID: 0}
+    - target: {fileID: 313960887928736758, guid: f668498a347a1d0488e9c861c6d002f3, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2414213581986193430, guid: f668498a347a1d0488e9c861c6d002f3, type: 3}
       propertyPath: m_LocalPosition.x

@@ -183,6 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 5000
   finishLine: {fileID: 0}
+  explosion: {fileID: 1865698628357012885, guid: b55ae95731954094cb58da7374204f0e, type: 3}
   rewardAmount: 100
   maxHealth: 5000
 --- !u!114 &4744027137510018553
