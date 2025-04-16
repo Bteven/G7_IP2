@@ -42,6 +42,8 @@ public class SpawnManager : MonoBehaviour
 
     bool bossSpawned = false;
 
+    public BossScript bossScript;
+
     [Header("Currency")]
     public int totalEnemyKillReward = 0;
     public int totalEnemiesSpawned = 0;
@@ -96,7 +98,7 @@ public class SpawnManager : MonoBehaviour
 
         GameObject newEnemy = Instantiate(enemyBoss, spawnPoint.transform.position, Quaternion.identity);
         // spawns an enemy depending the group dificulty set earlyer and will ether spawn normal,fast,tank
-
+        bossScript.getUFO(newEnemy);
         if (newEnemy.GetComponent<HealthController>() == null)
         {
             newEnemy.AddComponent<HealthController>();
