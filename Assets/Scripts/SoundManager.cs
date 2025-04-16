@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip zoneAttackSound;
     public AudioClip missileSound;
     public AudioClip missileExplosionSound;
+    public AudioClip lazerFiring;
 
     private AudioSource missileAudioSource;
     public void PlayPlacingSound(Vector3 position)
@@ -36,6 +37,12 @@ public class SoundManager : MonoBehaviour
     public void PlayMissleExplosionSound(Vector3 position)
     {
         AudioSource.PlayClipAtPoint(missileExplosionSound, position);
+
+    }
+
+    public void PlayLazerFireSound(Vector3 position)
+    {
+        AudioSource.PlayClipAtPoint(lazerFiring, position);
 
     }
 

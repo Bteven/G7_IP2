@@ -170,8 +170,8 @@ void checkTowerType()
                 costOneText.text = upgradeOneCost.ToString();
                 costTwoText.text = upgradeTwoCost.ToString();
 
-                UpgradeTypeOneText.text = "";
-                UpgradeTypeTwoText.text = "";
+                UpgradeTypeOneText.text = "Fire Speed ";
+                UpgradeTypeTwoText.text = "Range";
 
 
                 break;

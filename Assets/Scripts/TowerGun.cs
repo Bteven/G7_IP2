@@ -24,6 +24,8 @@ public class TowerGun : BaseTurret, UpgradeTowerInterface
     public GameObject bulletPrefab;       //  Stores the bullet prefab 
     public GameObject bulletSpawn;
 
+    private SoundManager soundManager;
+
     public bool UpgradeOneDone { get; private set; }
     public bool UpgradeTwoDone { get; private set; }
 
@@ -51,7 +53,13 @@ public class TowerGun : BaseTurret, UpgradeTowerInterface
 
             if (currentFireTimer > fireCooldown)        // when cooldown over
             {
+
+
+                soundManager = FindObjectOfType<SoundManager>();
+                soundManager.PlayLazerFireSound(this.transform.position);
+
                 Fire();                     // calls methoud to fire the bullet
+
                 currentFireTimer = 0;       // resets timer
             }
         }
@@ -99,7 +107,7 @@ public class TowerGun : BaseTurret, UpgradeTowerInterface
     {
         // this will decrease the cooldown betwean swings
 
-        int rangeIncrease = 3;
+        int rangeIncrease = 5;
 
         Debug.Log("Hello");
         rangeColider.radius = rangeColider.radius + rangeIncrease;

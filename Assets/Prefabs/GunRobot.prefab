@@ -1093,11 +1093,12 @@ MonoBehaviour:
   isPlaced: 1
   lineFinder: {fileID: 0}
   rotationPoint: {fileID: 7818617673169005122}
-  rotationSpeed: 20
+  rotationSpeed: 90
   targetDir: {x: 0, y: 0, z: 0}
   enemyObjectInRange: []
   enemyObject: {fileID: 0}
   towerBody: {fileID: 2868150809026142808}
+  rangeColider: {fileID: 1547444724993162498}
   targeting: 1
   fireCooldown: 3
   currentFireTimer: 0
@@ -1122,7 +1123,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 2.4290102
+  m_Radius: 4
   m_Center: {x: 0.028473172, y: 1.1340299, z: 0}
 --- !u!1 &8078699323833491060
 GameObject:
