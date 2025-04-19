@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectInRange: []
   rangeColider: {fileID: 4074088986168482634}
-  slowSpeedMultiplier: 0.5
+  slowSpeedMultiplier: 0.4
 --- !u!135 &4074088986168482634
 SphereCollider:
   m_ObjectHideFlags: 0
